@@ -1,8 +1,8 @@
-'use client'
+// 'use client'
 
 import Image from 'next/image'
-import { useState, Fragment } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+// import { useState, Fragment } from 'react'
+// import { Dialog, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Icon } from '@/components/Icon'
@@ -18,15 +18,15 @@ const ratings = [
 ]
 
 export const HomeHero = () => {
-  let [isOpen, setIsOpen] = useState(false)
+  // let [isOpen, setIsOpen] = useState(false)
 
-  function closeModal() {
-    setIsOpen(false)
-  }
+  // function closeModal() {
+  //   setIsOpen(false)
+  // }
 
-  function openModal() {
-    setIsOpen(true)
-  }
+  // function openModal() {
+  //   setIsOpen(true)
+  // }
 
   return (
     <section className="from-orange-25 bg-gradient-to-b to-orange-50 px-4 pt-16 sm:px-6 lg:px-8">
