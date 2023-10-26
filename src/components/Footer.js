@@ -2,14 +2,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
 
-import logo from '/public/images/bright-logo.png'
+import logo from '/public/images/azza-logo.svg'
 import { Icon } from '@/components/Icon'
 
 const siteLinks = [
   { label: 'Home', href: '/' },
   { label: 'About us', href: '/about' },
-  { label: 'Gallery', href: '/gallery' },
-  { label: 'Parents', href: '/gallery' },
+  // { label: 'Activities', href: '/activities' },
+  { label: 'Policies', href: '/policies' },
+  { label: 'School Calendar', href: '/calendar' },
+  { label: 'Registration Form', href: '/registration' },
   { label: 'Contact us', href: '/contact' },
 ]
 
@@ -44,15 +46,26 @@ export const Footer = ({ programs, contact }) => {
           </div>
           {/* Mission statement */}
           <div className="mt-6 text-lg text-purple-800">
-            Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Diam sit amet quam vehicula elementum sed sit.
+            We dedicate ourselves to fostering a deep sense of cultural identity
+            while nurturing academic excellence. We empower our students to
+            embrace their heritage with pride and contribute actively and
+            compassionately to their communities.
           </div>
           {/* Social links */}
           <div className="mt-5 w-full lg:mt-6">
             <div className="flex justify-start space-x-4">
-              <SocialLink href="#0" icon="instagram" />
-              <SocialLink href="#0" icon="facebook" />
-              <SocialLink href="#0" icon="twitter" />
+              <SocialLink
+                href="https://www.instagram.com/azzasupplementaryschool/"
+                icon="instagram"
+              />
+              <SocialLink
+                href="https://www.facebook.com/azza.supplementary"
+                icon="facebook"
+              />
+              <SocialLink
+                href="https://twitter.com/AzzaSupplement1"
+                icon="twitter"
+              />
             </div>
           </div>
         </div>
@@ -154,7 +167,10 @@ export const Footer = ({ programs, contact }) => {
                   Phone
                 </h5>
                 <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
-                  {contact.phone}
+                  {contact.phoneA}
+                </p>
+                <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
+                  {contact.phoneB}
                 </p>
               </div>
             </li>
@@ -165,22 +181,9 @@ export const Footer = ({ programs, contact }) => {
       <div className="mx-auto flex max-w-md flex-col justify-between py-8 sm:max-w-none sm:flex-row lg:max-w-screen-2xl">
         {/* Copyright note */}
         <span className="text-base text-purple-800/90">
-          © {new Date().getFullYear()} Bright School. All rights reserved.
+          © {new Date().getFullYear()} Azza Supplementary School. All rights
+          reserved.
         </span>
-        <p className="mt-0.5 flex items-center text-purple-800/90">
-          Made with
-          <Icon icon="coffee" className="mx-1 h-5 w-5" />
-          <span>
-            by{' '}
-            <Link
-              className="text-purple-700 hover:text-purple-900 hover:underline"
-              href="https://www.tailwindawesome.com/"
-              target="_blank"
-            >
-              Tailwind Awesome
-            </Link>
-          </span>
-        </p>
       </div>
     </footer>
   )

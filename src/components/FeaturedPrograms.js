@@ -83,12 +83,12 @@ export const FeaturedPrograms = () => {
         <div className="md:grid md:grid-cols-2 md:gap-12 lg:gap-16">
           <div>
             <h2 className="h2 max-w-4xl text-purple-900">
-              The best early education programs for your child
+              The best programs for your child
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-xl leading-relaxed text-purple-800 sm:mt-5 lg:text-left">
-              Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
-              dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-              sem.
+              We offer a core ciriculum of programs for children of all ages.
+              Our programs are designed to help your child grow and develop in a
+              safe and nurturing environment.
             </p>
           </div>
         </div>

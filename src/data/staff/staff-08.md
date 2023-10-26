@@ -1,10 +1,8 @@
 ---
-name: Diana Belbita
-role: Physical Instructor
-image: "/images/stock/staff/staff-08.jpg"
-social:
-  - name: "twitter"
-    href: "#"
-  - name: "facebook"
-    href: "#"
+name: Rania Abdelkarim
+role: Educational Technology Coordinator
+image: '/images/stock/staff/headshot-placeholder.jpeg'
+portraitImage: '/images/stock/staff/headshot-placeholder.jpeg'
+featured: false
+social: []
 ---

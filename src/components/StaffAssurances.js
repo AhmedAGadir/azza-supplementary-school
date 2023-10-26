@@ -8,11 +8,10 @@ import checkmark from '/public/images/illustrations/checkmark.svg'
 import { getAllItems } from '@/lib/getItems'
 
 const assurances = [
-  'A minimum of 3 years of experience',
-  'An advanced degree',
-  'Amazing recommendations and positive reviews',
-  'A love and passion for teaching and helping children grow and succeed',
-  'A commitment to creating a positive classroom experience for all students, no matter their learning needs',
+  'Over three years of hands-on teaching experience',
+  'Genuine passion for guiding and inspiring children',
+  'Devotion to ensuring a positive and supportive classroom for every student',
+  'Training working with children with special needs',
 ]
 
 export const StaffAssurances = () => {
@@ -29,16 +28,17 @@ export const StaffAssurances = () => {
           <div className="flex flex-col justify-center lg:order-2 lg:col-span-1 xl:col-span-6">
             <div>
               <span className="inline-block -rotate-1 rounded-full bg-purple-200 px-4 py-2 font-medium text-purple-700 shadow-md">
-                Your kids are in good hands
+                Your children are in good hands
               </span>
             </div>
             <h2 className="h2 mt-4 text-purple-900 sm:mt-5">
-              Meet the teachers behind Bright School
+              Meet the teachers behind Azza
             </h2>
             <p className="mt-4 max-w-xl text-xl leading-relaxed text-purple-800 md:mt-5">
-              Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut
-              libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus
-              convallis quis ac lectus.
+              Our teachers are the heart and soul of Azza. They are the ones who
+              make our school a safe, fun, and engaging place for your children
+              to learn and grow. We are proud to have a strong team of
+              experienced, passionate, and dedicated individuals.
             </p>
             {/* Teacher qualifications box */}
             <div className="relative mt-16 max-w-4xl rounded-xl bg-yellow-100 sm:mt-14">
@@ -47,8 +47,7 @@ export const StaffAssurances = () => {
               </span>
               <div className="mt-2 px-4 py-10 sm:px-10 sm:py-12">
                 <p className="text-lg font-semibold text-purple-900 sm:text-xl">
-                  At Bright, we pride ourselves on the quality of our teachers.
-                  You can expect the following from our teachers:
+                  What Sets Our Teachers Apart: Promises We Keep
                 </p>
                 {/* Teacher qualifications list */}
                 <ul className="mt-5 space-y-5 text-lg text-purple-800">

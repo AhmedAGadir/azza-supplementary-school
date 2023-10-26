@@ -1,4 +1,4 @@
 ---
-question: Do you accommodate allergies and dietary restrictions?
-answer: Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin molestie malesuada.
+question: How do you handle different proficiency levels in Arabic?
+answer: We assess each student's capabilities at the start to place them in the appropriate level, ensuring personalized and level-appropriate challenges. Our classes are structured to allow for progression and the continuous development of language skills.
 ---

@@ -1,10 +1,8 @@
 ---
-name: Liana Jojua
-role: Art Teacher
-image: "/images/stock/staff/staff-09.jpg"
-social:
-  - name: "twitter"
-    href: "#"
-  - name: "facebook"
-    href: "#"
+name: Maha Osman
+role: Health and Wellness Advisor
+image: '/images/stock/staff/headshot-placeholder.jpeg'
+portraitImage: '/images/stock/staff/headshot-placeholder.jpeg'
+featured: false
+social: []
 ---

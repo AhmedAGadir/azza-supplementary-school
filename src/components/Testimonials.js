@@ -21,12 +21,11 @@ export const Testimonials = () => {
         {/* Section header title and subheader */}
         <div className="flex flex-col items-center justify-center">
           <h2 className="h2 max-w-2xl text-center text-white">
-            See what parents are saying about us
+            See what parents have to say
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-xl leading-relaxed text-purple-50">
-            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
-            dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-            sem.
+            Hear from families like yours about the transformative impact our
+            educational approach has had on their children's lives.
           </p>
         </div>
 

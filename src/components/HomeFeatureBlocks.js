@@ -18,7 +18,6 @@ const features = [
   'Confidence-building',
   'Diverse activities',
   'Experienced staff',
-  'Community integration',
   'Excellence recognition',
 ]
 
@@ -26,7 +25,7 @@ const blocks = [
   {
     tagline: 'Beyond Academics',
     headline: "Fostering Every Child's Potential",
-    text: 'Azza Supplementary School takes a holistic approach to education, emphasizing not only academic excellence but also personal development. We integrate traditional curriculum subjects with unique cultural studies, ensuring that students are prepared to thrive in a diverse and interconnected world. Our commitment is to nurture individual talents, encourage curiosity, and build strong community connections.',
+    text: 'We take a holistic approach to education, emphasizing not only academic excellence but also personal development. Through this, we foster resilience, creativity, and critical thinking, equipping students for success beyond the classroom.',
     action: { label: 'Explore Our Ethos', href: '/about', icon: true },
     portraitImage: {
       src: portraitImage1,
@@ -39,8 +38,8 @@ const blocks = [
   },
   {
     tagline: 'Community and Belonging',
-    headline: 'Empowering Students in a Supportive Environment',
-    text: 'Azza Supplementary School stands as a beacon of community strength and student empowerment. Initiated by refugee women with a vision, we have grown into a sanctuary of learning and development. We welcome children from diverse backgrounds, helping them form lasting friendships and enriching their sense of community involvement. With a range of activities, we ensure every student finds their place of belonging and a path to self-discovery.',
+    headline: 'Creating Community Leaders',
+    text: 'By prioritizing leadership, teamwork, and social responsibility, we prepare our students to take active roles in their communities. Our emphasis on ethical conduct and community involvement inspires students to contribute positively to society and cultivate meaningful relationships.',
     action: { label: 'Become Part of Our Story', href: '/about', icon: true },
     portraitImage: {
       src: portraitImage2,

@@ -1,12 +1,8 @@
 ---
-name: Tecia Torres
-role: Executive Director
-image: "/images/stock/staff/staff-01.jpg"
+name: Samira Abboud
+role: Cultural Studies Coordinator
+image: '/images/stock/staff/headshot-placeholder.jpeg'
+portraitImage: '/images/stock/staff/headshot-placeholder.jpeg'
 featured: true
-portraitImage: "/images/stock/about-team-01.jpg"
-social:
-  - name: "twitter"
-    href: "#"
-  - name: "facebook"
-    href: "#"
+social: []
 ---

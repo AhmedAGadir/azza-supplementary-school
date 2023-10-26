@@ -2,7 +2,8 @@ import Image from 'next/image'
 
 import { Icon } from '@/components/Icon'
 import { Button } from '@/components/Button'
-import sunrise from '/public/images/illustrations/sunrise.svg'
+// import sunrise from '/public/images/illustrations/sunrise.svg'
+import crestLogo from 'public/images/logo-icon.png'
 import highlight from '/public/images/illustrations/underline-simple-light-purple.svg'
 
 export const CallToAction = () => {
@@ -10,11 +11,11 @@ export const CallToAction = () => {
     <section className="bg-white py-24 sm:py-32">
       {/* Container */}
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        {/* Sunrise image */}
-        <Image className="mx-auto w-72" src={sunrise} alt="" />
+        {/* crestLogo image */}
+        <Image className="mx-auto w-72" src={crestLogo} alt="" />
         {/* Header */}
         <h2 className="h1 mx-auto mt-6 max-w-3xl text-center text-purple-900">
-          <span className="block">Give your kid a</span>
+          <span className="block">Join us</span>
           {/* Underlined text */}
           <span className="relative block">
             <span className="relative">
@@ -23,7 +24,7 @@ export const CallToAction = () => {
                 src={highlight}
                 alt=""
               />
-              <span className="relative">brighter future</span>
+              <span className="relative">today</span>
             </span>
           </span>
         </h2>

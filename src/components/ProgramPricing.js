@@ -43,72 +43,66 @@ export const ProgramPricing = ({ data }) => {
             </div>
           </div>
           {/* Pricing cards */}
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:mt-20 lg:gap-4 xl:gap-8">
-            {[...Array(2)].map((e, i) => (
-              <div
-                key={`pricing-card-${i}`}
-                className={clsx(
-                  i == 0 ? 'bg-purple-25' : 'bg-yellow-200 lg:-translate-y-20',
-                  'w-full rounded-xl px-6 py-10 lg:px-5 xl:px-10',
-                )}
-              >
-                <div className="relative">
-                  <div className="relative inline-block w-full text-left">
-                    <h3 className="relative text-xl font-bold tracking-normal text-purple-900">
-                      {data[`pricing${i + 1}`].name}
-                    </h3>
-                    <div className="mt-2">
-                      <h2 className="h1 text-purple-900">
-                        {data[`pricing${i + 1}`].price}
-                      </h2>
-                      <div className="mt-3">
-                        <div className="inline-block h-6 -rotate-1 rounded-xl bg-purple-200 px-3 align-top text-sm font-medium leading-6 text-purple-700">
-                          {data[`pricing${i + 1}`].interval}
-                        </div>
-                      </div>
-                      <p className="mt-6 block w-full font-medium text-purple-900">
-                        {data[`pricing${i + 1}`].shortDescription}
-                      </p>
+          <div
+            key="pricing-card"
+            className={clsx(
+              'bg-purple-25',
+              'mt-14 w-full rounded-xl px-6 py-10 lg:mt-20 lg:px-5 xl:px-10',
+            )}
+          >
+            <div className="relative">
+              <div className="relative inline-block w-full text-left">
+                <h3 className="relative text-xl font-bold tracking-normal text-purple-900">
+                  {data.pricing.name}
+                </h3>
+                <div className="mt-2">
+                  <h2 className="h1 text-purple-900">{data.pricing.price}</h2>
+                  <div className="mt-3">
+                    <div className="inline-block h-6 -rotate-1 rounded-xl bg-purple-200 px-3 align-top text-sm font-medium leading-6 text-purple-700">
+                      {data.pricing.interval}
                     </div>
-                    {/* Features */}
-                    <ul className="mt-4 space-y-2 text-base">
-                      {data[`pricing${i + 1}`].features.map((item, index) => (
-                        <li
-                          key={`pricing-1-feature-${index}`}
-                          className="flex items-center"
-                        >
-                          <Icon
-                            icon="check"
-                            className="h-5 w-5 text-purple-600"
-                            stroke={2}
-                          />
-
-                          <span className="ml-2 text-purple-800">
-                            {item.feature}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                    {/* CTA button */}
-                    <Button
-                      href={data[`pricing${i + 1}`].action.href}
-                      className="mt-6"
-                      variant="accent"
-                      size="sm"
-                    >
-                      {data[`pricing${i + 1}`].action.label}
-                      {data[`pricing${i + 1}`].action.icon && (
-                        <Icon
-                          icon="arrowNarrowRight"
-                          className="ml-3 h-5 w-5 group-hover:animate-horizontal-bounce"
-                          stroke={2}
-                        />
-                      )}
-                    </Button>
                   </div>
+                  <p className="mt-6 block w-full font-medium text-purple-900">
+                    {data.pricing.shortDescription}
+                  </p>
                 </div>
+                {/* Features */}
+                <ul className="mt-4 space-y-2 text-base">
+                  {data.pricing.features.map((item, index) => (
+                    <li
+                      key={`pricing-feature-${index}`}
+                      className="flex items-center"
+                    >
+                      <Icon
+                        icon="check"
+                        className="h-5 w-5 text-purple-600"
+                        stroke={2}
+                      />
+
+                      <span className="ml-2 text-purple-800">
+                        {item.feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                {/* CTA button */}
+                <Button
+                  href={data.pricing.action.href}
+                  className="mt-6"
+                  variant="accent"
+                  size="sm"
+                >
+                  {data.pricing.action.label}
+                  {data.pricing.action.icon && (
+                    <Icon
+                      icon="arrowNarrowRight"
+                      className="ml-3 h-5 w-5 group-hover:animate-horizontal-bounce"
+                      stroke={2}
+                    />
+                  )}
+                </Button>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>

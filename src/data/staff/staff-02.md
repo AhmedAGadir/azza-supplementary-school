@@ -1,12 +1,8 @@
 ---
-name: Andrea Lee
-role: Elementary Director & Lead
-image: "/images/stock/staff/staff-02.jpg"
+name: Amal Bashir
+role: Lead Mathematics Educator
+image: '/images/stock/staff/headshot-placeholder.jpeg'
+portraitImage: '/images/stock/staff/headshot-placeholder.jpeg'
 featured: true
-portraitImage: "/images/stock/about-team-02.jpg"
-social:
-  - name: "twitter"
-    href: "#"
-  - name: "facebook"
-    href: "#"
+social: []
 ---

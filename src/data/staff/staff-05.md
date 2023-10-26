@@ -1,12 +1,8 @@
 ---
-name: Tom Aspinall
-role: Music Teacher
-image: "/images/stock/staff/staff-05.jpg"
-featured: true
-portraitImage: "/images/stock/about-team-03.jpg"
-social:
-  - name: "twitter"
-    href: "#"
-  - name: "facebook"
-    href: "#"
+name: Yasmine Fathi
+role: Community Outreach Manager
+image: '/images/stock/staff/headshot-placeholder.jpeg'
+portraitImage: '/images/stock/staff/headshot-placeholder.jpeg'
+featured: false
+social: []
 ---

@@ -1,10 +1,8 @@
 ---
-name: Angela Hill
-role: Preschool Director & Lead
-image: "/images/stock/staff/staff-03.jpg"
-social:
-  - name: "twitter"
-    href: "#"
-  - name: "facebook"
-    href: "#"
+name: Hiba Zakaria
+role: Science Department Head
+image: '/images/stock/staff/headshot-placeholder.jpeg'
+portraitImage: '/images/stock/staff/headshot-placeholder.jpeg'
+featured: true
+social: []
 ---

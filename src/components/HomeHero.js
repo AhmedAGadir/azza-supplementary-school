@@ -47,8 +47,7 @@ export const HomeHero = () => {
           </h1>
           <p className="mt-3 max-w-2xl text-center text-xl leading-loose text-purple-800 lg:text-left">
             We unite cultural enrichment and academic advancement, shaping
-            confident learners who balance their heritage with active roles in
-            British society. <br />
+            confident learners ready to take on active roles in society. <br />
             Join us where learning transcends textbooks, building community,
             identity, and contributing to a harmonious, collective future.
           </p>
