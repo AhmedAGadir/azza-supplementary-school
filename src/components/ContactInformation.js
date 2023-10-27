@@ -3,7 +3,6 @@ import { getItemData } from '@/lib/getItems'
 
 export const ContactInformation = () => {
   const contact = getItemData('contact', 'global')
-
   return (
     <section className="relative -mb-52 w-full -translate-y-52 bg-white px-4 pt-56 sm:px-6 sm:pt-64 lg:px-8 lg:pt-72">
       {/* Contact information container */}
@@ -17,8 +16,9 @@ export const ContactInformation = () => {
           </div>
           <div className="mt-3 flex items-center sm:mt-4 lg:mt-0">
             <p className="text-lg text-purple-800 text-opacity-90 sm:text-xl">
-              Dictum urna sed consectetur neque tristique pellentesque. Blandit
-              amet, sed aenean erat arcu morbi.
+              Reach out to us for any inquiries or support. We're here to assist
+              and guide you through any needed information or help concerning
+              our educational services and community involvement.
             </p>
           </div>
         </div>
@@ -73,7 +73,10 @@ export const ContactInformation = () => {
                   Call us
                 </h5>
                 <p className="mt-1.5 text-base leading-relaxed text-purple-800">
-                  {contact.phone}
+                  {contact.phoneA}
+                </p>
+                <p className="mt-1.5 text-base leading-relaxed text-purple-800">
+                  {contact.phoneB}
                 </p>
               </div>
             </div>
@@ -84,9 +87,9 @@ export const ContactInformation = () => {
       <div className="mt-16 rounded-3xl lg:mx-auto lg:mt-24 lg:max-w-screen-xl">
         <iframe
           className="w-full rounded-3xl"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3086.1624232420972!2d-76.62270638437457!3d39.329905428938126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c804df8502f88d%3A0x303d58494fa04c66!2sJohns%20Hopkins%20University!5e0!3m2!1sen!2sus!4v1629758627091!5m2!1sen!2sus"
           height={600}
           style={{ border: 0 }}
+          src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ_-A3f98PdkgR5Qn6SpOkZs0&key=${process.env.NEXT_PUBLIC_API_KEY}`}
           allowFullScreen
           loading="lazy"
         />

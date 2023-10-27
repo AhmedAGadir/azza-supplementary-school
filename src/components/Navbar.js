@@ -103,7 +103,7 @@ export function Navbar({ programs }) {
                     </Fragment>
                   ))}
 
-                  <Button href="#">Enroll today</Button>
+                  <Button href="/enroll">Enroll today</Button>
                 </div>
 
                 <hr className="my-8 w-full border-purple-200 border-opacity-30 sm:my-10" />
@@ -253,7 +253,7 @@ export function Navbar({ programs }) {
 
           {/* Call to action button */}
           <div className="hidden lg:block">
-            <Button href="#">Enroll today</Button>
+            <Button href="/enroll">Enroll today</Button>
           </div>
           {/* Logo on smaller screens: < lg */}
           <div className="block w-48 flex-shrink-0 flex-grow-0 sm:w-52 lg:hidden">

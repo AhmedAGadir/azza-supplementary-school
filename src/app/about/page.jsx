@@ -3,6 +3,7 @@ import { AlternatingFeatures } from '@/components/AlternatingFeatures'
 import { Stats } from '@/components/Stats'
 import { Staff } from '@/components/Staff'
 import { Values } from '@/components/Values'
+import { Maintenance } from '@/components/Maintenance'
 
 export const metadata = {
   title: 'About us - Azza Supplementary School',
@@ -11,6 +12,7 @@ export const metadata = {
 }
 
 export default function AboutPage() {
+  return <Maintenance />
   return (
     <>
       <AboutHero />

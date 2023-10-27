@@ -8,7 +8,7 @@ hero:
   text: Delve into the diverse realms of human cultures, past and present, guided by seasoned educators committed to illuminating the richness of human heritage and societal dynamics.
   action:
     label: Enroll today
-    href: '#'
+    href: '/enroll'
     icon: true
   image:
     src: '/images/stock/cultural-studies-flags.jpeg'
@@ -39,7 +39,7 @@ descriptionSection:
 
 
     We create a learning atmosphere of exploration and respect, essential for understanding the multifaceted nature of human societies. Our instructors are not just teachers; they are guides illuminating the path through the world’s cultural landscape, eager to pass on their knowledge and appreciation for the diversity of human experience.
-  portraitImage: '/images/stock/cultural-studies-education.jpeg'
+  portraitImage: '/images/stock/cultural-studies-pin.jpg'
   squareImage1: '/images/stock/cultural-studies-classroom.jpeg'
   squareImage2: '/images/stock/cultural-studies-map.jpeg'
 pricingSection:
@@ -56,6 +56,6 @@ pricingSection:
       - feature: One fee, multiple subjects - simplicity in academic planning
     action:
       label: Enroll Today
-      href: '#'
+      href: '/enroll'
       icon: true
 ---

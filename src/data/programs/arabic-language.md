@@ -8,7 +8,7 @@ hero:
   text: Dive deep into the nuances of the Arabic language and culture, guided by experienced educators dedicated to excellence in comprehensive language acquisition and cultural appreciation.
   action:
     label: Enroll today
-    href: '#'
+    href: '/enroll'
     icon: true
   image:
     src: '/images/stock/arabic-school.jpeg'
@@ -56,6 +56,6 @@ pricingSection:
       - feature: One fee, multiple subjects - simplicity in academic planning
     action:
       label: Enroll Today
-      href: '#'
+      href: '/enroll'
       icon: true
 ---

@@ -17,8 +17,8 @@ export const Faqs = ({ faqs }) => {
         <div className="max-w-2xl">
           <h2 className="h2 text-purple-900">Frequently asked questions</h2>
           <p className="mt-4 max-w-2xl text-xl leading-relaxed text-purple-800 lg:text-left">
-            Find the information you need about our programs, curriculum, and
-            more.
+            Seeking more information? Explore our FAQ section for insights on
+            program specifics, scheduling, and our educational approach.
           </p>
         </div>
         {/* FAQ */}

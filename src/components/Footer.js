@@ -11,7 +11,7 @@ const siteLinks = [
   // { label: 'Activities', href: '/activities' },
   { label: 'Policies', href: '/policies' },
   { label: 'School Calendar', href: '/calendar' },
-  { label: 'Registration Form', href: '/registration' },
+  { label: 'Enrollment', href: '/enroll' },
   { label: 'Contact us', href: '/contact' },
 ]
 

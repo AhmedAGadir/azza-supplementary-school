@@ -29,7 +29,7 @@ export const CallToAction = () => {
         </h2>
         {/* CTA button */}
         <div className="mt-12 flex justify-center xl:mt-14">
-          <Button href="#0">
+          <Button href="/enroll">
             Enroll today
             <Icon
               icon="arrowNarrowRight"

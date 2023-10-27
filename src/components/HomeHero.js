@@ -53,7 +53,7 @@ export const HomeHero = () => {
           </p>
           {/* Hero buttons */}
           <div className="mt-8 flex flex-col items-center overflow-hidden sm:flex-row">
-            <Button href="#0">
+            <Button href="/enroll">
               Enroll today
               <Icon
                 icon="arrowNarrowRight"

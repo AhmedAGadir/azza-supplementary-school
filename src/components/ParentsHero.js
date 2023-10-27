@@ -92,7 +92,7 @@ export const ParentsHero = () => {
           {/* Enroll CTA*/}
           <div className="mt-10 font-semibold lg:mt-12">
             <p className="text-purple-800">Not enrolled in our school?</p>
-            <Button href="#0" size="sm" className="mt-2 sm:mt-3">
+            <Button href="/enroll" size="sm" className="mt-2 sm:mt-3">
               Enroll today
               <Icon
                 icon="arrowNarrowRight"

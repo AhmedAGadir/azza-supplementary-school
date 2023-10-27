@@ -8,7 +8,7 @@ hero:
   text: Deepen your command of the English language under the guidance of expert educators, committed to bringing every student into the world of nuanced communication and insightful literary appreciation.
   action:
     label: Enroll today
-    href: '#'
+    href: '/enroll'
     icon: true
   image:
     src: '/images/stock/english-board.webp'
@@ -56,6 +56,6 @@ pricingSection:
       - feature: One fee, multiple subjects - simplicity in academic planning
     action:
       label: Enroll Today
-      href: '#'
+      href: '/enroll'
       icon: true
 ---

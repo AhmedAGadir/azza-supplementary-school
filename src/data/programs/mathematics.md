@@ -8,7 +8,7 @@ hero:
   text: Uncover the secrets of mathematics through a journey from the fundamental principles to complex problem-solving, guided by our dedicated educators committed to excellence in mathematical education and logical thinking.
   action:
     label: Enroll today
-    href: '#'
+    href: '/enroll'
     icon: true
   image:
     src: '/images/stock/maths-problem.webp'
@@ -56,6 +56,6 @@ pricingSection:
       - feature: One fee, multiple subjects - simplicity in academic planning
     action:
       label: Enroll Today
-      href: '#'
+      href: '/enroll'
       icon: true
 ---

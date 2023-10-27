@@ -25,7 +25,7 @@ const fields = [
     name: 'phone',
     label: 'Phone',
     type: 'text',
-    placeholder: '(123) 456-7890',
+    placeholder: '01234567890',
     required: true,
   },
   {
@@ -53,8 +53,10 @@ export const ContactHero = () => {
             We'd love to hear from you
           </h1>
           <p className="mt-3 max-w-lg text-xl leading-relaxed text-purple-800">
-            Praesent sapien massa, convallis a pellentesque nec, egestas non
-            nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+            Whether you have questions, feedback, or stories to share, we're
+            here for you. Our community thrives on your insights, and we're
+            committed to ensuring your experience with us is positive,
+            impactful, and meaningful.
           </p>
         </div>
         {/* Contact form container */}
