@@ -84,16 +84,18 @@ export const ContactInformation = () => {
         </div>
       </div>
       {/* Google map widget */}
-      <div className="mt-16 rounded-3xl lg:mx-auto lg:mt-24 lg:max-w-screen-xl">
-        <iframe
-          className="w-full rounded-3xl"
-          height={600}
-          style={{ border: 0 }}
-          src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ_-A3f98PdkgR5Qn6SpOkZs0&key=${process.env.NEXT_PUBLIC_API_KEY}`}
-          allowFullScreen
-          loading="lazy"
-        />
-      </div>
+      {process.env.NEXT_PUBLIC_API_KEY && (
+        <div className="mt-16 rounded-3xl lg:mx-auto lg:mt-24 lg:max-w-screen-xl">
+          <iframe
+            className="w-full rounded-3xl"
+            height={600}
+            style={{ border: 0 }}
+            src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ_-A3f98PdkgR5Qn6SpOkZs0&key=${process.env.NEXT_PUBLIC_API_KEY}`}
+            allowFullScreen
+            loading="lazy"
+          />
+        </div>
+      )}
     </section>
   )
 }
