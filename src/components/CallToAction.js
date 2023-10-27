@@ -15,9 +15,8 @@ export const CallToAction = () => {
         <Image className="mx-auto w-72" src={crestLogo} alt="" />
         {/* Header */}
         <h2 className="h1 mx-auto mt-6 max-w-3xl text-center text-purple-900">
-          <span className="block">Join us</span>
-          {/* Underlined text */}
-          <span className="relative block">
+          <span className="inline">Join </span> {/* Underlined text */}
+          <span className="relative">
             <span className="relative">
               <Image
                 className="absolute inset-0 translate-y-9 transform sm:translate-y-11 xl:translate-y-14"

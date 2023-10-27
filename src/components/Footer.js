@@ -40,16 +40,17 @@ export const Footer = ({ programs, contact }) => {
           <div className="flex items-center">
             <div className="w-60 flex-shrink-0 flex-grow-0">
               <Link href="/">
-                <Image src={logo} alt="Bright" className="h-auto" />
+                <Image
+                  src={logo}
+                  alt="Azza Supplementary School"
+                  className="h-auto"
+                />
               </Link>
             </div>
           </div>
           {/* Mission statement */}
           <div className="mt-6 text-lg text-purple-800">
-            We dedicate ourselves to fostering a deep sense of cultural identity
-            while nurturing academic excellence. We empower our students to
-            embrace their heritage with pride and contribute actively and
-            compassionately to their communities.
+            Empowering Communities, Enriching Education
           </div>
           {/* Social links */}
           <div className="mt-5 w-full lg:mt-6">
@@ -62,10 +63,7 @@ export const Footer = ({ programs, contact }) => {
                 href="https://www.facebook.com/azza.supplementary"
                 icon="facebook"
               />
-              <SocialLink
-                href="https://twitter.com/AzzaSupplement1"
-                icon="twitter"
-              />
+              <SocialLink href="  " icon="twitter" />
             </div>
           </div>
         </div>

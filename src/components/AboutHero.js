@@ -23,7 +23,7 @@ export function AboutHero() {
         {/* Page header */}
         <div className="relative">
           <h2 className="h1 mx-auto max-w-3xl text-center text-purple-900">
-            Why Bright
+            Why Azza
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-xl leading-relaxed text-purple-800 sm:mt-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

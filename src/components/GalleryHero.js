@@ -26,7 +26,7 @@ export const GalleryHero = () => {
             </span>
           </div>
           <h2 className="h1 mx-auto mt-4 max-w-3xl text-center text-purple-900">
-            See what the Bright experience looks like
+            See what the Azza experience looks like
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-xl leading-relaxed text-purple-800 sm:mt-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

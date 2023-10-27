@@ -16,7 +16,7 @@ export const Staff = () => {
           <div className="lg:grid lg:grid-cols-2 lg:gap-16">
             <div className="flex items-center">
               <h3 className="h2 max-w-4xl text-white sm:text-center lg:text-left">
-                Meet the awesome staff behind Bright school
+                Meet the awesome staff behind Azza
               </h3>
             </div>
             <div className="flex items-center">

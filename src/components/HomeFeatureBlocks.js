@@ -4,10 +4,10 @@ import clsx from 'clsx'
 import { Icon } from '@/components/Icon'
 import { Button } from '@/components/Button'
 import checkmark from '/public/images/illustrations/checkmark.svg'
-import portraitImage1 from '/public/images/stock/open-book.jpg'
-import squareImage1 from '/public/images/stock/cultural-studies.jpg'
-import portraitImage2 from '/public/images/stock/learning.jpg'
-import squareImage2 from '/public/images/stock/math.jpg'
+import portraitImage1 from '/public/images/photos/boys-football.jpg'
+import squareImage1 from '/public/images/photos/kids-playing-outside-cropped.jpg'
+import portraitImage2 from '/public/images/photos/girls-outside-cropped2.jpg'
+import squareImage2 from '/public/images/photos/student-girls-on-wall-cropped.jpg'
 
 const features = [
   'Holistic education',
@@ -25,7 +25,7 @@ const blocks = [
   {
     tagline: 'Beyond Academics',
     headline: "Fostering Every Child's Potential",
-    text: 'We take a holistic approach to education, emphasizing not only academic excellence but also personal development. Through this, we foster resilience, creativity, and critical thinking, equipping students for success beyond the classroom.',
+    text: 'We emphasize academic achievement alongside personal development, nurturing resilience, creativity, and critical thinking. Our commitment lies in equipping students with the skills necessary for success in and out of the classroom.',
     action: { label: 'Explore Our Ethos', href: '/about', icon: true },
     portraitImage: {
       src: portraitImage1,

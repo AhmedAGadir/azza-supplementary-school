@@ -9,7 +9,7 @@ import { getAllItems } from '@/lib/getItems'
 
 export const metadata = {
   title:
-    'Azza Supplementary School - Nurturing Potential, Celebrating Identity.',
+    'Azza Supplementary School - Empowering Communities, Enriching Education.',
   description:
     'At Azza Supplementary School, we blend cultural enrichment with academic growth, cultivating confident learners proud of their heritage. Join us in a journey where education extends beyond textbooks, fostering community, identity, and a shared future.',
 }

@@ -3,9 +3,9 @@ import { Events } from '@/components/Events'
 import { Newsletter } from '@/components/Newsletter'
 
 export const metadata = {
-  title: 'Parent information - Bright',
+  title: 'Parent information - Azza Supplementary School',
   description:
-    'Stay connected with Bright Preschool & Elementary through our Parents Portal - your go-to source for school news, events, and updates.',
+    'Stay connected with Azza Supplementary School through our Parents Portal - your go-to source for school news, events, and updates.',
 }
 
 export default function ParentsPage() {

@@ -15,8 +15,8 @@ const navigation = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Programs' },
-  { label: 'Gallery', href: '/gallery' },
-  { label: 'Parents', href: '/parents' },
+  { label: 'Activities', href: '/activities' },
+  { label: 'School Calendar', href: '/calendar' },
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -258,7 +258,11 @@ export function Navbar({ programs }) {
           {/* Logo on smaller screens: < lg */}
           <div className="block w-48 flex-shrink-0 flex-grow-0 sm:w-52 lg:hidden">
             <Link href="/">
-              <Image src={logo} alt="Bright" className="h-auto" />
+              <Image
+                src={logo}
+                alt="Azza Supplementary School"
+                className="h-auto"
+              />
             </Link>
           </div>
 

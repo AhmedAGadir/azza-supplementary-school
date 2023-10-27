@@ -8,8 +8,8 @@ import clsx from 'clsx'
 import { Icon } from '@/components/Icon'
 import { Button } from '@/components/Button'
 
-import heroImage1 from '/public/images/stock/classroom-03.jpg'
-import heroImage2 from '/public/images/stock/high-five.jpg'
+import heroImage1 from '/public/images/photos/certificates-1-cropped-2.jpg'
+import heroImage2 from '/public/images/photos/gardening-cropped.jpg'
 
 const ratings = [
   // { label: 'Great Schools', stars: 5 },
@@ -43,7 +43,7 @@ export const HomeHero = () => {
             </span>
           </div>
           <h1 className="h1 mt-4 max-w-xl text-center text-slate-800 sm:mt-5 lg:max-w-none lg:text-left">
-            Nurturing Potential, Celebrating Identity
+            Empowering Communities, Enriching Education
           </h1>
           <p className="mt-3 max-w-2xl text-center text-xl leading-loose text-purple-800 lg:text-left">
             We unite cultural enrichment and academic advancement, shaping

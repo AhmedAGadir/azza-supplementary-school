@@ -13,7 +13,11 @@ export function ContactHeader({ contact }) {
           {/* Site branding */}
           <div className="w-60 flex-shrink-0 flex-grow-0">
             <Link href="/">
-              <Image src={logo} alt="Bright" className="h-auto" />
+              <Image
+                src={logo}
+                alt="Azza Supplementary School"
+                className="h-auto"
+              />
             </Link>
           </div>
           {/* Contact information */}

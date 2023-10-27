@@ -9,7 +9,7 @@ export async function generateMetadata({ params: { slug } }) {
   const program = getItemData(slug, 'programs')
 
   return {
-    title: `${program.name} - Bright School`,
+    title: `${program.name} - Azza Supplementary School`,
     description: program.hero.description,
   }
 }
