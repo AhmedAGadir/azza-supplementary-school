@@ -1,7 +1,7 @@
 ---
 name: English
 dropdownDescription: Discover the nuances of English through a journey of linguistic exploration and expression.
-featured: true
+featured: false
 hero:
   tagline: Words Shape the World
   headline: Azza's English Excellence Program
