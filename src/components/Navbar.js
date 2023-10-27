@@ -7,7 +7,7 @@ import { Fragment } from 'react'
 import { Menu, Transition, Popover } from '@headlessui/react'
 import clsx from 'clsx'
 
-import logo from '/public/images/azza-logo.svg'
+import logo from '/public/images/azza-logo.png'
 import { Button } from '@/components/Button'
 import { Icon } from '@/components/Icon'
 
