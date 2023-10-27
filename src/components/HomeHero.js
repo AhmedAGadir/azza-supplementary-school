@@ -14,7 +14,7 @@ import heroImage2 from '/public/images/photos/gardening-cropped.jpg'
 const ratings = [
   // { label: 'Great Schools', stars: 5 },
   { label: 'Arabic School Review', stars: 5 },
-  { label: 'Google Reviews', stars: 5 },
+  // { label: 'Google Reviews', stars: 5 },
 ]
 
 export const HomeHero = () => {
