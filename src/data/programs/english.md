@@ -1,5 +1,6 @@
 ---
 name: English
+order: 3
 dropdownDescription: Discover the nuances of English through a journey of linguistic exploration and expression.
 featured: true
 hero:

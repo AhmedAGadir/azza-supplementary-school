@@ -11,6 +11,7 @@ const assurances = [
   'Over three years of hands-on teaching experience',
   'Genuine passion for guiding and inspiring children',
   'Devotion to ensuring a positive and supportive classroom for every student',
+  'Fluent in Arabic and English',
   'Training working with children with special needs',
 ]
 
@@ -23,11 +24,11 @@ export const StaffAssurances = () => {
     <section className="relative w-full px-4 py-16 sm:px-6 sm:py-24 xl:px-8">
       {/* Container */}
       <div className="mx-auto max-w-xl lg:max-w-screen-xl">
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-12 xl:grid-cols-11 xl:gap-24">
+        <div className="grid gap-16 lg:grid-cols-2 lg:gap-12">
           {/* Text content */}
-          <div className="flex flex-col justify-center lg:order-2 lg:col-span-1 xl:col-span-6">
+          <div className="flex flex-col justify-center lg:col-span-1 ">
             <div>
-              <span className="inline-block -rotate-1 rounded-full bg-purple-200 px-4 py-2 font-medium text-purple-700 shadow-md">
+              <span className="- inline-block rounded-full bg-purple-200 px-4 py-2 font-medium text-purple-700 shadow-md">
                 Your children are in good hands
               </span>
             </div>
@@ -40,7 +41,9 @@ export const StaffAssurances = () => {
               to learn and grow. We are proud to have a strong team of
               experienced, passionate, and dedicated individuals.
             </p>
-            {/* Teacher qualifications box */}
+          </div>
+          {/* Teacher qualifications box */}
+          <div className="mx-auto w-full sm:mx-0 sm:max-w-none ">
             <div className="relative mt-16 max-w-4xl rounded-xl bg-yellow-100 sm:mt-14">
               <span className="absolute -top-7 left-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-600 to-purple-600 shadow-md sm:left-10">
                 <Icon icon="certificate" className="h-8 w-8 text-purple-50" />
@@ -81,33 +84,6 @@ export const StaffAssurances = () => {
                 </Button>
               </div>
             </div>
-          </div>
-          {/* Featured teachers section */}
-          <div className="mx-auto grid w-full gap-10 sm:mx-0 sm:max-w-none sm:grid-cols-2 sm:gap-8 lg:order-1 lg:col-span-1 lg:mt-20 lg:gap-4 xl:col-span-5 xl:gap-8">
-            {featuredStaff.map((member, index) => (
-              <div
-                key={`featured-member-${index}`}
-                className={clsx(index % 2 == 0 && 'lg:-translate-y-20')}
-              >
-                <div className="aspect-h-2 aspect-w-3 relative rounded-3xl bg-yellow-50 sm:aspect-h-4 sm:aspect-w-3">
-                  <Image
-                    className="absolute inset-0 h-full w-full rounded-3xl object-cover shadow-md"
-                    fill
-                    src={member.data.portraitImage}
-                    sizes="(min-width: 1280px) 15.6rem, (min-width: 1024px) 20.8vw, (min-width: 640px) 17rem, 100vw"
-                    alt={member.data.name}
-                  />
-                </div>
-                <div className="mt-3.5 pl-2 text-lg sm:pl-0 sm:text-center">
-                  <p className="font-semibold tracking-wide text-purple-800">
-                    {member.data.name}
-                  </p>
-                  <p className="text-base font-medium text-purple-600">
-                    {member.data.role}
-                  </p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>

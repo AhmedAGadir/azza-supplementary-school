@@ -1,11 +1,12 @@
 ---
 name: Arabic Language
-dropdownDescription: Embark on a journey of language and culture with our immersive Arabic program.
+order: 1
+dropdownDescription: Dive deep into our immersive Arabic language program.
 featured: true
 hero:
   tagline: Embrace a World of Opportunity with Arabic
   headline: Azza's Arabic Language Program
-  text: Dive deep into the nuances of the Arabic language and culture, guided by experienced educators dedicated to excellence in comprehensive language acquisition and cultural appreciation.
+  text: Delve into the rich tapestry of the Arabic language, from its elegant script to its vibrant modes of expression, and empower your child with a linguistic asset for life.
   action:
     label: Enroll today
     href: '/enroll'
@@ -13,32 +14,27 @@ hero:
   image:
     src: '/images/stock/arabic-school.jpeg'
 infoSection:
-  headline: The Arabic Program dedicated to linguistic mastery
-  text: Navigate the intricacies of the Arabic language, embracing its historical significance and contemporary relevance through a curriculum designed to inspire passion for language learning and cultural understanding.
+  headline: The ultimate Arabic language journey for young learners
+  text: Through Azza's program, students grasp the Arabic language's expanse, from foundational script to nuanced conversations.
   ages: 5 - 16 years old
   dates: Sept. 23 - July 6
   schedule: Saturdays from 10AM - 2PM
   classSize: Student to teacher ratio of 15:1
 descriptionSection:
   text: >
-    ## Our unique approach to language immersion
+    ## Our Unique Approach to Language Immersion
             
-    From the alphabet to eloquence, our program encompasses every aspect of the Arabic language, empowering students to engage confidently with native speakers and texts. Through interactive sessions, students experience the language first-hand, enhancing their conversational skills, writing, and comprehension.
+    Our curriculum is designed to guide students through every facet of the Arabic language. From understanding the unique script to achieving fluency in conversation, Azza's program provides a comprehensive Arabic learning experience. 
         
-    ### What they will learn
+    ### What students will learn
           
-    * Proficiency in reading and writing Arabic script.
+    * Mastery of reading and writing the Arabic script.
+    * Effective communication skills, from casual chats to formal discourse.
+    * Techniques for listening comprehension across various contexts.
+    * Enhanced writing abilities, allowing them to express ideas clearly and eloquently in Arabic.
+    * Strategies for interpreting diverse Arabic texts, from literature to modern articles.
 
-    * Confidence in conversation, from everyday dialogue to formal communication.
-
-    * Deep understanding of cultural contexts, enabling meaningful interaction with Arabic literature, media, and traditions.
-
-    * Appreciation for the historical influence and modern relevance of the Arabic language.
-
-    * Skills to navigate real-life situations, contributing to lifelong linguistic and cultural competence.
-
-
-    We foster an environment of support and challenge, essential for language acquisition. Our instructors are more than teachers; they are custodians of a rich cultural tapestry, dedicated to passing on their knowledge and passion for the Arabic language.
+    At Azza, we believe in a holistic approach to language learning, ensuring students not only memorize but deeply understand and love the Arabic language. Our dedicated educators are committed to fostering this passion and ensuring every student reaches their linguistic potential.
   portraitImage: '/images/stock/arabic-class.jpeg'
   squareImage1: '/images/stock/arabic-writing.jpeg'
   squareImage2: '/images/stock/arabic-books.png'

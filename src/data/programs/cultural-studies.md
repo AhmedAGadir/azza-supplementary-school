@@ -1,7 +1,8 @@
 ---
 name: Cultural Studies
+order: 4
 dropdownDescription: Explore the richness of diverse cultures with our comprehensive Cultural Studies program.
-featured: false
+featured: true
 hero:
   tagline: Journey Through the Tapestry of Human Civilization
   headline: Azza's Cultural Studies Exploration

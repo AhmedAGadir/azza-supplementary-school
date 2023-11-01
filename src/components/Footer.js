@@ -134,6 +134,8 @@ export const Footer = ({ programs, contact }) => {
                 </h5>
                 <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
                   {contact.address}
+                  <br />
+                  (Term dates between 10am - 2pm only)
                 </p>
               </div>
             </li>

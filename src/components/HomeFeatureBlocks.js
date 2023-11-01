@@ -10,7 +10,7 @@ import portraitImage2 from '/public/images/photos/girls-outside-cropped2.jpg'
 import squareImage2 from '/public/images/photos/student-girls-on-wall-cropped.jpg'
 
 const features = [
-  'Holistic education',
+  'Arabic language',
   'Academic support',
   'Cultural studies',
   'Personal growth',
@@ -149,7 +149,7 @@ export const HomeFeatureBlocks = () => {
               )}
             >
               <div>
-                <span className="inline-block -rotate-1 rounded-full bg-orange-200 px-4 py-2 font-medium text-purple-700 shadow-md">
+                <span className="- inline-block rounded-full bg-orange-200 px-4 py-2 font-medium text-purple-700 shadow-md">
                   {block.tagline}
                 </span>
               </div>

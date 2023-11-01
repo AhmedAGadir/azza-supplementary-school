@@ -10,7 +10,7 @@ export const ProgramHero = ({ hero }) => {
         {/* Header */}
         <div className="relative">
           <div className="flex justify-center">
-            <span className="inline-block -rotate-1 rounded-full bg-purple-200 px-4 py-2 font-medium text-purple-700 shadow-md">
+            <span className="inline-block rounded-full bg-purple-200 px-4 py-2 font-medium text-purple-700 shadow-md">
               {hero.tagline}
             </span>
           </div>

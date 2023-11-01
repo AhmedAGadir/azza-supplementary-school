@@ -11,16 +11,18 @@ const ProgramCard = ({ program, index }) => (
   <div
     className={clsx(
       index == 1 &&
-        'mt-12 w-full rounded-3xl bg-yellow-200 px-8 py-10 sm:p-12 md:mt-0 md:-translate-y-80 md:px-8 md:py-10 lg:p-12',
+        'mt-12 w-full rounded-3xl bg-green-50 px-8 py-10 sm:p-12 md:mt-0 md:px-8 md:py-10 lg:p-12',
       index == 2 &&
-        'mt-12 w-full rounded-3xl bg-blue-50 px-8 py-10 sm:p-12 md:col-start-2 md:mt-0 md:-translate-y-80 md:px-8 md:py-10 lg:p-12',
+        'mt-12 w-full rounded-3xl bg-blue-50 px-8 py-10 sm:p-12 md:col-start-1 md:mt-0 md:-translate-y-60 md:px-8 md:py-10 lg:p-12',
       'relative',
+      index == 3 &&
+        'mt-12 w-full rounded-3xl bg-yellow-100 px-8 py-10 sm:p-12 md:mt-0 md:px-8 md:py-10 lg:p-12',
     )}
   >
     {index == 0 && (
       <Image
         src={curvedDottedLine}
-        className="absolute left-1/2 top-0 hidden -translate-y-1/2 md:block"
+        className="absolute left-1/2 top-0 hidden -translate-y-1/2 translate-x-1/2 -scale-x-100 md:block"
         style={{ width: 'calc(50% + 4rem)' }}
         alt=""
       />
@@ -28,7 +30,7 @@ const ProgramCard = ({ program, index }) => (
     <div
       className={clsx(
         index == 0 &&
-          'relative z-10 w-full rounded-3xl bg-purple-25 px-8 py-10 sm:p-12 md:px-8 md:py-10 lg:p-12',
+          'relative z-10 w-full rounded-3xl bg-purple-25 px-8 py-10 sm:p-12 md:-translate-y-60 md:px-8 md:py-10 lg:p-12',
       )}
     >
       <div className="flex flex-col justify-between">
@@ -62,7 +64,7 @@ const ProgramCard = ({ program, index }) => (
     {index == 0 && (
       <Image
         src={loopedDottedLine}
-        className="absolute bottom-0 left-1/2 hidden translate-y-[90%] md:block"
+        className="absolute bottom-0 left-1/2 hidden translate-x-1/2 translate-y-[90%] -scale-x-100 md:block"
         style={{ width: 'calc(50% + 4rem)' }}
         alt=""
       />
@@ -73,10 +75,11 @@ const ProgramCard = ({ program, index }) => (
 export const FeaturedPrograms = () => {
   const featuredPrograms = getAllItems('programs')
     .filter((program) => program.data.featured)
-    .slice(0, 3)
+    .sort((a, b) => a.data.order - b.data.order)
+  // .slice(0, 3)
 
   return (
-    <section className="overflow-hidden px-4 pb-24 pt-16 sm:px-6 sm:pb-28 sm:pt-24 md:pb-0 lg:px-8">
+    <section className="overflow-hidden px-4 pb-24 pt-16 sm:px-6 sm:pb-28 sm:pt-24 md:pb-72 lg:px-8">
       {/* Container */}
       <div className="mx-auto max-w-xl md:max-w-screen-xl">
         {/* Section header title and subtext  */}
@@ -86,7 +89,7 @@ export const FeaturedPrograms = () => {
               The best programs for your child
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-xl leading-relaxed text-purple-800 sm:mt-5 lg:text-left">
-              We offer a core ciriculum of programs for children of all ages.
+              We offer a core curriculum of programs for children of all ages.
               Our programs are designed to help your child grow and develop in a
               safe and nurturing environment.
             </p>

@@ -38,6 +38,8 @@ export const ContactInformation = () => {
                 </h5>
                 <p className="mt-1.5 text-base leading-relaxed text-purple-800">
                   {contact.address}
+                  <br />
+                  (Term dates between 10am - 2pm only)
                 </p>
               </div>
             </div>

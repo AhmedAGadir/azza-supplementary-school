@@ -113,22 +113,24 @@ export function Navbar({ programs }) {
                     Programs
                   </p>
                   <div className="mt-4 grid justify-items-center gap-4 sm:grid-cols-2 sm:justify-items-start sm:gap-x-8">
-                    {programs.map((program, index) => (
-                      <Link
-                        href={`/programs/${program.slug}`}
-                        key={`mobile-dropdown-${program.data.name}`}
-                        className={clsx(
-                          index % 2 == 1 && 'sm:justify-self-end',
-                        )}
-                      >
-                        <div className="group relative p-0.5">
-                          <span className="relative z-10 text-xl font-medium text-purple-50 duration-300 ease-in-out group-hover:text-white">
-                            {program.data.name}
-                          </span>
-                          <span className="absolute -left-1 -right-1 bottom-0 h-1.5 origin-bottom scale-x-0 transform rounded-lg bg-yellow-400 duration-300 ease-in-out group-hover:scale-x-100" />
-                        </div>
-                      </Link>
-                    ))}
+                    {programs
+                      .sort((a, b) => a.data.order - b.data.order)
+                      .map((program, index) => (
+                        <Link
+                          href={`/programs/${program.slug}`}
+                          key={`mobile-dropdown-${program.data.name}`}
+                          className={clsx(
+                            index % 2 == 1 && 'sm:justify-self-end',
+                          )}
+                        >
+                          <div className="group relative p-0.5">
+                            <span className="relative z-10 text-xl font-medium text-purple-50 duration-300 ease-in-out group-hover:text-white">
+                              {program.data.name}
+                            </span>
+                            <span className="absolute -left-1 -right-1 bottom-0 h-1.5 origin-bottom scale-x-0 transform rounded-lg bg-yellow-400 duration-300 ease-in-out group-hover:scale-x-100" />
+                          </div>
+                        </Link>
+                      ))}
                   </div>
                 </div>
               </div>

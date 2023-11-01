@@ -12,7 +12,7 @@ export const ProgramPricing = ({ data }) => {
           {/* Section content */}
           <div className="flex flex-col justify-center pr-10 xl:pr-0">
             <div>
-              <span className="inline-block -rotate-1 rounded-full bg-purple-200 px-4 py-2 font-medium text-purple-700 shadow-md">
+              <span className="- inline-block rounded-full bg-purple-200 px-4 py-2 font-medium text-purple-700 shadow-md">
                 {data.tagline}
               </span>
             </div>
@@ -56,10 +56,14 @@ export const ProgramPricing = ({ data }) => {
                   {data.pricing.name}
                 </h3>
                 <div className="mt-2">
-                  <h2 className="h1 text-purple-900">{data.pricing.price}</h2>
+                  {/* <h2 className="h1 text-purple-900">{data.pricing.price}</h2> */}
+                  {/* <h2 className="h1 text-purple-900">
+                    Parent Contribution Welcome
+                  </h2> */}
                   <div className="mt-3">
-                    <div className="inline-block h-6 -rotate-1 rounded-xl bg-purple-200 px-3 align-top text-sm font-medium leading-6 text-purple-700">
-                      {data.pricing.interval}
+                    <div className="inline-block h-6 rounded-xl bg-purple-200 px-3 align-top text-sm font-medium leading-6 text-purple-700">
+                      Parent Contribution Welcome
+                      {/* {data.pricing.interval} */}
                     </div>
                   </div>
                   <p className="mt-6 block w-full font-medium text-purple-900">

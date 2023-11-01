@@ -1,5 +1,6 @@
 ---
 name: Mathematics
+order: 2
 dropdownDescription: Delve into the world of numbers and logical reasoning with our comprehensive mathematics program.
 featured: true
 hero:

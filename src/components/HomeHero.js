@@ -14,7 +14,7 @@ import heroImage2 from '/public/images/photos/gardening-cropped.jpg'
 const ratings = [
   // { label: 'Great Schools', stars: 5 },
   { label: 'Arabic School Review', stars: 5 },
-  // { label: 'Google Reviews', stars: 5 },
+  { label: 'Google Reviews', stars: 5 },
 ]
 
 export const HomeHero = () => {
@@ -38,7 +38,7 @@ export const HomeHero = () => {
         {/* Hero text content */}
         <div className="flex flex-col items-center justify-center lg:col-span-6 lg:items-start">
           <div>
-            <span className="inline-block -rotate-1 rounded-full bg-orange-200 px-4 py-2 font-medium text-slate-800 shadow-md">
+            <span className="inline-block rounded-full bg-orange-200 px-4 py-2 font-medium text-slate-800 shadow-md">
               Welcome to Azza Supplementary School
             </span>
           </div>
@@ -46,10 +46,12 @@ export const HomeHero = () => {
             Empowering Communities, Enriching Education
           </h1>
           <p className="mt-3 max-w-2xl text-center text-xl leading-loose text-purple-800 lg:text-left">
-            We unite cultural enrichment and academic advancement, shaping
-            confident learners ready to take on active roles in society. <br />
-            Join us where learning transcends textbooks, building community,
-            identity, and contributing to a harmonious, collective future.
+            We're a dedicated non-profit focused on{' '}
+            <b>Arabic language education</b>. Through a balanced blend of
+            cultural enrichment and academic growth, we shape confident learners
+            primed to contribute actively to society.
+            <br /> Join us, where learning goes beyond textbooks, fostering
+            community, linguistic identity, and a harmonious collective future.
           </p>
           {/* Hero buttons */}
           <div className="mt-8 flex flex-col items-center overflow-hidden sm:flex-row">
