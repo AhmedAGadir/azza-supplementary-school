@@ -15,7 +15,7 @@ const navigation = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Programs' },
-  { label: 'Activities', href: '/activities' },
+  // { label: 'Activities', href: '/activities' },
   { label: 'School Calendar', href: '/calendar' },
   { label: 'Contact', href: '/contact' },
 ]
@@ -150,7 +150,7 @@ export function Navbar({ programs }) {
             {navigation.map((link) => (
               <Fragment key={`desktop-link-${link.label}`}>
                 {link.label == 'Programs' ? (
-                  <Menu as="div" className="relative">
+                  <Menu as="div" className="relative z-30">
                     {({ open }) => (
                       <>
                         <Menu.Button className="outline-none focus:outline-none">

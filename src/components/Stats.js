@@ -8,12 +8,15 @@ const gochiHand = Gochi_Hand({
 })
 
 const stats = [
-  { label: 'Teachers', value: '30+' },
-  { label: 'Average years of teacher experience', value: '6+' },
-  { label: 'Average number of students per class', value: '30+' },
-  { label: 'Student to teacher ratio', value: '9' },
-  { label: 'Number of Sister Schools', value: '4' },
-  { label: 'Student state exam percentile', value: '90%' },
+  { label: 'Teachers', value: '12+' },
+  { label: 'Average years of teacher experience', value: '3+' },
+  { label: 'Student to teacher ratio', value: '15:1' },
+  {
+    label: 'Students at Russel Group Universities',
+    value: '20+',
+  },
+  { label: 'Years in Operation', value: '28+' },
+  { label: 'Children Supported', value: '100+' },
 ]
 
 export const Stats = () => {
@@ -29,12 +32,11 @@ export const Stats = () => {
         {/* Section header text */}
         <div>
           <h2 className="h2 mx-auto max-w-4xl text-center text-white">
-            Giving your child the best possible start to their education
+            Where Your Child's Academic Success Begins
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-xl leading-relaxed text-purple-50">
-            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
-            dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-            sem.
+            Every aspect of our environment is thoughtfully designed with your
+            child's success in mind.
           </p>
         </div>
         {/* Stats */}

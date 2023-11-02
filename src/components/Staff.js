@@ -21,10 +21,9 @@ export const Staff = () => {
             </div>
             <div className="flex items-center">
               <p className="mt-5 text-xl leading-relaxed text-purple-50 sm:text-center lg:mt-0 lg:text-left">
-                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
-                dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-                sem. Quisque velit nisi, pretium ut lacinia in, elementum id
-                enim.
+                Our teachers are the heart and soul of Azza. They are the ones
+                who make our school a safe, fun, and engaging place for your
+                children to learn and grow.
               </p>
             </div>
           </div>

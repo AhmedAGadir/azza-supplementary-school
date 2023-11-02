@@ -1,19 +1,24 @@
 import Image from 'next/image'
 import { Fragment } from 'react'
 
-import image1 from '/public/images/stock/school-grid-01.jpg'
-import image2 from '/public/images/stock/school-grid-02.jpg'
-import image3 from '/public/images/stock/school-grid-03.jpg'
-import image4 from '/public/images/stock/school-grid-04.jpg'
-import image5 from '/public/images/stock/school-grid-05.jpg'
+// import image1 from '/public/images/stock/school-grid-01.jpg'
+// import image2 from '/public/images/stock/school-grid-02.jpg'
+// import image3 from '/public/images/stock/school-grid-03.jpg'
+// import image4 from '/public/images/stock/school-grid-04.jpg'
+// import image5 from '/public/images/stock/school-grid-05.jpg'
+import teachersImg from '/public/images/photos/stand.jpg'
+import lightRoseBlob from '/public/images/illustrations/blob-light-rose.svg'
+import dotsStrip from '/public/images/illustrations/dots-large-strip.svg'
+import dots from '/public/images/illustrations/dots.svg'
+import clsx from 'clsx'
 
-const images = [
-  { src: image1, alt: 'Child laughing with teacher' },
-  { src: image2, alt: 'Teacher portrait' },
-  { src: image3, alt: 'Teacher reading to students' },
-  { src: image4, alt: 'Child writing on board with teacher' },
-  { src: image5, alt: 'Classroom' },
-]
+// const images = [
+//   { src: image1, alt: 'Child laughing with teacher' },
+//   { src: image2, alt: 'Teacher portrait' },
+//   { src: image3, alt: 'Teacher reading to students' },
+//   { src: image4, alt: 'Child writing on board with teacher' },
+//   { src: image5, alt: 'Classroom' },
+// ]
 
 export function AboutHero() {
   return (
@@ -21,60 +26,102 @@ export function AboutHero() {
       {/* Container */}
       <div className="mx-auto max-w-screen-xl">
         {/* Page header */}
-        <div className="relative">
+        <div className="relative z-20">
           <h2 className="h1 mx-auto max-w-3xl text-center text-purple-900">
             Why Azza
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-xl leading-relaxed text-purple-800 sm:mt-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean
-            et tortor at risus viverra adipiscing at in.
+            Choosing Azza means investing in a comprehensive education grounded
+            in core values of excellence, inclusivity, and lifelong learning.
+            <br />
+            <br />
+            Established in 1995 by a group of dedicated refugee women, began its
+            journey by teaching children Arabic language and cultural studies.
           </p>
         </div>
-        {/* School images grid */}
-        <div className="mt-14 grid grid-flow-row-dense grid-cols-2 gap-2 sm:mt-16 sm:grid-cols-3 sm:gap-3 md:gap-4 lg:mt-24 lg:gap-6">
-          {images.map((image, index) => (
-            <Fragment key={`gallery-image-${index}`}>
-              {index % 5 == 1 && (
+        {/* School image */}
+        <div
+          className={clsx(
+            'relative mx-auto mt-24 w-full max-w-xl lg:col-span-6 lg:mx-0 lg:flex lg:max-w-none lg:items-center',
+            // index % 2 == 0 && 'lg:order-2',
+          )}
+        >
+          {/* Blob background decoration on large screens */}
+          <div className="hidden lg:block">
+            <Image
+              src={lightRoseBlob}
+              className="absolute inset-0 h-full w-full transform"
+              alt=""
+            />
+          </div>
+          {/* Grid background decoration on small screens */}
+          <Image
+            src={dotsStrip}
+            className="absolute left-1/2 top-0 origin-top -translate-x-1/2 -translate-y-8 scale-80 transform sm:scale-100 lg:hidden"
+            alt=""
+          />
+          <div
+            className={clsx(
+              'relative mx-auto w-full rounded-3xl shadow-lg lg:max-w-lg',
+              // index % 2 == 0 ? 'lg:ml-auto lg:mr-0' : 'lg:mx-0',
+            )}
+          >
+            <div className="relative block w-full">
+              {/* Corner dots decoration */}
+              <Image
+                className={clsx(
+                  '-top-30 xl:-top-30 absolute z-10 hidden w-40 transform lg:block xl:w-48',
+                  // index % 2 == 0 ? '-left-20' : '-right-20',
+                )}
+                src={dots}
+                alt=""
+              />
+              {/* Block image */}
+              <figure className="relative z-20 aspect-[12/10] md:order-1">
                 <Image
-                  className="col-span-2 h-30vw w-full rounded-2xl object-cover object-top lg:h-80"
-                  priority={true}
-                  alt={image.alt}
-                  src={image.src}
-                  sizes="(min-width: 1280px) 52.875rem, (min-width: 640px) 66vw, 100vw"
+                  src={teachersImg}
+                  className="absolute inset-0 h-full w-full rounded-3xl object-cover object-center shadow-xl"
+                  fill
+                  sizes="(min-width: 1024px) 32rem, (min-width: 576px) 36rem, 100vw"
+                  alt={'school stand'}
                 />
-              )}
-
-              {index % 5 != 1 && (
-                <Image
-                  className="h-30vw w-full rounded-2xl object-cover lg:h-80"
-                  alt={image.alt}
-                  src={image.src}
-                  sizes="(min-width: 1280px) 25.75rem, (min-width: 640px) 33vw, 50vw"
-                />
-              )}
-            </Fragment>
-          ))}
+              </figure>
+            </div>
+          </div>
         </div>
         {/* About school */}
         <div className="prose prose-lg mx-auto mt-14 sm:prose-xl sm:mt-16 lg:mt-24">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl
-            pretium fusce id velit ut. Id porta nibh venenatis cras sed felis
-            eget velit. Ut morbi tincidunt augue interdum velit. Ipsum faucibus
-            vitae aliquet nec ullamcorper sit amet. Viverra orci sagittis eu
-            volutpat odio facilisis mauris. Diam quis enim lobortis scelerisque
-            fermentum. Viverra mauris in aliquam sem fringilla.
+            These modest beginnings in North Kensington burgeoned into a school
+            that has since been a beacon of learning for hundreds of children.
+            Every Saturday, from 10 am to 2 pm at KAA, children aged 6-16
+            receive an education that spans subjects beyond just Arabic, delving
+            into mainstream school curriculum subjects such as English and
+            Mathematics.
           </p>
           <p>
-            Elementum nisi quis eleifend quam adipiscing vitae proin sagittis
-            nisl. Viverra vitae congue eu consequat ac felis donec et odio.
-            Euismod nisi porta lorem mollis aliquam ut porttitor. Sed nisi lacus
-            sed viverra tellus. Augue lacus viverra vitae congue eu consequat ac
-            felis donec. Elementum pulvinar etiam non quam lacus. Ut venenatis
-            tellus in metus vulputate. Ultrices dui sapien eget mi proin sed
-            libero enim. Id velit ut tortor pretium viverra suspendisse.
+            Alongside these academic pursuits, the school offers enriching
+            activities like football, gymnastics, and engagement sessions for
+            parents, fostering a holistic development environment. Our purpose
+            extends beyond mere academic assistance. We aim to bolster the
+            cultural identity, self-esteem, and confidence of children,
+            predominantly from the Sudanese community and other communities
+            within Kensington and Chelsea.
+          </p>
+          <p>
+            Many of our learners hail from immigrant backgrounds, often with
+            English as their second language, making our English and Maths
+            classes doubly essential for both them and their Arabic-speaking
+            parents.
+          </p>
+          <p>
+            Beyond the classroom, Azza Supplementary School promotes camaraderie
+            and understanding; we've observed heartening bonds forged between
+            families, stemming from friendships initiated within our school
+            walls. These relationships have proven invaluable, enhancing
+            self-confidence, reducing feelings of isolation, and creating an
+            inclusive environment where children and parents from diverse
+            backgrounds intermingle seamlessly.
           </p>
         </div>
       </div>

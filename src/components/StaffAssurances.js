@@ -75,7 +75,7 @@ export const StaffAssurances = () => {
                   size="sm"
                   className="mt-10"
                 >
-                  Meet the rest of the team
+                  Meet the team
                   <Icon
                     icon="arrowNarrowRight"
                     className="ml-3 h-5 w-5 group-hover:animate-horizontal-bounce"
