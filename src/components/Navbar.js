@@ -11,6 +11,8 @@ import logo from '/public/images/azza-logo.png'
 import { Button } from '@/components/Button'
 import { Icon } from '@/components/Icon'
 
+import sheen from '/public/images/illustrations/sheen-purple.svg'
+
 const navigation = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
@@ -86,6 +88,11 @@ export function Navbar({ programs }) {
               as="div"
               className="absolute inset-x-0 top-0 z-40 w-screen overflow-y-scroll bg-gradient-to-tr from-purple-600 to-purple-600 px-4 py-16 sm:px-8"
             >
+              <Image
+                className=" absolute -bottom-20 left-0 -z-20 h-auto w-screen 2xl:block"
+                src={sheen}
+                alt=""
+              />
               <div className="flex h-full w-full flex-col items-center justify-center">
                 <div className="mx-auto flex w-full flex-col items-center justify-evenly space-y-6">
                   {navigation.map((link) => (
