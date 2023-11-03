@@ -24,7 +24,7 @@ export const Testimonials = () => {
         <div className="flex flex-col items-center justify-center">
           <h2 className="h2 relative z-10 max-w-2xl text-center text-white">
             <Image
-              className=" absolute -bottom-40 -right-40 h-auto w-72 -rotate-6 2xl:block"
+              className=" absolute -bottom-40 -right-10 h-auto w-72 -rotate-6 2xl:block"
               src={qaaf}
               alt=""
             />

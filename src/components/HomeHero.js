@@ -44,7 +44,7 @@ export const HomeHero = () => {
           <h1 className="h1 relative mt-4 max-w-xl text-center text-slate-800 sm:mt-5 lg:max-w-none lg:text-left">
             Empowering Communities, Enriching Education
             <Image
-              className=" absolute -bottom-20 left-0 -z-20 h-auto w-screen -rotate-6 2xl:block"
+              className=" absolute -bottom-20 left-0 -z-20 h-auto w-screen -rotate-8 2xl:block"
               src={alifbata}
               alt=""
             />
