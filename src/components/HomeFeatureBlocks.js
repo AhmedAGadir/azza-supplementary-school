@@ -9,6 +9,9 @@ import squareImage1 from '/public/images/photos/kids-playing-outside-cropped.jpg
 import portraitImage2 from '/public/images/photos/girls-outside-cropped2.jpg'
 import squareImage2 from '/public/images/photos/student-girls-on-wall-cropped.jpg'
 
+import daad from '/public/images/illustrations/daad.svg'
+import ayn from '/public/images/illustrations/ayn.svg'
+
 const features = [
   'Arabic language',
   'Academic support',
@@ -35,12 +38,13 @@ const blocks = [
       src: squareImage1,
       alt: 'Students participating in a group activity',
     },
+    backgroundImage: daad,
   },
   {
     tagline: 'Community and Belonging',
     headline: 'Creating Community Leaders',
     text: 'By prioritizing leadership, teamwork, and social responsibility, we prepare our students to take active roles in their communities. Our emphasis on ethical conduct and community involvement inspires students to contribute positively to society and cultivate meaningful relationships.',
-    action: { label: 'Become Part of Our Story', href: '/about', icon: true },
+    action: { label: 'Become Part of Our Story', href: '/enroll', icon: true },
     portraitImage: {
       src: portraitImage2,
       alt: 'Child smiling in a classroom setting',
@@ -49,6 +53,7 @@ const blocks = [
       src: squareImage2,
       alt: 'Students enjoying a meal together',
     },
+    backgroundImage: ayn,
   },
 ]
 
@@ -149,14 +154,22 @@ export const HomeFeatureBlocks = () => {
               )}
             >
               <div>
-                <span className="- inline-block rounded-full bg-orange-200 px-4 py-2 font-medium text-purple-700 shadow-md">
+                <span className="- relative z-30 inline-block rounded-full bg-orange-200 px-4 py-2 font-medium text-purple-700 shadow-md">
                   {block.tagline}
                 </span>
               </div>
-              <h3 className="h3 mt-4 text-purple-900 sm:mt-5">
-                {block.headline}
+              <h3 className="h3 relative mt-4 text-purple-900 sm:mt-5">
+                <Image
+                  className={clsx(
+                    'absolute -right-0 -top-20 h-auto w-96 2xl:block',
+                    index % 2 == 0 ? '-rotate-6' : 'rotate-8',
+                  )}
+                  src={block.backgroundImage}
+                  alt=""
+                />
+                <span className="relative z-20">{block.headline}</span>
               </h3>
-              <p className="mt-3 max-w-2xl text-lg leading-loose text-purple-800">
+              <p className="z-10 mt-3 max-w-2xl text-lg leading-loose text-purple-800">
                 {block.text}
               </p>
               <div className="mt-6">

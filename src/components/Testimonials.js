@@ -4,6 +4,8 @@ import clsx from 'clsx'
 import { Icon } from '@/components/Icon'
 import { getAllItems } from '@/lib/getItems'
 
+import qaaf from '/public/images/illustrations/qaaf-purple.svg'
+
 const bgColorsClassName = [
   'bg-yellow-200',
   'bg-purple-25',
@@ -20,10 +22,15 @@ export const Testimonials = () => {
       <div className="mx-auto px-4 sm:px-6 lg:max-w-screen-2xl">
         {/* Section header title and subheader */}
         <div className="flex flex-col items-center justify-center">
-          <h2 className="h2 max-w-2xl text-center text-white">
-            Parent Testimonials
+          <h2 className="h2 relative z-10 max-w-2xl text-center text-white">
+            <Image
+              className=" absolute -bottom-40 -right-40 h-auto w-72 -rotate-6 2xl:block"
+              src={qaaf}
+              alt=""
+            />
+            <span className="relative z-20">Parent Testimonials</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-center text-xl leading-relaxed text-purple-50">
+          <p className="z-10 mx-auto mt-4 max-w-3xl text-center text-xl leading-relaxed text-purple-50">
             Don't just take our word for it. Hear from the parents about the
             positive and lasting impact Azza has on their children's lives.
           </p>
@@ -36,7 +43,7 @@ export const Testimonials = () => {
               key={`testimonial-${index}`}
               className={clsx(
                 bgColorsClassName[index % 4],
-                'rounded-3xl px-8 py-8 transition duration-300 ease-in-out sm:px-6 md:px-8 lg:px-5 2xl:px-8',
+                'relative z-20 rounded-3xl px-8 py-8 transition duration-300 ease-in-out sm:px-6 md:px-8 lg:px-5 2xl:px-8',
               )}
             >
               {/* <Image

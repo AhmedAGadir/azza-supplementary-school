@@ -11,10 +11,12 @@ import { Button } from '@/components/Button'
 import heroImage1 from '/public/images/photos/certificates-1-cropped-2.jpg'
 import heroImage2 from '/public/images/photos/gardening-cropped.jpg'
 
+import alifbata from '/public/images/illustrations/alifbata.svg'
+
 const ratings = [
   // { label: 'Great Schools', stars: 5 },
   { label: 'Arabic School Review', stars: 5 },
-  { label: 'Google Reviews', stars: 5 },
+  // { label: 'Google Reviews', stars: 5 },
 ]
 
 export const HomeHero = () => {
@@ -31,10 +33,7 @@ export const HomeHero = () => {
   return (
     <section className="from-orange-25 bg-gradient-to-b to-orange-50 px-4 pt-16 sm:px-6 lg:px-8">
       {/* Hero container */}
-      <div
-        className="mx-auto max-w-screen-xl lg:grid lg:grid-cols-12 lg:gap-8"
-        x-data="{ modalOpen: false }"
-      >
+      <div className="mx-auto max-w-screen-xl lg:grid lg:grid-cols-12 lg:gap-8">
         {/* Hero text content */}
         <div className="flex flex-col items-center justify-center lg:col-span-6 lg:items-start">
           <div>
@@ -42,10 +41,15 @@ export const HomeHero = () => {
               Welcome to Azza Supplementary School
             </span>
           </div>
-          <h1 className="h1 mt-4 max-w-xl text-center text-slate-800 sm:mt-5 lg:max-w-none lg:text-left">
+          <h1 className="h1 relative mt-4 max-w-xl text-center text-slate-800 sm:mt-5 lg:max-w-none lg:text-left">
             Empowering Communities, Enriching Education
+            <Image
+              className=" absolute -bottom-20 -right-20 -z-20 h-auto w-screen -rotate-6 2xl:block"
+              src={alifbata}
+              alt=""
+            />
           </h1>
-          <p className="mt-3 max-w-2xl text-center text-xl leading-loose text-purple-800 lg:text-left">
+          <p className="relative mt-3 max-w-2xl text-center text-xl leading-loose text-purple-800 lg:text-left">
             We're a dedicated non-profit focused on{' '}
             <b>Arabic language education</b>. Through a balanced blend of
             cultural enrichment and academic growth, we shape confident learners
