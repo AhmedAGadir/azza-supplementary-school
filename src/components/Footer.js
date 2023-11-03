@@ -9,8 +9,10 @@ const siteLinks = [
   { label: 'Home', href: '/' },
   { label: 'About us', href: '/about' },
   // { label: 'Activities', href: '/activities' },
-  { label: 'Policies', href: '/policies' },
   { label: 'School Calendar', href: '/calendar' },
+  // { label: 'Policies', href: '/policies' },
+  { label: 'Safeguarding Policy', href: '/policy' },
+  { label: 'Safeguarding Procedure', href: '/procedure' },
   { label: 'Enrollment', href: '/enroll' },
   { label: 'Contact us', href: '/contact' },
 ]
