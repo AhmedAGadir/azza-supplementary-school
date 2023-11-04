@@ -90,12 +90,12 @@ export function Navbar({ programs }) {
               className="absolute inset-x-0 top-0 z-40 w-screen overflow-y-scroll bg-gradient-to-tr from-purple-600 to-purple-600 px-4 py-16 sm:px-8"
             >
               <Image
-                className=" absolute left-0 top-0 -z-20 h-auto w-2/3 2xl:block"
+                className=" absolute left-0 top-0 -z-20 h-auto w-2/3 md:w-80 2xl:block"
                 src={kaaf}
                 alt=""
               />
               <Image
-                className=" absolute -bottom-20 right-0 -z-20 h-auto w-3/4 2xl:block"
+                className=" absolute -bottom-20 right-0 -z-20 h-auto w-3/4 md:w-80 2xl:block"
                 src={sheen}
                 alt=""
               />
