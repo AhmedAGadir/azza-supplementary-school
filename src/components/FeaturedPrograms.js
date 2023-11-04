@@ -7,6 +7,11 @@ import curvedDottedLine from '/public/images/illustrations/curved-dotted-line.sv
 import loopedDottedLine from '/public/images/illustrations/looped-dotted-line.svg'
 import { getAllItems } from '@/lib/getItems'
 
+import meem from '/public/images/illustrations/meem-lightpurple.svg'
+import ya from '/public/images/illustrations/ya-lightgreen.svg'
+import za from '/public/images/illustrations/za-lightyellow.svg'
+import dha from '/public/images/illustrations/dha-lightblue.svg'
+
 const ProgramCard = ({ program, index }) => (
   <div
     className={clsx(
@@ -33,8 +38,17 @@ const ProgramCard = ({ program, index }) => (
           'relative z-10 w-full rounded-3xl bg-purple-25 px-8 py-10 sm:p-12 md:-translate-y-60 md:px-8 md:py-10 lg:p-12',
       )}
     >
-      <div className="flex flex-col justify-between">
-        <div className="flex-1">
+      <div className="relative flex flex-col justify-between">
+        <Image
+          className={clsx(
+            'absolute top-0 z-10 h-auto w-56 -rotate-8 2xl:block ',
+            index % 2 == 0 ? 'left-0' : 'right-0',
+          )}
+          // purple green blue yellow
+          src={index === 0 ? meem : index === 1 ? ya : index === 2 ? dha : za}
+          alt=""
+        />
+        <div className="z-20 flex-1">
           <h3 className="h3 text-purple-900">{program.data.name}</h3>
           <p className="mt-3 max-w-2xl text-lg leading-loose text-purple-800">
             {program.data.hero.text}
