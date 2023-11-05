@@ -271,7 +271,7 @@ export function Navbar({ programs }) {
             <Button href="/enroll">Enroll today</Button>
           </div>
           {/* Logo on smaller screens: < lg */}
-          <div className="block w-48 flex-shrink-0 flex-grow-0 sm:w-52 lg:hidden">
+          <div className="block w-48 flex-shrink-0 flex-grow-0 sm:w-60 lg:hidden">
             <Link href="/">
               <Image
                 src={logo}
