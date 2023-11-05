@@ -159,14 +159,14 @@ export const HomeFeatureBlocks = () => {
                 </span>
               </div>
               <h3 className="h3 relative mt-4 text-purple-900 sm:mt-5">
-                <Image
+                {/* <Image
                   className={clsx(
                     'absolute -right-0 -top-20 h-auto w-96 2xl:block',
                     index % 2 == 0 ? '-rotate-6' : 'rotate-8',
                   )}
                   src={block.backgroundImage}
                   alt=""
-                />
+                /> */}
                 <span className="relative z-20">{block.headline}</span>
               </h3>
               <p className="z-10 mt-3 max-w-2xl text-lg leading-loose text-purple-800">

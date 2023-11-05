@@ -43,11 +43,11 @@ export const HomeHero = () => {
           </div>
           <h1 className="h1 relative mt-4 max-w-xl text-center text-slate-800 sm:mt-5 lg:max-w-none lg:text-left">
             Empowering Communities, Enriching Education
-            <Image
+            {/* <Image
               className=" absolute -bottom-20 left-0 -z-20 h-auto w-screen -rotate-8 2xl:block"
               src={alifbata}
               alt=""
-            />
+            /> */}
           </h1>
           <p className="relative mt-3 max-w-2xl text-center text-xl leading-loose text-purple-800 lg:text-left">
             We're a dedicated non-profit focused on{' '}

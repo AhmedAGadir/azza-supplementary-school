@@ -41,7 +41,7 @@ const ProgramCard = ({ program, index }) => (
       <div className="relative flex flex-col justify-between">
         <Image
           className={clsx(
-            'absolute top-0 z-10 h-auto w-56 -rotate-8 2xl:block ',
+            'absolute top-0 z-10 h-auto w-72 -rotate-8 2xl:block',
             index % 2 == 0 ? 'left-0' : 'right-0',
           )}
           // purple green blue yellow
@@ -64,7 +64,12 @@ const ProgramCard = ({ program, index }) => (
           </div>
         </div>
         <div className="mt-8">
-          <Button href={`/programs/${program.slug}`} variant="accent" size="sm">
+          <Button
+            href={`/programs/${program.slug}`}
+            variant="accent"
+            size="sm"
+            className="z-10"
+          >
             Learn more
             <Icon
               icon="arrowNarrowRight"
