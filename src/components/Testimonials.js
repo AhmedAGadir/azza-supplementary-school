@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import { Icon } from '@/components/Icon'
 import { getAllItems } from '@/lib/getItems'
 
-import qaaf from '/public/images/illustrations/qaaf-purple.svg'
+// import qaaf from '/public/images/illustrations/qaaf-purple.svg'
 
 const bgColorsClassName = [
   'bg-yellow-200',
@@ -23,11 +23,11 @@ export const Testimonials = () => {
         {/* Section header title and subheader */}
         <div className="flex flex-col items-center justify-center">
           <h2 className="h2 relative z-10 max-w-2xl text-center text-white">
-            <Image
+            {/* <Image
               className=" absolute -bottom-40 -right-10 h-auto w-72 -rotate-6 2xl:block"
               src={qaaf}
               alt=""
-            />
+            /> */}
             <span className="relative z-20">Parent Testimonials</span>
           </h2>
           <p className="z-10 mx-auto mt-4 max-w-3xl text-center text-xl leading-relaxed text-purple-50">
