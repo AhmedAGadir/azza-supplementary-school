@@ -11,7 +11,7 @@ export function ContactHeader({ contact }) {
       <div className="relative mx-auto max-w-screen-xl border-b border-purple-200/30 py-5">
         <div className="flex items-center justify-between">
           {/* Site branding */}
-          <div className="w-60 flex-shrink-0 flex-grow-0">
+          <div className="w-96 flex-shrink-0 flex-grow-0">
             <Link href="/">
               <Image
                 src={logo}
