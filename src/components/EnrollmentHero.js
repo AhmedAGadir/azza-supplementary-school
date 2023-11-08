@@ -429,7 +429,7 @@ export const EnrollmentHero = () => {
                           )}
                         </div>
 
-                        <div className="grid max-w-2xl grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-6 lg:col-span-3">
+                        <div className="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 lg:col-span-3">
                           {section.fields.map((field) => (
                             <div
                               key={`contact-form-field-${field}}`}
