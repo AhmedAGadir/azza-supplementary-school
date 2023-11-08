@@ -127,7 +127,7 @@ const enrollmentFields = [
       {
         name: 'schoolYear',
         label: 'Current School Year',
-        type: 'number',
+        type: 'text',
         required: true,
       },
     ],
@@ -166,6 +166,8 @@ const enrollmentFields = [
           'Any other Asian background',
           'Sudanese',
           'Somali',
+          'Eritrean',
+          'Ethiopian',
           'Nigerian',
           'Ghanaian',
           'Any other Black/African/Caribbean background',
