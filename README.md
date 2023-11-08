@@ -71,10 +71,10 @@ hero:
   text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean et tortor at risus viverra adipiscing at in.
   action:
     label: Enroll today
-    href: "#"
+    href: '#'
     icon: true
   image:
-    src: "/images/stock/elementary-school.jpg"
+    src: '/images/stock/elementary-school.jpg'
 infoSection:
   headline: The Elementary School dedicated to your child's success
   text: Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi.
@@ -102,9 +102,9 @@ descriptionSection:
 
 
     Elementum nisi quis eleifend quam adipiscing vitae proin sagittis nisl. Viverra vitae congue eu consequat ac felis donec et odio. Euismod nisi porta lorem mollis aliquam ut porttitor. Sed nisi lacus sed viverra tellus. Augue lacus viverra vitae congue eu consequat ac felis donec. Elementum pulvinar etiam non quam lacus. Ut venenatis tellus in metus vulputate. Ultrices dui sapien eget mi proin sed libero enim. Id velit ut tortor pretium viverra suspendisse.
-  portraitImage: "/images/stock/program-description-01.jpg"
-  squareImage1: "/images/stock/program-description-02.jpg"
-  squareImage2: "/images/stock/program-description-03.jpg"
+  portraitImage: '/images/stock/program-description-01.jpg'
+  squareImage1: '/images/stock/program-description-02.jpg'
+  squareImage2: '/images/stock/program-description-03.jpg'
 pricingSection:
   tagline: Our Elementary School Plans
   headline: A program for every parent and child
@@ -119,7 +119,7 @@ pricingSection:
       - feature: Lorem ipsum dolor sit
     action:
       label: Enroll today
-      href: "#"
+      href: '#'
       icon: true
   pricing2:
     name: Extended
@@ -131,7 +131,7 @@ pricingSection:
       - feature: Lorem ipsum dolor sit
     action:
       label: Enroll today
-      href: "#"
+      href: '#'
       icon: true
 ---
 ```
@@ -196,4 +196,5 @@ To learn more about Next.js, take a look at the following resources:
 ## Additional Help
 
 If you need additional help setting up the template or have any questions, feel free to contact me at <rodrigo@tailwindawesome.com>.
+
 # azza-supplementary-school

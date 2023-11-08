@@ -1,4 +1,5 @@
-import { Maintenance } from '@/components/Maintenance'
+import { EnrollmentHero } from '@/components/EnrollmentHero'
+import { ContactInformation } from '@/components/ContactInformation'
 
 export const metadata = {
   title: 'Enroll Today - Azza Supplementary School',
@@ -9,7 +10,8 @@ export const metadata = {
 export default function EnrollmentPage() {
   return (
     <>
-      <Maintenance />
+      <EnrollmentHero />
+      <ContactInformation email="enrollment@azzaschool.org" />
     </>
   )
 }

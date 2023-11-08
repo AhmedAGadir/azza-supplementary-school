@@ -11,7 +11,7 @@ export const metadata = {
   title:
     'Azza Supplementary School - Empowering Communities, Enriching Education.',
   description:
-    'At Azza Supplementary School, we blend cultural enrichment with academic growth, cultivating confident learners proud of their heritage. Join us in a journey where education extends beyond textbooks, fostering community, identity, and a shared future.',
+    'We are a dedicated non-profit focused on Arabic language education. Through a balanced blend of cultural enrichment and academic growth, we shape confident learners primed to contribute actively to society.',
 }
 
 export default function HomePage() {

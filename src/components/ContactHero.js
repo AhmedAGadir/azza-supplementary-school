@@ -15,14 +15,14 @@ import emailjs from '@emailjs/browser'
 const fields = [
   {
     name: 'from_name',
-    label: 'Name *',
+    label: 'Name',
     type: 'text',
     placeholder: 'Your name',
     required: true,
   },
   {
     name: 'from_email',
-    label: 'Email *',
+    label: 'Email',
     type: 'email',
     placeholder: 'Your email address',
     required: true,
@@ -36,7 +36,7 @@ const fields = [
   },
   {
     name: 'message',
-    label: 'Message *',
+    label: 'Message',
     type: 'textarea',
     placeholder: 'Message',
     required: true,
@@ -149,7 +149,10 @@ export const ContactHero = () => {
                         htmlFor={field.name}
                         className="ml-0.5 text-sm font-medium text-purple-900"
                       >
-                        {field.label}
+                        {field.label}{' '}
+                        {field.required && (
+                          <span className="text-red-500">*</span>
+                        )}
                       </label>
                       {field.type == 'textarea' && (
                         <textarea

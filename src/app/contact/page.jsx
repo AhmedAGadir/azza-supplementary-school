@@ -11,7 +11,7 @@ export default function ContactPage() {
   return (
     <>
       <ContactHero />
-      <ContactInformation />
+      <ContactInformation email="info@azzaschool.org" />
     </>
   )
 }

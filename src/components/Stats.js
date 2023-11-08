@@ -16,7 +16,7 @@ const stats = [
     value: '20+',
   },
   { label: 'Years in Operation', value: '28+' },
-  { label: 'Children Supported', value: '100+' },
+  { label: 'Children Supported', value: '1000+' },
 ]
 
 export const Stats = () => {

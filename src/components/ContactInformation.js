@@ -1,7 +1,7 @@
 import { Icon } from '@/components/Icon'
 import { getItemData } from '@/lib/getItems'
 
-export const ContactInformation = () => {
+export const ContactInformation = ({ email }) => {
   const contact = getItemData('contact', 'global')
   return (
     <section className="relative -mb-52 w-full -translate-y-52 bg-white px-4 pt-56 sm:px-6 sm:pt-64 lg:px-8 lg:pt-72">
@@ -57,7 +57,7 @@ export const ContactInformation = () => {
                   Email us
                 </h5>
                 <p className="mt-1.5 text-base leading-relaxed text-purple-800">
-                  {contact.email}
+                  {email}
                 </p>
               </div>
             </div>
