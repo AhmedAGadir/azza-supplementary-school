@@ -183,7 +183,7 @@ export const ContactHero = () => {
                     </div>
                   )}
 
-                  <div className="mt-6 flex justify-start">
+                  <div className="mt-6 flex justify-end">
                     <Button type="submit">Send message</Button>
                   </div>
                 </form>

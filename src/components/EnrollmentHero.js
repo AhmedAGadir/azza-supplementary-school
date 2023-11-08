@@ -602,7 +602,7 @@ export const EnrollmentHero = () => {
                       </div>
                     )}
 
-                    <div className="mt-6 flex justify-start">
+                    <div className="mt-6 flex justify-end">
                       <Button type="submit">Submit Application</Button>
                     </div>
                   </div>
