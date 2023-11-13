@@ -67,8 +67,8 @@ export const HomeHero = () => {
           </div>
           {/* Social proof */}
           <p className="mt-14 hidden text-sm font-medium uppercase tracking-wider text-purple-900 sm:block lg:hidden xl:block">
-            Rated 5 stars by over{' '}
-            <span className="font-semibold text-purple-600">100 parents</span>
+            {t.rating1}{' '}
+            <span className="font-semibold text-purple-600">{t.rating2}</span>
           </p>
           <div className="mt-8 hidden flex-col divide-y divide-purple-400/20 overflow-hidden sm:mt-5 sm:flex sm:flex-row sm:divide-x sm:divide-y-0 lg:hidden xl:flex">
             {ratings.map((rating, index) => (
