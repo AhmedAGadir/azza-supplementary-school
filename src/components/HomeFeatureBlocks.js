@@ -1,3 +1,6 @@
+'use client'
+
+import React, { useMemo } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
 
@@ -12,52 +15,48 @@ import squareImage2 from '/public/images/photos/student-girls-on-wall-cropped.jp
 import daad from '/public/images/illustrations/daad.svg'
 import ayn from '/public/images/illustrations/ayn.svg'
 
-const features = [
-  'Arabic language',
-  'Academic support',
-  'Cultural studies',
-  'Personal growth',
-  'Community bonding',
-  'Confidence-building',
-  'Diverse activities',
-  'Experienced staff',
-  'Excellence recognition',
-]
-
-const blocks = [
-  {
-    tagline: 'Beyond Academics',
-    headline: "Fostering Every Child's Potential",
-    text: 'We emphasize academic achievement alongside personal development, nurturing resilience, creativity, and critical thinking. Our commitment lies in equipping students with the skills necessary for success in and out of the classroom.',
-    action: { label: 'Explore Our Ethos', href: '/about', icon: true },
-    portraitImage: {
-      src: portraitImage1,
-      alt: 'Students engaged in an interactive class',
-    },
-    squareImage: {
-      src: squareImage1,
-      alt: 'Students participating in a group activity',
-    },
-    backgroundImage: daad,
-  },
-  {
-    tagline: 'Community and Belonging',
-    headline: 'Creating Community Leaders',
-    text: 'By prioritizing leadership, teamwork, and social responsibility, we prepare our students to take active roles in their communities. Our emphasis on ethical conduct and community involvement inspires students to contribute positively to society and cultivate meaningful relationships.',
-    action: { label: 'Become Part of Our Story', href: '/enroll', icon: true },
-    portraitImage: {
-      src: portraitImage2,
-      alt: 'Child smiling in a classroom setting',
-    },
-    squareImage: {
-      src: squareImage2,
-      alt: 'Students enjoying a meal together',
-    },
-    backgroundImage: ayn,
-  },
-]
+import { useTranslation } from '@/app/useTranslation'
 
 export const HomeFeatureBlocks = () => {
+  const t = useTranslation()?.home?.homeFeaturesBlock ?? {}
+
+  const blocks = [
+    {
+      tagline: t.blocks?.[0].tagline ?? '',
+      headline: t.blocks?.[0].headline ?? '',
+      text: t.blocks?.[0].text ?? '',
+      action: { label: t.blocks?.[0].action ?? '', href: '/about', icon: true },
+      portraitImage: {
+        src: portraitImage1,
+        alt: t.blocks?.[0].image1Alt ?? '',
+      },
+      squareImage: {
+        src: squareImage1,
+        alt: t.blocks?.[0].image2Alt ?? '',
+      },
+      backgroundImage: daad,
+    },
+    {
+      tagline: t.blocks?.[1].tagline ?? '',
+      headline: t.blocks?.[1].headline ?? '',
+      text: t.blocks?.[1].text ?? '',
+      action: {
+        label: t.blocks?.[1].action ?? '',
+        href: '/enroll',
+        icon: true,
+      },
+      portraitImage: {
+        src: portraitImage2,
+        alt: t.blocks?.[1].image1Alt ?? '',
+      },
+      squareImage: {
+        src: squareImage2,
+        alt: t.blocks?.[1].image2Alt ?? '',
+      },
+      backgroundImage: ayn,
+    },
+  ]
+
   return (
     <section className="overflow-hidden bg-yellow-100 px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8">
       {/* Container */}
@@ -66,18 +65,15 @@ export const HomeFeatureBlocks = () => {
         <div className="relative">
           {/* Block title and subtext */}
           <h2 className="h2 mx-auto max-w-4xl text-center text-purple-900">
-            Beyond Academics: Growing Minds, Hearts, and Identities.
+            {t.title}
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-xl leading-relaxed text-purple-800">
-            We embrace a holistic approach to education, rooted in academic
-            excellence and personal development, combining standard academics
-            with unique community engagement to cultivate an environment where
-            students excel on all fronts.
+            {t.description}
           </p>
           {/* Feature list */}
           <div className="mx-auto mt-12 max-w-3xl">
             <ul className="-mx-3 -my-2 flex flex-wrap items-center justify-center text-lg text-purple-800">
-              {features.map((feature, index) => (
+              {t.features?.map((feature, index) => (
                 <li
                   key={`home-feature-${index}`}
                   className="mx-3 my-2 flex items-center"

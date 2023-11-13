@@ -10,6 +10,39 @@
         "rating2": "100 parents",
         "cta": "Enroll today",
         "arabicSchoolReviewLabel": "Arabic School Review"
+      },
+      "homeFeaturesBlock": {
+        "title": "Beyond Academics: Growing Minds, Hearts, and Identities.",
+        "description": "We embrace a holistic approach to education, rooted in academic excellence and personal development, combining standard academics with unique community engagement to cultivate an environment where students excel on all fronts.",
+        "features": [
+          "Arabic language",
+          "Academic support",
+          "Cultural studies",
+          "Personal growth",
+          "Community bonding",
+          "Confidence-building",
+          "Diverse activities",
+          "Experienced staff",
+          "Excellence recognition"
+        ],
+        "blocks": [
+          {
+            "tagline": "Beyond Academics",
+            "headline": "Fostering Every Child's Potential",
+            "text": "We emphasize academic achievement alongside personal development, nurturing resilience, creativity, and critical thinking. Our commitment lies in equipping students with the skills necessary for success in and out of the classroom.",
+            "action": "Explore Our Ethos",
+            "image1Alt": "Students engaged in an interactive class",
+            "image2Alt": "'tudents participating in a group activity"
+          },
+          {
+            "tagline": "Community and Belonging",
+            "headline": "Creating Community Leaders",
+            "text": "By prioritizing leadership, teamwork, and social responsibility, we prepare our students to take active roles in their communities. Our emphasis on ethical conduct and community involvement inspires students to contribute positively to society and cultivate meaningful relationships.",
+            "action": "Become Part of Our Story",
+            "image1Alt": "Child smiling in a classroom setting",
+            "image2Alt": "Students enjoying a meal together"
+          }
+        ]
       }
     }
   },
@@ -24,6 +57,39 @@
         "rating2": "100 ولي أمر",
         "cta": "التحق بنا اليوم",
         "arabicSchoolReviewLabel": "مراجعة المدرسة العربية"
+      },
+      "homeFeaturesBlock": {
+        "title": "أكثر من التحصيل الأكاديمي: تنمية العقول والقلوب والهويات",
+        "description": "نتبنى منهجاً شاملاً في التعليم، يستند إلى التميز الأكاديمي والتطور الشخصي، مدمجين الأكاديميات القياسية مع الانخراط الفريد بالمجتمع لخلق بيئة تتيح للطلاب التفوق في جميع المجالات.",
+        "features": [
+          "اللغة العربية",
+          "الدعم الأكاديمي",
+          "الدراسات الثقافية",
+          "النمو الشخصي",
+          "تعزيز الروابط المجتمعية",
+          "بناء الثقة",
+          "أنشطة متنوعة",
+          "فريق عمل ذو خبرة",
+          "التميز والاعتراف به"
+        ],
+        "blocks": [
+          {
+            "tagline": "أكثر من التحصيل الأكاديمي",
+            "headline": "تنمية إمكانيات كل طفل",
+            "text": "نركز على التحصيل الأكاديمي إلى جانب التطور الشخصي، معززين المرونة والإبداع والتفكير النقدي. نلتزم بتجهيز الطلاب بالمهارات اللازمة للنجاح داخل الصف الدراسي وخارجه.",
+            "action": "اكتشف فلسفتنا",
+            "image1Alt": "طلاب مشاركون في حصة تفاعلية",
+            "image2Alt": "طلاب يشاركون في نشاط جماعي"
+          },
+          {
+            "tagline": "المجتمع والانتماء",
+            "headline": "تكوين قادة المجتمع",
+            "text": "من خلال إعطاء الأولوية للقيادة والعمل الجماعي والمسؤولية الاجتماعية، نعد طلابنا لتولي أدوار فاعلة في مجتمعاتهم. تركيزنا على السلوك الأخلاقي والمشاركة المجتمعية يلهم الطلاب للمساهمة بشكل إيجابي في المجتمع وبناء علاقات ذات معنى.",
+            "action": "كن جزءاً من قصتنا",
+            "image1Alt": "طفل يبتسم في بيئة صفية",
+            "image2Alt": "طلاب يتمتعون بوجبة معاً"
+          }
+        ]
       }
     }
   }
