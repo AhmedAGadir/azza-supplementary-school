@@ -17,7 +17,7 @@ import { useTranslation } from '@/app/useTranslation'
 // import alifbata from '/public/images/illustrations/alifbata.svg'
 
 export const HomeHero = () => {
-  const t = useTranslation().home.hero
+  const t = useTranslation()?.home?.hero ?? {}
 
   const ratings = useMemo(
     () => [
