@@ -1,5 +1,6 @@
 'use client'
 
+import React, { useMemo } from 'react'
 import Image from 'next/image'
 // import { useState, Fragment } from 'react'
 // import { Dialog, Transition } from '@headlessui/react'
@@ -18,11 +19,14 @@ import { useTranslation } from '@/app/useTranslation'
 export const HomeHero = () => {
   const t = useTranslation().home.hero
 
-  const ratings = [
-    // { label: 'Great Schools', stars: 5 },
-    { label: t.arabicSchoolReviewLabel, stars: 5 },
-    // { label: 'Google Reviews', stars: 5 },
-  ]
+  const ratings = useMemo(
+    () => [
+      // { label: 'Great Schools', stars: 5 },
+      { label: t.arabicSchoolReviewLabel, stars: 5 },
+      // { label: 'Google Reviews', stars: 5 },
+    ],
+    [t.arabicSchoolReviewLabel],
+  )
 
   return (
     <section className="from-orange-25 bg-gradient-to-b to-orange-50 px-4 pt-16 sm:px-6 lg:px-8">
@@ -132,8 +136,8 @@ export const HomeHero = () => {
         <div className="mt-20 flex flex-col items-center sm:hidden lg:mt-24 lg:flex xl:hidden">
           {/* Social proof */}
           <p className="text-sm font-semibold uppercase tracking-wider text-purple-900">
-            Rated 5 stars by over{' '}
-            <span className="font-semibold text-purple-600">100 parents</span>
+            {t.rating1}{' '}
+            <span className="font-semibold text-purple-600">{t.rating2}</span>
           </p>
           <div className="mt-8 flex flex-col divide-y divide-purple-400/20 overflow-hidden sm:flex-row sm:divide-x sm:divide-y-0">
             {ratings.map((rating, index) => (
