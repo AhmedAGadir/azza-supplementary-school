@@ -15,14 +15,14 @@ import { useTranslation } from '@/app/useTranslation'
 
 // import alifbata from '/public/images/illustrations/alifbata.svg'
 
-const ratings = [
-  // { label: 'Great Schools', stars: 5 },
-  { label: 'Arabic School Review', stars: 5 },
-  // { label: 'Google Reviews', stars: 5 },
-]
-
 export const HomeHero = () => {
   const t = useTranslation().home.hero
+
+  const ratings = [
+    // { label: 'Great Schools', stars: 5 },
+    { label: t.arabicSchoolReviewLabel, stars: 5 },
+    // { label: 'Google Reviews', stars: 5 },
+  ]
 
   return (
     <section className="from-orange-25 bg-gradient-to-b to-orange-50 px-4 pt-16 sm:px-6 lg:px-8">
