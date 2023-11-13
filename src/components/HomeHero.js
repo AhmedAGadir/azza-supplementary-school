@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 
 import Image from 'next/image'
 // import { useState, Fragment } from 'react'
@@ -11,7 +11,9 @@ import { Button } from '@/components/Button'
 import heroImage1 from '/public/images/photos/certificates-1-cropped-2.jpg'
 import heroImage2 from '/public/images/photos/gardening-cropped.jpg'
 
-import alifbata from '/public/images/illustrations/alifbata.svg'
+import { useTranslation } from '@/app/useTranslation'
+
+// import alifbata from '/public/images/illustrations/alifbata.svg'
 
 const ratings = [
   // { label: 'Great Schools', stars: 5 },
@@ -20,15 +22,7 @@ const ratings = [
 ]
 
 export const HomeHero = () => {
-  // let [isOpen, setIsOpen] = useState(false)
-
-  // function closeModal() {
-  //   setIsOpen(false)
-  // }
-
-  // function openModal() {
-  //   setIsOpen(true)
-  // }
+  const t = useTranslation().home.hero
 
   return (
     <section className="from-orange-25 bg-gradient-to-b to-orange-50 px-4 pt-16 sm:px-6 lg:px-8">
@@ -38,29 +32,21 @@ export const HomeHero = () => {
         <div className="flex flex-col items-center justify-center lg:col-span-6 lg:items-start">
           <div>
             <span className="inline-block rounded-full bg-orange-200 px-4 py-2 font-medium text-slate-800 shadow-md">
-              Welcome to Azza Supplementary School
+              {t.title}
             </span>
           </div>
           <h1 className="h1 relative mt-4 max-w-xl text-center text-slate-800 sm:mt-5 lg:max-w-none lg:text-left">
-            Empowering Communities, Enriching Education
-            {/* <Image
-              className=" absolute -bottom-20 left-0 -z-20 h-auto w-screen -rotate-8 2xl:block"
-              src={alifbata}
-              alt=""
-            /> */}
+            {t.subtitle}
           </h1>
           <p className="relative mt-3 max-w-2xl text-center text-xl leading-loose text-purple-800 lg:text-left">
-            We're a dedicated non-profit focused on{' '}
-            <b>Arabic language education</b>. Through a balanced blend of
-            cultural enrichment and academic growth, we shape confident learners
-            primed to contribute actively to society.
-            <br /> Join us, where learning goes beyond textbooks, fostering
-            community, linguistic identity, and a harmonious collective future.
+            {t.description1}
+            <br />
+            {t.description2}
           </p>
           {/* Hero buttons */}
           <div className="mt-8 flex flex-col items-center overflow-hidden sm:flex-row">
             <Button href="/enroll">
-              Enroll today
+              {t.cta}
               <Icon
                 icon="arrowNarrowRight"
                 className="ml-3 h-6 w-6 group-hover:animate-horizontal-bounce"

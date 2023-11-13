@@ -31,6 +31,7 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-roboto)', 'sans-serif'],
         written: ['var(--font-gochi-hand)', 'cursive'],
+        arabic: ['var(--font-cairo)', 'sans-serif'],
       },
 
       colors: {

@@ -11,6 +11,12 @@ import logo from '/public/images/azza-logo.png'
 import { Button } from '@/components/Button'
 import { Icon } from '@/components/Icon'
 
+import { useLanguageContext } from '@/app/languageContext'
+
+import LanguageToggle from '@/components/LanguageToggle'
+import english from '/public/images/vectors/english.png'
+import arabic from '/public/images/vectors/arabic.png'
+
 import kaaf from '/public/images/illustrations/kaaf-purple.svg'
 import sheen from '/public/images/illustrations/sheen-purple.svg'
 
@@ -24,7 +30,16 @@ const navigation = [
 ]
 
 export function Navbar({ programs }) {
+  const { language, changeLanguage } = useLanguageContext()
   const pathname = usePathname()
+
+  const toggleLanguage = () => {
+    if (language === 'en') {
+      changeLanguage('ar')
+    } else {
+      changeLanguage('en')
+    }
+  }
 
   function MenuIcon({ open }) {
     return (
@@ -67,10 +82,20 @@ export function Navbar({ programs }) {
 
   function MobileNav() {
     return (
-      <div className="block lg:hidden">
+      <div className="flex items-center lg:hidden">
+        <div className="mr-2 pt-2">
+          <LanguageToggle
+            languages={[
+              { label: 'English', value: 'en', img: english },
+              { label: 'Arabic', value: 'ar', img: arabic },
+            ]}
+            selectedLanguage={language}
+            toggleLanguage={toggleLanguage}
+          />
+        </div>
         <Popover>
           <Popover.Button
-            className="group relative z-50 h-5 w-6 rotate-0 transform cursor-pointer transition duration-500 ease-in-out focus:outline-none"
+            className="group relative z-50 mx-2 h-5 w-6 rotate-0 transform cursor-pointer transition duration-500 ease-in-out focus:outline-none"
             aria-label="Toggle Navigation"
           >
             {({ open }) => <MenuIcon open={open} />}
@@ -267,7 +292,15 @@ export function Navbar({ programs }) {
           </div>
 
           {/* Call to action button */}
-          <div className="hidden lg:block">
+          <div className="hidden items-center gap-2 lg:flex">
+            <LanguageToggle
+              languages={[
+                { label: 'English', value: 'en', img: english },
+                { label: 'Arabic', value: 'ar', img: arabic },
+              ]}
+              selectedLanguage={language}
+              toggleLanguage={toggleLanguage}
+            />
             <Button href="/enroll">Enroll today</Button>
           </div>
           {/* Logo on smaller screens: < lg */}

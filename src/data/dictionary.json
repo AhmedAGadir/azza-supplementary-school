@@ -1,0 +1,24 @@
+{
+  "en": {
+    "home": {
+      "hero": {
+        "title": "Welcome to Azza Supplementary School",
+        "subtitle": "Empowering Communities, Enriching Education",
+        "description1": "We're a dedicated non-profit focused on Arabic language education. Through a balanced blend of cultural enrichment and academic growth, we shape confident learners primed to contribute actively to society.",
+        "description2": "Join us, where learning goes beyond textbooks, fostering community, linguistic identity, and a harmonious collective future.",
+        "cta": "Enroll today"
+      }
+    }
+  },
+  "ar": {
+    "home": {
+      "hero": {
+        "title": "مرحبا بكم في مدرسة عزة الإضافية",
+        "subtitle": "تمكين المجتمعات وإغناء التعليم",
+        "description1": "نحن منظمة غير ربحية ملتزمة بتعزيز تعليم اللغة العربية. نسعى لتشكيل متعلمين واثقين قادرين على المساهمة الفاعلة في المجتمع من خلال الجمع بين الإثراء الثقافي والتطور الأكاديمي.",
+        "description2": ".انضموا إلينا في رحلة تعلم تتخطى الكتب الدراسية، تُنمي روح المجتمع والهوية اللغوية، وتبني مستقبلاً جماعياً متناسقاً",
+        "cta": "التحق بنا اليوم"
+      }
+    }
+  }
+}
