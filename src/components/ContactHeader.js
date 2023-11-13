@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Icon } from '@/components/Icon'
-import logo from '/public/images/azza-logo.png'
+// import logo from '/public/images/azza-logo.png'
+import logo from '/public/images/logo-icon.png'
 
 export function ContactHeader({ contact }) {
   return (
@@ -11,13 +12,17 @@ export function ContactHeader({ contact }) {
       <div className="relative mx-auto max-w-screen-xl border-b border-purple-200/30 py-5">
         <div className="flex items-center justify-between">
           {/* Site branding */}
-          <div className="w-96 flex-shrink-0 flex-grow-0">
+          <div className="flex-shrink-0 flex-grow-0">
             <Link href="/">
-              <Image
-                src={logo}
-                alt="Azza Supplementary School"
-                className="h-auto"
-              />
+              <div class="flex w-32 items-center gap-2">
+                <Image
+                  src={logo}
+                  alt="Azza Supplementary School"
+                  className="h-auto"
+                  width={120}
+                />
+                <h1 className="h5">Azza Supplementary School</h1>
+              </div>
             </Link>
           </div>
           {/* Contact information */}

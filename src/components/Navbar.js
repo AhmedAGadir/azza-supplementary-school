@@ -7,7 +7,8 @@ import { Fragment } from 'react'
 import { Menu, Transition, Popover } from '@headlessui/react'
 import clsx from 'clsx'
 
-import logo from '/public/images/azza-logo.png'
+// import logo from '/public/images/azza-logo.png'
+import logo from '/public/images/logo-icon.png'
 import { Button } from '@/components/Button'
 import { Icon } from '@/components/Icon'
 
@@ -304,13 +305,16 @@ export function Navbar({ programs }) {
             <Button href="/enroll">Enroll today</Button>
           </div>
           {/* Logo on smaller screens: < lg */}
-          <div className="block w-48 flex-shrink-0 flex-grow-0 sm:w-60 lg:hidden">
+          <div className="block w-20 flex-shrink-0 flex-grow-0 sm:w-24 lg:hidden">
             <Link href="/">
-              <Image
-                src={logo}
-                alt="Azza Supplementary School"
-                className="h-auto"
-              />
+              <div class="flex items-center gap-2">
+                <Image
+                  src={logo}
+                  alt="Azza Supplementary School"
+                  className="h-auto"
+                />
+                <h1 className="h5">Azza Supplementary School</h1>
+              </div>
             </Link>
           </div>
 

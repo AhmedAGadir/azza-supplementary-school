@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { Icon } from '@/components/Icon'
 import { Button } from '@/components/Button'
 // import sunrise from '/public/images/illustrations/sunrise.svg'
-// import crestLogo from 'public/images/logo-icon.png'
-import newLogo from 'public/images/azza-logo-square-no-english.png'
+import logo from 'public/images/logo-icon.png'
+// import logo from 'public/images/azza-logo-square-no-english.png'
 import highlight from '/public/images/illustrations/underline-simple-light-purple.svg'
 
 export const CallToAction = () => {
@@ -12,8 +12,8 @@ export const CallToAction = () => {
     <section className="bg-white py-24 sm:py-32">
       {/* Container */}
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        {/* newLogo image */}
-        <Image className="mx-auto w-72" src={newLogo} alt="" />
+        {/* logo image */}
+        <Image className="mx-auto w-72" src={logo} alt="" />
         {/* Header */}
         <h2 className="h1 mx-auto mt-6 max-w-3xl text-center text-purple-900">
           <span className="inline">Join </span> {/* Underlined text */}

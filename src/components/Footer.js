@@ -2,7 +2,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
 
-import logo from '/public/images/azza-logo.png'
+// import logo from '/public/images/azza-logo.png'
+import logo from '/public/images/logo-icon.png'
 import { Icon } from '@/components/Icon'
 
 const siteLinks = [
@@ -40,7 +41,7 @@ export const Footer = ({ programs, contact }) => {
         <div className="flex flex-col lg:col-span-4 lg:mx-auto">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-60 flex-shrink-0 flex-grow-0">
+            <div className="w-40 flex-shrink-0 flex-grow-0">
               <Link href="/">
                 <Image
                   src={logo}
