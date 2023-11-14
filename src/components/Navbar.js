@@ -21,7 +21,7 @@ import arabic from '/public/images/vectors/arabic.png'
 import kaaf from '/public/images/illustrations/kaaf-purple.svg'
 import sheen from '/public/images/illustrations/sheen-purple.svg'
 
-import React, { useMemo } from 'react'
+import React, { useMemo, useCallback } from 'react'
 import { useTranslation } from '@/app/useTranslation'
 
 export function Navbar({ programs }) {
@@ -32,13 +32,22 @@ export function Navbar({ programs }) {
   const { language, changeLanguage } = useLanguageContext()
   const pathname = usePathname()
 
-  const toggleLanguage = () => {
-    if (language === 'en') {
-      changeLanguage('ar')
-    } else {
-      changeLanguage('en')
-    }
-  }
+  const selectLanguage = useCallback(
+    (language) => {
+      switch (language) {
+        case 'en':
+          changeLanguage('en')
+          break
+        case 'ar':
+          changeLanguage('ar')
+          break
+        default:
+          changeLanguage('en')
+          break
+      }
+    },
+    [changeLanguage],
+  )
 
   function MenuIcon({ open }) {
     return (
@@ -89,7 +98,7 @@ export function Navbar({ programs }) {
               { label: 'عربي', value: 'ar', img: arabic },
             ]}
             selectedLanguage={language}
-            toggleLanguage={toggleLanguage}
+            selectLanguage={selectLanguage}
           />
         </div>
         <Popover>
@@ -127,28 +136,27 @@ export function Navbar({ programs }) {
                 <div className="mx-auto flex w-full flex-col items-center justify-evenly space-y-6">
                   {t.navItems?.map((link) => (
                     <Fragment key={`mobile-link-${link.label}`}>
-                      {(link.label == 'Programs' ||
-                        link.label === 'البرامج') && (
-                        <Link href={link.href}>
-                          <div className="group relative p-0.5">
-                            <span className="relative z-10 text-2xl font-medium text-purple-50 duration-300 ease-in-out group-hover:text-white">
-                              {link.label}
-                            </span>
-                            <span className="absolute -left-1 -right-1 bottom-0 h-1.5 origin-bottom scale-x-0 transform rounded-lg bg-yellow-400 duration-300 ease-in-out group-hover:scale-x-100" />
-                          </div>
-                        </Link>
-                      )}
+                      {link.label !== 'Programs' &&
+                        link.label !== 'البرامج' && (
+                          <Link href={link.href}>
+                            <div className="group relative p-0.5">
+                              <span className="relative z-10 text-2xl font-medium text-purple-50 duration-300 ease-in-out group-hover:text-white">
+                                {link.label}
+                              </span>
+                              <span className="absolute -left-1 -right-1 bottom-0 h-1.5 origin-bottom scale-x-0 transform rounded-lg bg-yellow-400 duration-300 ease-in-out group-hover:scale-x-100" />
+                            </div>
+                          </Link>
+                        )}
                     </Fragment>
                   ))}
-
-                  <Button href="/enroll">Enroll today</Button>
+                  <Button href="/enroll">{t.cta}</Button>
                 </div>
 
                 <hr className="my-8 w-full border-purple-200 border-opacity-30 sm:my-10" />
 
                 <div className="mx-auto w-full max-w-md">
                   <p className="text-center text-lg font-semibold uppercase tracking-wider text-purple-200 sm:text-left">
-                    Programs
+                    {language === 'en' ? 'Programs' : 'البرامج'}
                   </p>
                   <div className="mt-4 grid justify-items-center gap-4 sm:grid-cols-2 sm:justify-items-start sm:gap-x-8">
                     {programs
@@ -182,9 +190,21 @@ export function Navbar({ programs }) {
   return (
     <div className="px-4 sm:px-6">
       <nav className="mx-auto flex max-w-screen-xl items-center pt-5">
-        <div className="flex w-full items-center justify-between">
+        <div
+          className={clsx(
+            'flex w-full items-center justify-between',
+            language === 'ar' && 'lg:flex-row-reverse',
+          )}
+        >
           {/* Main navigation menu for large screens */}
-          <div className="hidden items-center justify-between md:space-x-6 lg:flex lg:space-x-10">
+          <div
+            className={clsx(
+              'hidden items-center justify-between md:space-x-6 lg:flex',
+              language === 'en'
+                ? 'lg:space-x-10'
+                : 'lg:flex-row-reverse lg:space-x-10 lg:space-x-reverse',
+            )}
+          >
             {t.navItems?.map((link) => (
               <Fragment key={`desktop-link-${link.label}`}>
                 {link.label == 'Programs' || link.label === 'البرامج' ? (
@@ -199,7 +219,7 @@ export function Navbar({ programs }) {
                                 open ? 'text-purple-600' : 'text-purple-700',
                               )}
                             >
-                              Programs
+                              {language === 'en' ? 'Programs' : 'البرامج'}
                               {/* Heroicon name: solid/chevron-down */}
                               {/* Toggle class 'rotate-180' on dropdown open and close */}
                               <Icon
@@ -292,16 +312,21 @@ export function Navbar({ programs }) {
           </div>
 
           {/* Call to action button */}
-          <div className="hidden items-center gap-2 lg:flex">
+          <div
+            className={clsx(
+              'hidden items-center gap-2 lg:flex',
+              language === 'ar' && 'lg:flex-row-reverse',
+            )}
+          >
             <LanguageToggle
               languages={[
                 { label: 'English', value: 'en', img: english },
                 { label: 'عربي', value: 'ar', img: arabic },
               ]}
               selectedLanguage={language}
-              toggleLanguage={toggleLanguage}
+              selectLanguage={selectLanguage}
             />
-            <Button href="/enroll">Enroll today</Button>
+            <Button href="/enroll">{t.cta}</Button>
           </div>
           {/* Logo on smaller screens: < lg */}
           <div className="block w-20 flex-shrink-0 flex-grow-0 sm:w-24 lg:hidden">
@@ -312,7 +337,7 @@ export function Navbar({ programs }) {
                   alt="Azza Supplementary School"
                   className="h-auto"
                 />
-                <h1 className="h5">Azza Supplementary School</h1>
+                <h1 className="h5">{t.name}</h1>
               </div>
             </Link>
           </div>

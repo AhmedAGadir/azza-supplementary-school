@@ -11,6 +11,8 @@
         }
       },
       "navigation": {
+        "name": "Azza Supplementary School",
+        "cta": "Enroll today",
         "navItems": [
           { "label": "Home", "href": "/" },
           { "label": "About", "href": "/about" },
@@ -127,6 +129,8 @@
         }
       },
       "navigation": {
+        "name": "مدرسة عزة التكميلية",
+        "cta": "التسجيل",
         "navItems": [
           { "label": "الصفحة الرئيسية", "href": "/" },
           { "label": "معلومات عنا", "href": "/about" },
