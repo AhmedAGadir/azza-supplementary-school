@@ -84,7 +84,7 @@ export function Navbar({ programs }) {
   function MobileNav() {
     return (
       <div className="flex items-center lg:hidden">
-        <div className="mr-2 pt-2">
+        <div className="mr-1 pt-2">
           <LanguageToggle
             languages={[
               { label: 'English', value: 'en', img: english },
