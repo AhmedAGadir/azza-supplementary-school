@@ -14,7 +14,7 @@ export function ContactHeader({ contact }) {
           {/* Site branding */}
           <div className="flex-shrink-0 flex-grow-0">
             <Link href="/">
-              <div class="flex w-32 items-center gap-2">
+              <div className="flex w-32 items-center gap-2">
                 <Image
                   src={logo}
                   alt="Azza Supplementary School"

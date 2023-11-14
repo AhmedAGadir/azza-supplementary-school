@@ -142,37 +142,13 @@ const enrollmentFields = [
         label: 'Ethnic Origin',
         type: 'select',
         options: [
-          'Algerian',
-          'Egyptian',
-          'Iraqi',
-          'Lebanese',
-          'Moroccan',
-          'Palestinian',
-          'Syrian',
-          'Yemeni',
-          'Kurdish',
-          'Turkish',
-          'Any other Arab background',
-          'White British',
-          'White Irish',
-          'White Gypsy or Irish Traveller',
-          'Kosovan',
-          'Any other White background',
-          'Indian',
-          'Pakistani',
-          'Bangladeshi',
-          'Chinese',
-          'Malaysian',
-          'Any other Asian background',
           'Sudanese',
-          'Somali',
-          'Eritrean',
-          'Ethiopian',
-          'Nigerian',
-          'Ghanaian',
-          'Any other Black/African/Caribbean background',
-          'Mixed/Multiple ethnic background',
-          'Any other ethnic group',
+          'North African',
+          'African',
+          'Middle Eastern',
+          'Asian',
+          'Caucasian',
+          'Other',
           'Prefer not to say',
         ],
         required: true,
@@ -409,7 +385,7 @@ export const EnrollmentHero = () => {
                           ind < enrollmentFields.length - 1 && 'border-b',
                         )}
                       >
-                        <div class="lg:col-span-2">
+                        <div className="lg:col-span-2">
                           <h2 className="text-base font-semibold leading-7 text-gray-900">
                             {section.section}
                           </h2>

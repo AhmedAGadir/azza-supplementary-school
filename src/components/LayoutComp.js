@@ -3,7 +3,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import { Roboto_Flex } from 'next/font/google'
-import { Cairo } from 'next/font/google'
+import { IBM_Plex_Sans_Arabic } from 'next/font/google'
 
 import { Header } from '@/components/Header'
 import { CallToAction } from '@/components/CallToAction'
@@ -15,9 +15,10 @@ const roboto = Roboto_Flex({
   variable: '--font-roboto',
 })
 
-const cairo = Cairo({
+const plex = IBM_Plex_Sans_Arabic({
   subsets: ['arabic'],
-  variable: '--font-cairo',
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
+  variable: '--font-plex',
 })
 
 const LayoutComp = ({ programs, contact, children }) => {
@@ -25,7 +26,7 @@ const LayoutComp = ({ programs, contact, children }) => {
     <LanguageProvider>
       {({ language }) => {
         const isArabic = language === 'ar'
-        const fontVariable = isArabic ? cairo.variable : roboto.variable
+        const fontVariable = isArabic ? plex.variable : roboto.variable
         const fontName = isArabic ? 'font-arabic' : 'font-sans'
         const htmlLang = isArabic ? 'ar' : 'en'
 

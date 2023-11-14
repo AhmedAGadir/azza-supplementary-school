@@ -17,7 +17,9 @@ import { useTranslation } from '@/app/useTranslation'
 // import alifbata from '/public/images/illustrations/alifbata.svg'
 
 export const HomeHero = () => {
-  const t = useTranslation()?.home?.hero ?? {}
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(() => translation?.home?.hero ?? {}, [translation])
 
   const ratings = useMemo(
     () => [
@@ -33,16 +35,37 @@ export const HomeHero = () => {
       {/* Hero container */}
       <div className="mx-auto max-w-screen-xl lg:grid lg:grid-cols-12 lg:gap-8">
         {/* Hero text content */}
-        <div className="flex flex-col items-center justify-center lg:col-span-6 lg:items-start">
+        <div
+          className={clsx(
+            'flex flex-col items-center lg:col-span-6',
+            language === 'en'
+              ? 'justify-center lg:items-start'
+              : 'lg:items-end',
+          )}
+        >
           <div>
-            <span className="inline-block rounded-full bg-orange-200 px-4 py-2 font-medium text-slate-800 shadow-md">
+            <div
+              className={clsx(
+                'inline-block rounded-full bg-orange-200 px-4 py-2 font-medium text-slate-800 shadow-md',
+              )}
+            >
               {t.title}
-            </span>
+            </div>
           </div>
-          <h1 className="h1 relative mt-4 max-w-xl text-center text-slate-800 sm:mt-5 lg:max-w-none lg:text-left">
+          <h1
+            className={clsx(
+              'h1 relative mt-4 max-w-xl text-center text-slate-800 sm:mt-5 lg:max-w-none',
+              language === 'en' ? 'lg:text-left' : 'lg:text-right',
+            )}
+          >
             {t.subtitle}
           </h1>
-          <p className="relative mt-3 max-w-2xl text-center text-xl leading-loose text-purple-800 lg:text-left">
+          <p
+            className={clsx(
+              'relative mt-3 max-w-2xl text-center text-xl leading-loose text-purple-800',
+              language === 'en' ? 'lg:text-left' : 'lg:text-right',
+            )}
+          >
             {t.description1}
             <br />
             {t.description2}

@@ -88,7 +88,7 @@ export function Navbar({ programs }) {
           <LanguageToggle
             languages={[
               { label: 'English', value: 'en', img: english },
-              { label: 'Arabic', value: 'ar', img: arabic },
+              { label: 'عربي', value: 'ar', img: arabic },
             ]}
             selectedLanguage={language}
             toggleLanguage={toggleLanguage}
@@ -297,7 +297,7 @@ export function Navbar({ programs }) {
             <LanguageToggle
               languages={[
                 { label: 'English', value: 'en', img: english },
-                { label: 'Arabic', value: 'ar', img: arabic },
+                { label: 'عربي', value: 'ar', img: arabic },
               ]}
               selectedLanguage={language}
               toggleLanguage={toggleLanguage}
@@ -307,7 +307,7 @@ export function Navbar({ programs }) {
           {/* Logo on smaller screens: < lg */}
           <div className="block w-20 flex-shrink-0 flex-grow-0 sm:w-24 lg:hidden">
             <Link href="/">
-              <div class="flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <Image
                   src={logo}
                   alt="Azza Supplementary School"

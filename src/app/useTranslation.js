@@ -6,5 +6,10 @@ import dictionary from '@/data/dictionary.json'
 export const useTranslation = () => {
   const { language } = useLanguageContext()
 
-  return dictionary[language] || {}
+  const translation = dictionary[language] || {}
+
+  return {
+    translation,
+    language,
+  }
 }

@@ -18,7 +18,12 @@ import ayn from '/public/images/illustrations/ayn.svg'
 import { useTranslation } from '@/app/useTranslation'
 
 export const HomeFeatureBlocks = () => {
-  const t = useTranslation()?.home?.homeFeaturesBlock ?? {}
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(
+    () => translation?.home?.homeFeaturesBlock ?? {},
+    [translation],
+  )
 
   const blocks = [
     {
