@@ -39,8 +39,8 @@ export const HomeHero = () => {
           className={clsx(
             'flex flex-col items-center lg:col-span-6',
             language === 'en'
-              ? 'justify-center lg:items-start'
-              : 'lg:items-end',
+              ? 'order-1 justify-center lg:items-start'
+              : 'order-2 lg:items-end',
           )}
         >
           <div>
@@ -125,10 +125,18 @@ export const HomeHero = () => {
           </div>
         </div>
         {/* Hero image & video */}
-        <div className={clsx('relative lg:col-span-6')}>
+        <div
+          className={clsx(
+            'relative lg:col-span-6',
+            language === 'en' ? 'order-2' : 'order-1',
+          )}
+        >
           <div
             className={clsx(
-              'relative pt-16 sm:pl-36 sm:pt-0 lg:pl-20 xl:pl-32',
+              'relative pt-16',
+              language === 'en'
+                ? 'sm:pl-36 sm:pt-0 lg:pl-20 xl:pl-32'
+                : 'sm:pr-36 sm:pt-0 lg:pr-20 xl:pr-32',
             )}
           >
             <div className="aspect-h-4 aspect-w-3 relative rounded-2xl">
@@ -142,11 +150,14 @@ export const HomeHero = () => {
             </div>
             <div
               className={clsx(
-                'absolute bottom-0 left-0 hidden rounded-3xl sm:block sm:h-72 sm:w-72 sm:translate-y-1/3 lg:h-64 lg:w-64 xl:h-72 xl:w-72 2xl:h-80 2xl:w-80',
+                'absolute bottom-0 hidden rounded-3xl sm:block sm:h-72 sm:w-72 sm:translate-y-1/3 lg:h-64 lg:w-64 xl:h-72 xl:w-72 2xl:h-80 2xl:w-80',
+                language === 'en' ? 'left-0' : 'right-0',
               )}
             >
               <Image
-                className="absolute inset-0 h-full w-full rounded-3xl object-cover"
+                className={clsx(
+                  'absolute inset-0 h-full w-full rounded-3xl object-cover',
+                )}
                 src={heroImage2}
                 fill
                 alt="classroom"

@@ -43,6 +43,20 @@
             "image2Alt": "Students enjoying a meal together"
           }
         ]
+      },
+      "staffAssurances": {
+        "title": "Your children are in good hands",
+        "subtitle": "Meet the teachers behind Azza",
+        "description": "Our teachers are the heart and soul of Azza. They are the ones who make our school a safe, fun, and engaging place for your children to learn and grow. We are proud to have a strong team of experienced, passionate, and dedicated individuals.",
+        "title2": "What Sets Our Teachers Apart: Promises We Keep",
+        "assurances": [
+          "Over three years of hands-on teaching experience",
+          "Genuine passion for guiding and inspiring children",
+          "Devotion to ensuring a positive and supportive classroom for every student",
+          "Fluent in Arabic and English",
+          "Training working with children with special needs"
+        ],
+        "action": "Meet the team"
       }
     }
   },
@@ -59,7 +73,7 @@
         "arabicSchoolReviewLabel": "تقييمات المدرسة العربية"
       },
       "homeFeaturesBlock": {
-        "title": "ما وراء الأكاديميات: نمو العقول والقلوب والهويات",
+        "title": "ما وراء الأكاديميات: نمو العقل والقلب والهوية",
         "description": "نتبنى نهجاً شاملاً في التعليم يقوم على التميز الأكاديمي والتطور الشخصي، مدمجين التعليم الأكاديمي التقليدي مع تفاعل مجتمعي فريد لخلق بيئة تسمح للطلاب بالتفوق في كافة المجالات.",
         "features": [
           "اللغة العربية",
@@ -90,6 +104,20 @@
             "image2Alt": "طلاب يستمتعون بوجبة معًا"
           }
         ]
+      },
+      "staffAssurances": {
+        "title": "أطفالكم بأيدٍ أمينة",
+        "subtitle": "تعرفوا على معلمي مدرسة عزة",
+        "description": "معلمونا هم قلب وروح مدرسة عزة. هم من يجعلون مدرستنا مكانًا آمنًا وممتعًا وتفاعليًا لتعلم أطفالكم ونموهم. نفخر بوجود فريق قوي من الأفراد ذوي الخبرة والشغف والتفاني.",
+        "title2": "ما يميز معلمينا: وعود نحافظ عليها",
+        "assurances": [
+          "خبرة تدريس عملية تزيد عن ثلاث سنوات",
+          "شغف حقيقي بتوجيه وإلهام الأطفال",
+          "التفاني في توفير بيئة صفية إيجابية وداعمة لكل طالب",
+          "إتقان اللغة العربية والإنجليزية",
+          "تدريب في العمل مع الأطفال ذوي الاحتياجات الخاصة"
+        ],
+        "action": "تعرفوا على فريقنا"
       }
     }
   }

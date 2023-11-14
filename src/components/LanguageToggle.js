@@ -16,7 +16,7 @@ export default function LanguageToggle({
         <Menu as="div" className="relative inline-block text-left">
           <div>
             <Menu.Button className="inline-flex w-full justify-center rounded-md  px-4 py-2 text-sm font-medium text-white hover:bg-black/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
-              <span className="text-bold mr-1 text-lg text-slate-500">
+              <span className="text-bold text-md mr-1 text-slate-500 sm:text-lg">
                 {selectedLanguage === 'en' ? 'EN' : 'عربي'}
               </span>
               <Image

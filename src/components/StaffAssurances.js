@@ -1,23 +1,21 @@
+'use client'
+
 import Image from 'next/image'
 import clsx from 'clsx'
+
+import React, { useMemo } from 'react'
+import { useTranslation } from '@/app/useTranslation'
 
 import { Icon } from '@/components/Icon'
 import { Button } from '@/components/Button'
 import checkmark from '/public/images/illustrations/checkmark.svg'
 
-import { getAllItems } from '@/lib/getItems'
-
-const assurances = [
-  'Over three years of hands-on teaching experience',
-  'Genuine passion for guiding and inspiring children',
-  'Devotion to ensuring a positive and supportive classroom for every student',
-  'Fluent in Arabic and English',
-  'Training working with children with special needs',
-]
-
 export const StaffAssurances = () => {
-  const featuredStaff = getAllItems('staff').filter(
-    (member) => member.data.featured,
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(
+    () => translation?.home?.staffAssurances ?? {},
+    [translation],
   )
 
   return (
@@ -29,17 +27,12 @@ export const StaffAssurances = () => {
           <div className="flex flex-col justify-center lg:col-span-1 ">
             <div>
               <span className="- inline-block rounded-full bg-purple-200 px-4 py-2 font-medium text-purple-700 shadow-md">
-                Your children are in good hands
+                {t.title}
               </span>
             </div>
-            <h2 className="h2 mt-4 text-purple-900 sm:mt-5">
-              Meet the teachers behind Azza
-            </h2>
+            <h2 className="h2 mt-4 text-purple-900 sm:mt-5">{t.subtitle}</h2>
             <p className="mt-4 max-w-xl text-xl leading-relaxed text-purple-800 md:mt-5">
-              Our teachers are the heart and soul of Azza. They are the ones who
-              make our school a safe, fun, and engaging place for your children
-              to learn and grow. We are proud to have a strong team of
-              experienced, passionate, and dedicated individuals.
+              {t.description}
             </p>
           </div>
           {/* Teacher qualifications box */}
@@ -50,11 +43,11 @@ export const StaffAssurances = () => {
               </span>
               <div className="mt-2 px-4 py-10 sm:px-10 sm:py-12">
                 <p className="text-lg font-semibold text-purple-900 sm:text-xl">
-                  What Sets Our Teachers Apart: Promises We Keep
+                  {t.title2}
                 </p>
                 {/* Teacher qualifications list */}
                 <ul className="mt-5 space-y-5 text-lg text-purple-800">
-                  {assurances.map((assurance, index) => (
+                  {t.assurances?.map((assurance, index) => (
                     <li
                       key={`assurance-${index}`}
                       className="flex items-center"
@@ -75,7 +68,7 @@ export const StaffAssurances = () => {
                   size="sm"
                   className="mt-10"
                 >
-                  Meet the team
+                  {t.action}
                   <Icon
                     icon="arrowNarrowRight"
                     className="ml-3 h-5 w-5 group-hover:animate-horizontal-bounce"
