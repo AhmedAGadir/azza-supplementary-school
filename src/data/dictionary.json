@@ -57,6 +57,10 @@
           "Training working with children with special needs"
         ],
         "action": "Meet the team"
+      },
+      "featuredPrograms": {
+        "title": "The best programs for your child",
+        "description": "We offer a core curriculum of programs for children of all ages. Our programs are designed to help your child grow and develop in a safe and nurturing environment."
       }
     }
   },
@@ -69,7 +73,7 @@
         "description2": "انضموا إلينا في تجربة تعليمية تتجاوز الكتب المدرسية، وتعمل على تنمية روح المجتمع والهوية اللغوية، وصياغة مستقبل جماعي متناغم.",
         "rating1": "حازت على تقييم خمس نجوم من أكثر من",
         "rating2": "100 ولي أمر",
-        "cta": "سجل اليوم",
+        "cta": "التسجيل",
         "arabicSchoolReviewLabel": "تقييمات المدرسة العربية"
       },
       "homeFeaturesBlock": {
@@ -118,6 +122,10 @@
           "تدريب في العمل مع الأطفال ذوي الاحتياجات الخاصة"
         ],
         "action": "تعرفوا على فريقنا"
+      },
+      "featuredPrograms": {
+        "title": "أفضل البرامج لطفلك",
+        "description": "نقدم منهجًا دراسيًا شاملاً للأطفال في كافة الأعمار. تم تصميم برامجنا لمساعدة طفلك على النمو والتطور في بيئة آمنة ومحفزة."
       }
     }
   }

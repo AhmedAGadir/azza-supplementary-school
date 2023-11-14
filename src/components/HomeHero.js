@@ -167,7 +167,7 @@ export const HomeHero = () => {
           </div>
         </div>
         {/* Visible only on sm screens ( <= 640px ) and lg screens ( >= 1024px	< 1280px ) */}
-        <div className="mt-20 flex flex-col items-center sm:hidden lg:mt-24 lg:flex xl:hidden">
+        <div className="mt-20 flex flex-col items-center sm:hidden lg:mt-24 lg:hidden">
           {/* Social proof */}
           <p className="text-sm font-semibold uppercase tracking-wider text-purple-900">
             {t.rating1}{' '}

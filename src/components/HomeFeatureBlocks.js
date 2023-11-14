@@ -152,6 +152,7 @@ export const HomeFeatureBlocks = () => {
               className={clsx(
                 'mt-16 flex flex-col justify-center lg:col-span-6 lg:mt-0',
                 index % 2 == 0 ? 'sm:mt-44' : 'sm:mt-20 lg:order-1',
+                language === 'en' ? 'text-left' : 'text-right',
               )}
             >
               <div>

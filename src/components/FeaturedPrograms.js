@@ -1,3 +1,6 @@
+'use client'
+
+import React, { useMemo } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
 
@@ -5,16 +8,19 @@ import { Icon } from '@/components/Icon'
 import { Button } from '@/components/Button'
 import curvedDottedLine from '/public/images/illustrations/curved-dotted-line.svg'
 import loopedDottedLine from '/public/images/illustrations/looped-dotted-line.svg'
-import { getAllItems } from '@/lib/getItems'
+// import { getAllItems } from '@/lib/getItems'
 
 import meem from '/public/images/illustrations/meem-lightpurple.svg'
 import ya from '/public/images/illustrations/ya-lightgreen.svg'
 import za from '/public/images/illustrations/za-lightyellow.svg'
 import dha from '/public/images/illustrations/dha-lightblue.svg'
 
-const ProgramCard = ({ program, index }) => (
+import { useTranslation } from '@/app/useTranslation'
+
+const ProgramCard = ({ program, index, language }) => (
   <div
     className={clsx(
+      language === 'en' ? 'text-left' : 'text-right',
       index == 1 &&
         'mt-12 w-full rounded-3xl bg-green-50 px-8 py-10 sm:p-12 md:mt-0 md:px-8 md:py-10 lg:p-12',
       index == 2 &&
@@ -70,7 +76,7 @@ const ProgramCard = ({ program, index }) => (
             size="sm"
             className="z-10"
           >
-            Learn more
+            {language === 'en' ? 'Learn more' : 'المزيد'}
             <Icon
               icon="arrowNarrowRight"
               className="ml-3 h-5 w-5 group-hover:animate-horizontal-bounce"
@@ -91,36 +97,53 @@ const ProgramCard = ({ program, index }) => (
   </div>
 )
 
-export const FeaturedPrograms = () => {
-  const featuredPrograms = getAllItems('programs')
-    .filter((program) => program.data.featured)
-    .sort((a, b) => a.data.order - b.data.order)
-  // .slice(0, 3)
+export const FeaturedPrograms = (props) => {
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(
+    () => translation?.home?.featuredPrograms ?? {},
+    [translation],
+  )
+
+  const featuredPrograms = useMemo(
+    () =>
+      language === 'en'
+        ? props.featuredPrograms
+        : props.featuredProgramsArabic ?? [],
+    [language, props.featuredPrograms, props.featuredProgramsArabic],
+  )
 
   return (
     <section className="overflow-hidden px-4 pb-24 pt-16 sm:px-6 sm:pb-28 sm:pt-24 md:pb-72 lg:px-8">
       {/* Container */}
       <div className="mx-auto max-w-xl md:max-w-screen-xl">
         {/* Section header title and subtext  */}
-        <div className="md:grid md:grid-cols-2 md:gap-12 lg:gap-16">
-          <div>
-            <h2 className="h2 max-w-4xl text-purple-900">
-              The best programs for your child
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-xl leading-relaxed text-purple-800 sm:mt-5 lg:text-left">
-              We offer a core curriculum of programs for children of all ages.
-              Our programs are designed to help your child grow and develop in a
-              safe and nurturing environment.
+        <div
+          className={clsx(
+            'md:grid md:grid-cols-2 md:gap-12 lg:gap-16',
+            language === 'en' ? 'text-left' : 'text-right',
+          )}
+        >
+          <div className={language === 'ar' && 'md:col-start-2'}>
+            <h2 className="h2 max-w-4xl text-purple-900">{t.title}</h2>
+            <p
+              className={clsx(
+                'mx-auto mt-4 max-w-2xl text-xl leading-relaxed text-purple-800 sm:mt-5',
+                language === 'en' ? 'lg:text-left' : 'lg:text-right',
+              )}
+            >
+              {t.description}
             </p>
           </div>
         </div>
         {/* School programs */}
         <div className="mt-16 md:mt-72 md:grid md:grid-cols-2 md:gap-8 lg:gap-16">
-          {featuredPrograms.map((program, index) => (
+          {featuredPrograms?.map((program, index) => (
             <ProgramCard
               key={`featured-program-${program.data.name}`}
               program={program}
               index={index}
+              language={language}
             />
           ))}
         </div>

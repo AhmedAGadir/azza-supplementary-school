@@ -1,8 +1,11 @@
+'use client'
+
+import React, { useMemo } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
 
 import { Icon } from '@/components/Icon'
-import { getAllItems } from '@/lib/getItems'
+import { useTranslation } from '@/app/useTranslation'
 
 // import qaaf from '/public/images/illustrations/qaaf-purple.svg'
 
@@ -13,8 +16,15 @@ const bgColorsClassName = [
   'bg-blue-50',
 ]
 
-export const Testimonials = () => {
-  const testimonials = getAllItems('testimonials')
+export const Testimonials = ({ testimonials, testimonialsArabic }) => {
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(() => translation?.home?.testimonials ?? {}, [translation])
+
+  const testimonialsArr = useMemo(
+    () => (language === 'en' ? testimonials : testimonialsArabic ?? []),
+    [language, testimonials, testimonialsArabic],
+  )
 
   return (
     <section className="bg-purple-600 py-20 sm:py-28 md:-mt-48 lg:py-32">
@@ -38,7 +48,7 @@ export const Testimonials = () => {
 
         {/* Testimonials */}
         <div className="mt-12 grid gap-8 sm:grid-cols-2 sm:gap-6 md:mt-14 md:gap-8 lg:mt-16 lg:gap-6 xl:mt-20 xl:grid-cols-4 2xl:mt-24 2xl:gap-12">
-          {testimonials.map((item, index) => (
+          {testimonialsArr.map((item, index) => (
             <blockquote
               key={`testimonial-${index}`}
               className={clsx(
