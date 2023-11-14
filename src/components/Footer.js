@@ -1,3 +1,6 @@
+'use client'
+
+import React, { useMemo } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
@@ -6,17 +9,7 @@ import clsx from 'clsx'
 import logo from '/public/images/logo-icon.png'
 import { Icon } from '@/components/Icon'
 
-const siteLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About us', href: '/about' },
-  // { label: 'Activities', href: '/activities' },
-  { label: 'School Calendar', href: '/calendar' },
-  // { label: 'Policies', href: '/policies' },
-  { label: 'Safeguarding Policy', href: '/policy' },
-  { label: 'Safeguarding Procedure', href: '/procedure' },
-  { label: 'Enrollment', href: '/enroll' },
-  { label: 'Contact us', href: '/contact' },
-]
+import { useTranslation } from '@/app/useTranslation'
 
 function SocialLink({ className, href, icon }) {
   return (
@@ -33,6 +26,22 @@ function SocialLink({ className, href, icon }) {
 }
 
 export const Footer = ({ programs, contact }) => {
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(() => translation?.footer ?? {}, [translation])
+
+  const siteLinks = [
+    { label: 'Home', href: '/' },
+    { label: 'About us', href: '/about' },
+    // { label: 'Activities', href: '/activities' },
+    { label: 'School Calendar', href: '/calendar' },
+    // { label: 'Policies', href: '/policies' },
+    { label: 'Safeguarding Policy', href: '/policy' },
+    { label: 'Safeguarding Procedure', href: '/procedure' },
+    { label: 'Enrollment', href: '/enroll' },
+    { label: 'Contact us', href: '/contact' },
+  ]
+
   return (
     <footer className="space-y-8 divide-y divide-purple-400/20 bg-yellow-100 px-4 pt-16 sm:px-6 sm:pt-20 lg:px-8">
       {/* Top section: blocks */}
@@ -52,9 +61,7 @@ export const Footer = ({ programs, contact }) => {
             </div>
           </div>
           {/* Mission statement */}
-          <div className="mt-6 text-lg text-purple-800">
-            Empowering Communities, Enriching Education
-          </div>
+          <div className="mt-6 text-lg text-purple-800">{t.title}</div>
           {/* Social links */}
           <div className="mt-5 w-full lg:mt-6">
             <div className="flex justify-start space-x-4">
@@ -73,7 +80,7 @@ export const Footer = ({ programs, contact }) => {
         {/* Block 2 */}
         <div className="flex-shrink sm:order-3 lg:order-none lg:col-span-2">
           <h6 className="relative text-xl font-bold tracking-wide text-purple-900">
-            <span className="relative z-20">Programs</span>
+            <span className="relative z-20">{t.labels?.programs}</span>
             <span className="absolute -bottom-1 left-0 z-10 h-1 w-12 rounded-lg bg-gradient-to-r from-yellow-400 to-yellow-500" />
           </h6>
           {/* Program links */}
@@ -96,12 +103,12 @@ export const Footer = ({ programs, contact }) => {
         {/* Block 3 */}
         <div className="flex-shrink sm:order-4 lg:order-none lg:col-span-2">
           <h6 className="relative text-xl font-bold tracking-wide text-purple-900">
-            <span className="relative z-20">Site Links</span>
+            <span className="relative z-20">{t.labels?.siteLinks}</span>
             <span className="absolute -bottom-1 left-0 z-10 h-1 w-12 rounded-lg bg-gradient-to-r from-yellow-400 to-yellow-500" />
           </h6>
           {/* Site links */}
           <ul className="mt-6 divide-y divide-purple-400/20 text-lg">
-            {siteLinks.map((link, index) => (
+            {t?.siteLinksDropdown?.map((link, index) => (
               <li
                 key={`footer-site-link-${link.label}`}
                 className={clsx(
@@ -119,7 +126,7 @@ export const Footer = ({ programs, contact }) => {
         {/* Block 4 */}
         <div className="sm:order-2 lg:order-none lg:col-span-3 lg:mx-auto ">
           <h6 className="relative text-xl font-bold tracking-wide text-purple-900">
-            <span className="relative z-20">Contact us</span>
+            <span className="relative z-20">{t.labels?.contactUs}</span>
             <span className="absolute -bottom-1 left-0 z-10 h-1 w-12 rounded-lg bg-gradient-to-r from-yellow-400 to-yellow-500" />
           </h6>
           {/* Contact information */}
@@ -133,12 +140,12 @@ export const Footer = ({ programs, contact }) => {
               </div>
               <div className="ml-3 mt-0 flex-1 xl:ml-4">
                 <h5 className="flex items-center text-base font-semibold text-purple-900">
-                  Address
+                  {t.labels?.address}
                 </h5>
                 <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
                   {contact.address}
                   <br />
-                  (Term dates between 10am - 2pm only)
+                  {t.labels?.addressTimes}
                 </p>
               </div>
             </li>
@@ -151,7 +158,7 @@ export const Footer = ({ programs, contact }) => {
               </div>
               <div className="ml-3 flex-1 xl:ml-4">
                 <h5 className="flex items-center text-base font-semibold text-purple-900">
-                  Email
+                  {t.labels?.email}
                 </h5>
                 <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
                   {contact.email}
@@ -167,7 +174,7 @@ export const Footer = ({ programs, contact }) => {
               </div>
               <div className="ml-3 flex-1 xl:ml-4">
                 <h5 className="flex items-center text-base font-semibold text-purple-900">
-                  Phone
+                  {t.labels?.phone}
                 </h5>
                 <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
                   {contact.phoneA}

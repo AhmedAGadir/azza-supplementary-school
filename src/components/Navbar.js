@@ -21,16 +21,14 @@ import arabic from '/public/images/vectors/arabic.png'
 import kaaf from '/public/images/illustrations/kaaf-purple.svg'
 import sheen from '/public/images/illustrations/sheen-purple.svg'
 
-const navigation = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Programs' },
-  // { label: 'Activities', href: '/activities' },
-  { label: 'School Calendar', href: '/calendar' },
-  { label: 'Contact', href: '/contact' },
-]
+import React, { useMemo } from 'react'
+import { useTranslation } from '@/app/useTranslation'
 
 export function Navbar({ programs }) {
+  const { translation } = useTranslation()
+
+  const t = useMemo(() => translation?.header?.navigation ?? {}, [translation])
+
   const { language, changeLanguage } = useLanguageContext()
   const pathname = usePathname()
 
@@ -127,9 +125,10 @@ export function Navbar({ programs }) {
               />
               <div className="flex h-full w-full flex-col items-center justify-center">
                 <div className="mx-auto flex w-full flex-col items-center justify-evenly space-y-6">
-                  {navigation.map((link) => (
+                  {t.navItems?.map((link) => (
                     <Fragment key={`mobile-link-${link.label}`}>
-                      {link.label !== 'Programs' && (
+                      {(link.label == 'Programs' ||
+                        link.label === 'البرامج') && (
                         <Link href={link.href}>
                           <div className="group relative p-0.5">
                             <span className="relative z-10 text-2xl font-medium text-purple-50 duration-300 ease-in-out group-hover:text-white">
@@ -186,9 +185,9 @@ export function Navbar({ programs }) {
         <div className="flex w-full items-center justify-between">
           {/* Main navigation menu for large screens */}
           <div className="hidden items-center justify-between md:space-x-6 lg:flex lg:space-x-10">
-            {navigation.map((link) => (
+            {t.navItems?.map((link) => (
               <Fragment key={`desktop-link-${link.label}`}>
-                {link.label == 'Programs' ? (
+                {link.label == 'Programs' || link.label === 'البرامج' ? (
                   <Menu as="div" className="relative z-30">
                     {({ open }) => (
                       <>

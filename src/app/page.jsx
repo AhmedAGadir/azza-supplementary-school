@@ -18,16 +18,15 @@ export default function HomePage() {
   const featuredPrograms = getAllItems('programs')
     .filter((program) => program.data.featured)
     .sort((a, b) => a.data.order - b.data.order)
-
   const featuredProgramsArabic = getAllItems('programs-arabic')
     .filter((program) => program.data.featured)
     .sort((a, b) => a.data.order - b.data.order)
 
-  const faqs = getAllItems('faqs')
-
   const testimonials = getAllItems('testimonials')
-
   const testimonialsArabic = getAllItems('testimonials-arabic')
+
+  const faqs = getAllItems('faqs')
+  const faqsArabic = getAllItems('faqs-arabic')
 
   return (
     <>
@@ -45,7 +44,7 @@ export default function HomePage() {
         testimonials={testimonials}
         testimonialsArabic={testimonialsArabic}
       />
-      <Faqs faqs={faqs} />
+      <Faqs faqs={faqs} faqsArabic={faqsArabic} />
     </>
   )
 }

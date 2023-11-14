@@ -7,7 +7,7 @@ import logo from 'public/images/logo-icon.png'
 // import logo from 'public/images/azza-logo-square-no-english.png'
 import highlight from '/public/images/illustrations/underline-simple-light-purple.svg'
 
-export const CallToAction = () => {
+export const CallToAction = ({ language }) => {
   return (
     <section className="bg-white py-24 sm:py-32">
       {/* Container */}
@@ -16,7 +16,10 @@ export const CallToAction = () => {
         <Image className="mx-auto w-72" src={logo} alt="" />
         {/* Header */}
         <h2 className="h1 mx-auto mt-6 max-w-3xl text-center text-purple-900">
-          <span className="inline">Join </span> {/* Underlined text */}
+          <span className="inline">
+            {language === 'en' ? 'Enroll ' : 'سجل '}
+          </span>{' '}
+          {/* Underlined text */}
           <span className="relative">
             <span className="relative">
               <Image
@@ -24,14 +27,16 @@ export const CallToAction = () => {
                 src={highlight}
                 alt=""
               />
-              <span className="relative">today</span>
+              <span className="relative">
+                {language === 'en' ? 'today' : 'اليوم'}
+              </span>
             </span>
           </span>
         </h2>
         {/* CTA button */}
         <div className="mt-12 flex justify-center xl:mt-14">
           <Button href="/enroll">
-            Enroll today
+            {language === 'en' ? 'Enroll today' : 'التسجيل'}
             <Icon
               icon="arrowNarrowRight"
               className="ml-3 h-6 w-6 group-hover:animate-horizontal-bounce"

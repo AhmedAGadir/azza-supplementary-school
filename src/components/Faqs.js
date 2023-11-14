@@ -4,21 +4,42 @@ import Image from 'next/image'
 import { Disclosure, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
+import React, { useMemo } from 'react'
+import { useTranslation } from '@/app/useTranslation'
+
 import { Icon } from '@/components/Icon'
 import questionMark from '/public/images/illustrations/question-mark.svg'
 import bulb from '/public/images/illustrations/bulb.svg'
 
-export const Faqs = ({ faqs }) => {
+export const Faqs = ({ faqs, faqsArabic }) => {
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(() => translation?.home?.faqs ?? {}, [translation])
+
+  const faqsArr = useMemo(
+    () => (language === 'en' ? faqs : faqsArabic ?? []),
+    [language, faqs, faqsArabic],
+  )
+
   return (
     <section className="bg-yellow-100 py-20 sm:py-28">
       {/* Container */}
       <div className="mx-auto px-4 sm:px-6 lg:max-w-screen-lg lg:px-8">
         {/* Section header title and subtext  */}
-        <div className="max-w-2xl">
-          <h2 className="h2 text-purple-900">Frequently asked questions</h2>
-          <p className="mt-4 max-w-2xl text-xl leading-relaxed text-purple-800 lg:text-left">
-            Seeking more information? Explore our FAQ section for insights on
-            program specifics, scheduling, and our educational approach.
+        <div
+          className={clsx(
+            'max-w-2xl',
+            language === 'en' ? 'lg:text-left' : 'ml-auto text-right',
+          )}
+        >
+          <h2 className="h2 text-purple-900">{t.title}</h2>
+          <p
+            className={clsx(
+              'mt-4 max-w-2xl text-xl leading-relaxed text-purple-800',
+              language === 'en' ? 'lg:text-left' : '',
+            )}
+          >
+            {t.description}
           </p>
         </div>
         {/* FAQ */}
@@ -36,7 +57,7 @@ export const Faqs = ({ faqs }) => {
               alt=""
             />
           </div>
-          {faqs.map((faq, index) => (
+          {faqsArr.map((faq, index) => (
             <Disclosure
               key={index}
               as="li"
@@ -44,7 +65,12 @@ export const Faqs = ({ faqs }) => {
             >
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="group flex w-full items-center justify-between text-lg sm:text-xl">
+                  <Disclosure.Button
+                    className={clsx(
+                      'group flex w-full items-center justify-between text-lg sm:text-xl',
+                      language === 'en' ? '' : 'flex-row-reverse',
+                    )}
+                  >
                     <span className="text-left font-medium text-purple-900 duration-300 ease-in-out group-hover:text-purple-600">
                       {faq.data.question}
                     </span>
@@ -65,7 +91,12 @@ export const Faqs = ({ faqs }) => {
                     leaveFrom="transform scale-100 opacity-100"
                     leaveTo="transform scale-95 opacity-0"
                   >
-                    <Disclosure.Panel className="mt-3 text-base leading-relaxed text-purple-800 sm:text-lg">
+                    <Disclosure.Panel
+                      className={clsx(
+                        'mt-3 text-base leading-relaxed text-purple-800 sm:text-lg',
+                        language === 'en' ? 'text-left' : 'text-right',
+                      )}
+                    >
                       {faq.data.answer}
                     </Disclosure.Panel>
                   </Transition>

@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -5,7 +6,17 @@ import { Icon } from '@/components/Icon'
 // import logo from '/public/images/azza-logo.png'
 import logo from '/public/images/logo-icon.png'
 
+import React, { useMemo } from 'react'
+import { useTranslation } from '@/app/useTranslation'
+
 export function ContactHeader({ contact }) {
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(
+    () => translation?.header?.contactHeader ?? {},
+    [translation],
+  )
+
   return (
     <div className="hidden px-4 sm:px-6 lg:block">
       {/* Container */}
@@ -21,7 +32,7 @@ export function ContactHeader({ contact }) {
                   className="h-auto"
                   width={120}
                 />
-                <h1 className="h5">Azza Supplementary School</h1>
+                <h1 className="h5">{t.name}</h1>
               </div>
             </Link>
           </div>
@@ -36,12 +47,12 @@ export function ContactHeader({ contact }) {
               </div>
               <div className="ml-3 mt-0 flex-1 xl:ml-4">
                 <h5 className="flex items-center text-base font-semibold text-purple-900">
-                  Address
+                  {t.labels?.address}
                 </h5>
                 <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
                   {contact.address}
                   <br />
-                  (Term dates between 10am - 2pm only)
+                  {t.labels?.addressTimes}
                 </p>
               </div>
             </li>
@@ -55,7 +66,7 @@ export function ContactHeader({ contact }) {
               </div>
               <div className="ml-3 flex-1 xl:ml-4">
                 <h5 className="flex items-center text-base font-semibold text-purple-900">
-                  Phone
+                  {t.labels?.phone}
                 </h5>
                 <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
                   {contact.phoneA}
@@ -75,7 +86,7 @@ export function ContactHeader({ contact }) {
               </div>
               <div className="ml-3 flex-1 xl:ml-4">
                 <h5 className="flex items-center text-base font-semibold text-purple-900">
-                  Email
+                  {t.labels?.email}
                 </h5>
                 <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
                   {contact.email}

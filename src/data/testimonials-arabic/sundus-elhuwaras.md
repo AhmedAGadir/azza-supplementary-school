@@ -1,6 +1,6 @@
 ---
-name: Sundus El-Huwaras
-testimonial: 'My daughter changed a lot after starting this program. She talks better, shows more kindness, and understands our culture more. She’s learning a lot, not just school things but also about being a good person in the world.'
+name: سندس الحوارس
+testimonial: 'ابنتي تغيرت كثيرًا بعد بدئها في هذا البرنامج. أصبحت تتحدث بشكل أفضل، تظهر المزيد من اللطف، وأصبحت تفهم ثقافتنا بشكل أعمق. هي تتعلم الكثير، ليس فقط الأمور الدراسية ولكن أيضًا عن كيفية أن تكون إنسانة صالحة في هذا العالم.'
 stars: 5
 image: '/images/stock/testimonials/testimonial-01.jpeg'
 ---

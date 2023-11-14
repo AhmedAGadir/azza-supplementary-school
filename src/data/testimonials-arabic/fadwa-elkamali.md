@@ -1,6 +1,6 @@
 ---
-name: Fadwa El-Kamali
-testimonial: 'I enrolled my kids in this program hoping for rigorous academics, but it offered us so much more. The educators are deeply caring, the curriculum extensive, and the cultural insights have brought us closer to our Sudanese heritage. This program has been a blessing for our family.'
+name: فدوى الكمالي
+testimonial: 'لما سجلت أطفالي في البرنامج، كنت أبحث عن تعليم متقن وجاد. بس الحقيقة، البرنامج قدم لنا أكثر بكثير. المعلمين عندهم اهتمام عميق بالطلاب، والمنهج واسع وغني، والمعرفة بثقافتنا السودانية زادتنا قربًا وتقديرًا لجذورنا. هذا البرنامج كان هدية حقيقية لعائلتنا.'
 stars: 5
 image: '/images/stock/testimonials/testimonial-02.jpeg'
 ---

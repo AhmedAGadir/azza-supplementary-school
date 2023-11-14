@@ -1,6 +1,6 @@
 ---
-name: Itezaz Ahmed
-testimonial: "As a mother, seeing my children embrace learning is invaluable. The personal attention they receive in this program has not only improved their academic performance but has also built their confidence. Their curiosity is now insatiable, and for that, I'm profoundly grateful."
+name: إيتيزاز أحمد
+testimonial: 'شوفتي لعيالي وهما بيتعلموا بحماس هي أجمل حاجة بالنسبة لي كأم. في البرنامج ده، هما مش بس بيتحسنوا دراسيًا، بس كمان بيكتسبوا ثقة في نفسهم. بقوا دايمًا فضوليين وعايزين يعرفوا أكتر وأكتر. وعلشان كده، أنا ممتنة جدًا.'
 stars: 5
 image: '/images/stock/testimonials/testimonial-03.jpeg'
 ---

@@ -21,7 +21,7 @@ const plex = IBM_Plex_Sans_Arabic({
   variable: '--font-plex',
 })
 
-const LayoutComp = ({ programs, contact, children }) => {
+const LayoutComp = ({ programs, programsArabic, contact, children }) => {
   return (
     <LanguageProvider>
       {({ language }) => {
@@ -33,10 +33,16 @@ const LayoutComp = ({ programs, contact, children }) => {
         return (
           <html lang={htmlLang}>
             <body className={clsx(fontName, fontVariable)}>
-              <Header programs={programs} contact={contact} />
+              <Header
+                programs={isArabic ? programsArabic : programs}
+                contact={contact}
+              />
               {children}
-              <CallToAction />
-              <Footer programs={programs} contact={contact} />
+              <CallToAction language={language} />
+              <Footer
+                programs={isArabic ? programsArabic : programs}
+                contact={contact}
+              />
             </body>
           </html>
         )

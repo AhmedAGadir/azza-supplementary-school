@@ -11,10 +11,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const programs = getAllItems('programs')
+  const programsArabic = getAllItems('programs-arabic')
   const contact = getItemData('contact', 'global')
 
   return (
-    <LayoutComp programs={programs} contact={contact}>
+    <LayoutComp
+      programs={programs}
+      programsArabic={programsArabic}
+      contact={contact}
+    >
       {children}
     </LayoutComp>
   )

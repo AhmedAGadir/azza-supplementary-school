@@ -38,11 +38,10 @@ export const Testimonials = ({ testimonials, testimonialsArabic }) => {
               src={qaaf}
               alt=""
             /> */}
-            <span className="relative z-20">Parent Testimonials</span>
+            <span className="relative z-20">{t.title}</span>
           </h2>
           <p className="z-10 mx-auto mt-4 max-w-3xl text-center text-xl leading-relaxed text-purple-50">
-            Don't just take our word for it. Hear from the parents about the
-            positive and lasting impact Azza has on their children's lives.
+            {t.description}
           </p>
         </div>
 
@@ -63,11 +62,21 @@ export const Testimonials = ({ testimonials, testimonialsArabic }) => {
                 className="h-20 w-20 rounded-full border-2 border-yellow-300 object-cover drop-shadow-2xl filter"
                 alt={item.data.name}
               /> */}
-              <p className="mt-3 text-lg font-bold text-purple-900">
+              <p
+                className={clsx(
+                  'mt-3 text-lg font-bold text-purple-900',
+                  language === 'en' ? 'text-left' : 'text-right',
+                )}
+              >
                 {item.data.name}
               </p>
               {/* Rating */}
-              <div className="mt-1 flex w-full justify-start space-x-1">
+              <div
+                className={clsx(
+                  'mt-1 flex w-full justify-start space-x-1',
+                  language === 'en' ? 'justify-start' : 'justify-end',
+                )}
+              >
                 {[...Array(item.data.stars)].map((e, i) => (
                   <Icon
                     key={`${item.data.name}-star-${i}`}
@@ -76,7 +85,12 @@ export const Testimonials = ({ testimonials, testimonialsArabic }) => {
                   />
                 ))}
               </div>
-              <p className="mt-5 text-lg text-purple-800">
+              <p
+                className={clsx(
+                  'mt-5 text-lg text-purple-800',
+                  language === 'en' ? 'text-left' : 'text-right',
+                )}
+              >
                 "{item.data.testimonial}"
               </p>
             </blockquote>

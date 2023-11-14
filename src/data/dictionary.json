@@ -1,5 +1,26 @@
 {
   "en": {
+    "header": {
+      "contactHeader": {
+        "name": "Azza Supplementary School",
+        "labels": {
+          "address": "Address",
+          "email": "Email",
+          "phone": "Phone",
+          "addressTimes": "(Term dates between 10am - 2pm only)"
+        }
+      },
+      "navigation": {
+        "navItems": [
+          { "label": "Home", "href": "/" },
+          { "label": "About", "href": "/about" },
+          { "label": "Programs" },
+          { "label": "Activities", "href": "/activities" },
+          { "label": "School Calendar", "href": "/calendar" },
+          { "label": "Contact", "href": "/contact" }
+        ]
+      }
+    },
     "home": {
       "hero": {
         "title": "Welcome to Azza Supplementary School",
@@ -61,10 +82,61 @@
       "featuredPrograms": {
         "title": "The best programs for your child",
         "description": "We offer a core curriculum of programs for children of all ages. Our programs are designed to help your child grow and develop in a safe and nurturing environment."
+      },
+      "testimonials": {
+        "title": "Parent Testimonials",
+        "description": "Don't just take our word for it. Hear from the parents about the positive and lasting impact Azza has on their children's lives."
+      },
+      "faqs": {
+        "title": "Frequently asked questions",
+        "description": " Seeking more information? Explore our FAQ section for insights on program specifics, scheduling, and our educational approach."
       }
+    },
+    "footer": {
+      "title": "Empowering Communities, Enriching Education",
+      "labels": {
+        "programs": "Programs",
+        "siteLinks": "Site Links",
+        "contactUs": "Contact us",
+        "address": "Address",
+        "email": "Email",
+        "phone": "Phone",
+        "addressTimes": "(Term dates between 10am - 2pm only)"
+      },
+      "siteLinksDropdown": [
+        { "label": "Home", "href": "/" },
+        { "label": "About us", "href": "/about" },
+        { "label": "Activities", "href": "/activities" },
+        { "label": "School Calendar", "href": "/calendar" },
+        { "label": "Safeguarding Policy", "href": "/policy" },
+        { "label": "Safeguarding Procedure", "href": "/procedure" },
+        { "label": "Enrollment", "href": "/enroll" },
+        { "label": "Contact us", "href": "/contact" }
+      ]
     }
   },
   "ar": {
+    "header": {
+      "contactHeader": {
+        "name": "مدرسة عزة التكميلية",
+        "labels": {
+          "address": "العنوان",
+          "email": "البريد الإلكتروني",
+          "phone": "الهاتف",
+          "addressTimes": "(مواعيد الفصل من 10 صباحًا حتى 2 ظهرًا فقط)"
+        }
+      },
+      "navigation": {
+        "navItems": [
+          { "label": "الصفحة الرئيسية", "href": "/" },
+          { "label": "معلومات عنا", "href": "/about" },
+          { "label": "البرامج" },
+          { "label": "الأنشطة", "href": "/activities" },
+          { "label": "التقويم الدراسي", "href": "/calendar" },
+          { "label": "تواصل معنا", "href": "/contact" }
+        ]
+      }
+    },
     "home": {
       "hero": {
         "title": "أهلاً بكم في مدرسة عزة التكميلية",
@@ -126,7 +198,37 @@
       "featuredPrograms": {
         "title": "أفضل البرامج لطفلك",
         "description": "نقدم منهجًا دراسيًا شاملاً للأطفال في كافة الأعمار. تم تصميم برامجنا لمساعدة طفلك على النمو والتطور في بيئة آمنة ومحفزة."
+      },
+      "testimonials": {
+        "title": "شهادات الآباء",
+        "description": "ليس عليك أن تأخذ كلامنا فقط، بل استمع لما يقوله الآباء عن التأثير الإيجابي والباقي الذي تركته مدرسة عزة في حياة أبنائهم."
+      },
+      "faqs": {
+        "title": "الأسئلة الشائعة",
+        "description": "هل ترغب في الحصول على معلومات أكثر؟ تصفح قسم الأسئلة الشائعة لدينا لاكتشاف المزيد حول تفاصيل البرنامج، الجداول الزمنية، ومنهجيتنا التعليمية."
       }
+    },
+    "footer": {
+      "title": "تمكين المجتمعات، إثراء التعليم",
+      "labels": {
+        "programs": "البرامج",
+        "siteLinks": "روابط الموقع",
+        "contactUs": "اتصل بنا",
+        "address": "العنوان",
+        "email": "البريد الإلكتروني",
+        "phone": "الهاتف",
+        "addressTimes": "(مواعيد الفصل من 10 صباحًا حتى 2 ظهرًا فقط)"
+      },
+      "siteLinksDropdown": [
+        { "label": "الصفحة الرئيسية", "href": "/" },
+        { "label": "معلومات عنا", "href": "/about" },
+        { "label": "الأنشطة", "href": "/activities" },
+        { "label": "التقويم الدراسي", "href": "/calendar" },
+        { "label": "سياسة الحماية", "href": "/policy" },
+        { "label": "إجراءات الحماية", "href": "/procedure" },
+        { "label": "التسجيل", "href": "/enroll" },
+        { "label": "تواصل معنا", "href": "/contact" }
+      ]
     }
   }
 }
