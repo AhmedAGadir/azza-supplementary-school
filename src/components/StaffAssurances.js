@@ -27,7 +27,7 @@ export const StaffAssurances = () => {
           <div
             className={clsx(
               'flex flex-col justify-center lg:col-span-1 ',
-              language === 'en' ? 'lg:text-left' : 'text-right',
+              language === 'en' ? 'lg:text-left' : 'items-end text-right',
             )}
           >
             <div>
