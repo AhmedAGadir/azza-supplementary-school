@@ -172,11 +172,9 @@ export const ContactInformation = ({ email, contact }) => {
             className="w-full rounded-3xl"
             height={600}
             style={{ border: 0 }}
-            src={`https://www.google.com/maps/embed/v1/place?${
-              language === 'ar' && 'language=ar&'
-            }q=place_id:ChIJ_-A3f98PdkgR5Qn6SpOkZs0&key=${
+            src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ_-A3f98PdkgR5Qn6SpOkZs0&key=${
               process.env.NEXT_PUBLIC_API_KEY
-            }`}
+            }${language === 'ar' && '&language=ar'}`}
             allowFullScreen
             loading="lazy"
           />
