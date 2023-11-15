@@ -81,10 +81,16 @@ export const HomeFeatureBlocks = () => {
               {t.features?.map((feature, index) => (
                 <li
                   key={`home-feature-${index}`}
-                  className="mx-3 my-2 flex items-center"
+                  className={clsx(
+                    'mx-3 my-2 flex items-center',
+                    language === 'en' ? '' : 'flex-row-reverse items-end',
+                  )}
                 >
                   <Image
-                    className="mr-3 h-7 w-7 flex-shrink-0"
+                    className={clsx(
+                      'h-7 w-7 flex-shrink-0',
+                      language === 'en' ? 'mr-3' : 'ml-3',
+                    )}
                     src={checkmark}
                     alt=""
                   />

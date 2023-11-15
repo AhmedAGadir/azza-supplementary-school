@@ -1,62 +1,62 @@
 ---
 name: Cultural Studies
 order: 4
-dropdownDescription: Explore the richness of diverse cultures with our comprehensive Cultural Studies program.
+dropdownDescription: Embark on a knowledge adventure exploring the richness of diverse cultures through our comprehensive Cultural Studies program.
 featured: true
 hero:
   tagline: Journey Through the Tapestry of Human Civilization
-  headline: Azza's Cultural Studies Exploration
-  text: Delve into the diverse realms of human cultures, past and present, guided by seasoned educators committed to illuminating the richness of human heritage and societal dynamics.
+  headline: Cultural Studies Exploration at Azza School
+  text: Dive into the diverse realms of human cultures, both ancient and modern, guided by experienced teachers dedicated to highlighting the richness of human heritage and societal dynamics.
   action:
-    label: Enroll today
+    label: Enroll Now
     href: '/enroll'
     icon: true
   image:
     src: '/images/stock/cultural-studies-flags.jpeg'
 infoSection:
-  headline: The Cultural Studies Program dedicated to global understanding
-  text: Uncover the various layers of human societies, from historical milestones to contemporary phenomena, through a curriculum that fosters curiosity, respect, and informed perspectives on diverse ways of life.
-  ages: 5 - 16 years old
-  dates: Sept. 23 - July 6
-  schedule: Saturdays from 10AM - 2PM
-  classSize: Student to teacher ratio of 15:1
+  headline: Learning and Exploring Diverse Cultures
+  text: Our program offers an overview of global cultures, nurturing deep understanding of human heritage and its evolution.
+  ages: 5-16 years
+  dates: September 23 - July 6
+  schedule: Saturdays from 10 AM to 2 PM
+  classSize: Student to teacher ratio 15:1
 descriptionSection:
   text: >
-    ## Our unique approach to cultural education
-            
-    From ancient civilizations to modern societies, our program spans across time and geography, offering students a glimpse into the customs, traditions, and influences that have shaped human history and interactions. Through participative sessions, students gain insights into different cultural narratives, enhancing their understanding and empathy.
-        
-    ### What they will learn
-          
-    * Insights into the historical background of various world cultures.
+    ## Our Innovative Approach to Cultural Education
 
-    * Understanding of social dynamics, cultural expressions, and human interactions across societies.
+    Our program takes students on a journey through time to explore civilizations and societies, focusing on enhancing understanding and appreciation of different traditions and cultures.
 
-    * Recognition of the contributions and influences of diverse cultures on global events and trends.
+    ### What Students Will Learn
 
-    * Development of informed perspectives and respect for multiculturalism.
+    * Recognition of various global civilizations and cultures.
 
-    * Skills to critically analyze cultural narratives and contribute to contemporary discussions on global cultural dynamics.
+    * Understanding cultural customs and traditions and their evolution.
+
+    * Appreciation of cultural impacts on the global society.
+
+    * Development of critical thinking and cultural analysis skills.
+
+    * Gaining communication skills to interact with diverse cultures.
 
 
-    We create a learning atmosphere of exploration and respect, essential for understanding the multifaceted nature of human societies. Our instructors are not just teachers; they are guides illuminating the path through the world’s cultural landscape, eager to pass on their knowledge and appreciation for the diversity of human experience.
+    At Azza School, we aim to provide an educational experience that enriches cultural understanding and encourages discovery and appreciation of cultural diversity.
   portraitImage: '/images/stock/cultural-studies-pin.jpg'
   squareImage1: '/images/stock/cultural-studies-classroom.jpeg'
   squareImage2: '/images/stock/cultural-studies-map.jpeg'
 pricingSection:
-  tagline: A Single Investment in Holistic Education
-  headline: Complete Academic Enrichment, One Annual Fee
-  text: Dive into a comprehensive educational experience with our all-encompassing curriculum, designed for holistic growth and exploration.
+  tagline: Comprehensive Cultural Education
+  headline: Cultural Studies Program with an Annual Fee
+  text: Enjoy a rich educational experience that combines cultural knowledge with global exploration.
   pricing:
-    name: Full Academic Year Enrollment
+    name: Full Academic Year Registration
     price: £240
     interval: per academic year
-    shortDescription: All-encompassing educational journey across key subjects
+    shortDescription: A comprehensive educational experience covering the main academic subjects in an integrated manner
     features:
-      - feature: Comprehensive curriculum including Arabic, cultural studies, Maths, and English
-      - feature: One fee, multiple subjects - simplicity in academic planning
+      - feature: Curriculum includes interactive and comprehensive cultural studies
+      - feature: One tuition fee for simplified academic planning
     action:
-      label: Enroll Today
+      label: Enroll Now
       href: '/enroll'
       icon: true
 ---

@@ -1,4 +1,8 @@
+'use client'
+
+import React, { useMemo } from 'react'
 import clsx from 'clsx'
+import { useTranslation } from '@/app/useTranslation'
 
 // export const metadata = {
 //   title: 'School Calendar - Azza Supplementary School',
@@ -104,21 +108,31 @@ const Weekly = () => (
 )
 
 export default function CalendarPage() {
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(() => translation?.calendar ?? {}, [translation])
+
   return (
     <section className="bg-purple-25 px-4 pb-24 pt-16 sm:px-6 lg:px-8">
       <div className="prose prose-lg mx-auto mt-14 pb-16  sm:mt-16">
-        <h3 className="mb-12 text-center text-5xl font-bold">
-          School Calendar
-        </h3>
-        <p>
-          Access the comprehensive school calendar of Azza Supplementary School
-          to keep up-to-date with upcoming events, holidays, examinations, and
-          other important academic dates throughout the year.
-        </p>
+        <h3 className="mb-12 text-center text-5xl font-bold">{t.title}</h3>
+        <p>{t.description}</p>
       </div>
       <div className="mx-auto max-w-screen-xl">
         {/* <Overview /> */}
-        <Weekly />
+        {/* <Weekly /> */}
+        <div className="">
+          <iframe
+            src={`https://calendar.google.com/calendar/embed?src=azzasupplementaryschool%40gmail.com&ctz=Europe%2FLondon${
+              language === 'ar' ? '&hl=ar' : ''
+            }`}
+            style={{ border: 0, margin: 'auto' }}
+            width={'100%'}
+            height={600}
+            frameborder="0"
+            scrolling="no"
+          />
+        </div>
       </div>
     </section>
   )

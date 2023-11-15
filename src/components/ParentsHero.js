@@ -41,8 +41,8 @@ const links = [
     icon: 'virus',
   },
   {
-    label: 'School Activities',
-    href: '/activities',
+    label: 'Gallery',
+    href: '/gallery',
     description: 'View our school gallery',
     icon: 'photo',
   },

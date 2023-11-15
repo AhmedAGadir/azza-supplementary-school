@@ -6,7 +6,7 @@ import { getAllItems, getGalleryTags } from '@/lib/getItems'
 import 'lightgallery/css/lightgallery.css'
 
 export const metadata = {
-  title: 'Activities - Azza Supplementary School',
+  title: 'Gallery - Azza Supplementary School',
   description:
     "Step inside Azza's vibrant learning environment with our photo gallery.",
 }

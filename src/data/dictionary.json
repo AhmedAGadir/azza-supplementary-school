@@ -17,7 +17,7 @@
           { "label": "Home", "href": "/" },
           { "label": "About", "href": "/about" },
           { "label": "Programs" },
-          { "label": "Activities", "href": "/activities" },
+          { "label": "Gallery", "href": "/gallery" },
           { "label": "School Calendar", "href": "/calendar" },
           { "label": "Contact", "href": "/contact" }
         ]
@@ -94,6 +94,36 @@
         "description": " Seeking more information? Explore our FAQ section for insights on program specifics, scheduling, and our educational approach."
       }
     },
+    "about": {
+      "hero": {
+        "title": "Why Azza?",
+        "description": "Choosing Azza means investing in a comprehensive education grounded in core values of excellence, inclusivity, and lifelong learning. <br /><br />Established in 1995 by a group of dedicated refugee women, began its journey by teaching children Arabic language and cultural studies.",
+        "description2": "<p>These modest beginnings in North Kensington burgeoned into a school that has since been a beacon of learning for hundreds of children. Every Saturday, from 10 am to 2 pm at KAA, children aged 6-16 receive an education that spans subjects beyond just Arabic, delving into mainstream school curriculum subjects such as English and Mathematics.</p><p> Alongside these academic pursuits, the school offers enriching activities like football, gymnastics, and engagement sessions for parents, fostering a holistic development environment. Our purpose extends beyond mere academic assistance. We aim to bolster the cultural identity, self-esteem, and confidence of children, predominantly from the Sudanese community and other communities within Kensington and Chelsea.</p><p>Many of our learners hail from immigrant backgrounds, often with English as their second language, making our English and Maths classes doubly essential for both them and their Arabic-speaking parents.</p><p>Beyond the classroom, Azza Supplementary School promotes camaraderie and understanding; we've observed heartening bonds forged between families, stemming from friendships initiated within our school walls. These relationships have proven invaluable, enhancing self-confidence, reducing feelings of isolation, and creating an inclusive environment where children and parents from diverse backgrounds intermingle seamlessly.</p>"
+      },
+      "stats": {
+        "title": "Where Your Child's Academic Success Begins",
+        "description": "Every aspect of our environment is thoughtfully designed with your child's success in mind.",
+        "stats": [
+          { "label": "Teachers", "value": "12+" },
+          { "label": "Average years of teacher experience", "value": "3+" },
+          { "label": "Student to teacher ratio", "value": "15:1" },
+          {
+            "label": "Students at Russel Group Universities",
+            "value": "20+"
+          },
+          { "label": "Years in Operation", "value": "28+" },
+          { "label": "Children Supported", "value": "500+" }
+        ]
+      },
+      "staff": {
+        "title": "Meet the awesome staff behind Azza",
+        "description": "Our teachers are the heart and soul of Azza. They are the ones who make our school a safe, fun, and engaging place for your children to learn and grow."
+      }
+    },
+    "calendar": {
+      "title": "School Calendar",
+      "description": "Access the comprehensive school calendar of Azza Supplementary School to keep up-to-date with upcoming events, holidays, examinations, and other important academic dates throughout the year."
+    },
     "footer": {
       "title": "Empowering Communities, Enriching Education",
       "labels": {
@@ -108,7 +138,7 @@
       "siteLinksDropdown": [
         { "label": "Home", "href": "/" },
         { "label": "About us", "href": "/about" },
-        { "label": "Activities", "href": "/activities" },
+        { "label": "Gallery", "href": "/gallery" },
         { "label": "School Calendar", "href": "/calendar" },
         { "label": "Safeguarding Policy", "href": "/policy" },
         { "label": "Safeguarding Procedure", "href": "/procedure" },
@@ -135,7 +165,7 @@
           { "label": "الصفحة الرئيسية", "href": "/" },
           { "label": "معلومات عنا", "href": "/about" },
           { "label": "البرامج" },
-          { "label": "الأنشطة", "href": "/activities" },
+          { "label": "معرض الصور", "href": "/gallery" },
           { "label": "التقويم الدراسي", "href": "/calendar" },
           { "label": "تواصل معنا", "href": "/contact" }
         ]
@@ -212,6 +242,32 @@
         "description": "هل ترغب في الحصول على معلومات أكثر؟ تصفح قسم الأسئلة الشائعة لدينا لاكتشاف المزيد حول تفاصيل البرنامج، الجداول الزمنية، ومنهجيتنا التعليمية."
       }
     },
+    "about": {
+      "hero": {
+        "title": "لماذا مدرسة عزة؟",
+        "description": "اختيار مدرسة عزة يعني الاستثمار في تعليم شامل مبني على قيم الامتياز، الشمولية، والتعلم المستمر. <br /><br />تأسست المدرسة في عام 1995 على يد مجموعة من النساء اللاجئات المتفانيات، وبدأت رحلتها بتعليم الأطفال اللغة العربية والدراسات الثقافية.",
+        "description2": "<p>هذه البدايات المتواضعة في شمال كنسينغتون تطورت إلى مدرسة أصبحت منارة للتعلم لمئات الأطفال. كل يوم سبت، من الساعة 10 صباحًا حتى 2 ظهرًا في مدرسة KAA، يتلقى الأطفال من سن 6 إلى 16 سنة تعليمًا يمتد لمواد تتجاوز اللغة العربية، ليشمل مواد المنهج الدراسي العام مثل الإنجليزية والرياضيات.</p><p> إلى جانب هذه المساعي الأكاديمية، تقدم المدرسة أنشطة تثرية مثل كرة القدم، الجمباز، وجلسات تفاعلية للأهالي، مما يعزز بيئة تطور شامل. هدفنا يتجاوز المساعدة الأكاديمية؛ نهدف إلى دعم الهوية الثقافية والثقة بالنفس والاعتزاز للأطفال، وبشكل أساسي من المجتمع السوداني وغيره من المجتمعات في كنسينغتون وتشيلسي.</p><p>العديد من طلابنا ينحدرون من خلفيات مهاجرة، وغالبًا ما يكون الإنجليزية لغتهم الثانية، مما يجعل دروس الإنجليزية والرياضيات أساسية لهم ولأهاليهم الناطقين بالعربية.</p><p>خارج الفصول الدراسية، تروج مدرسة عزة التكاملية للروابط الاجتماعية والتفاهم؛ لقد لاحظنا روابط مشجعة تنشأ بين العائلات نتيجة للصداقات التي بدأت داخل أسوار مدرستنا. هذه العلاقات ثمينة، حيث تعزز الثقة بالنفس، تقلل من الشعور بالعزلة، وتخلق بيئة شاملة حيث يتفاعل الأطفال والأهالي من خلفيات متنوعة بسلاسة.</p>"
+      },
+      "stats": {
+        "title": "منطلق النجاح الأكاديمي لطفلك",
+        "description": "كل جانب في بيئتنا مصمم بعناية لضمان نجاح طفلك.",
+        "stats": [
+          { "label": "المعلمون", "value": "١٢+" },
+          { "label": "متوسط سنوات خبرة المعلمين", "value": "٣+" },
+          { "label": "نسبة الطلاب إلى المعلم", "value": "١٥:١" },
+          {
+            "label": "الطلاب في جامعات المجموعة راسل",
+            "value": "٢٠+"
+          },
+          { "label": "سنوات العمل", "value": "٢٨+" },
+          { "label": "الأطفال المستفيدون", "value": "٥٠٠+" }
+        ]
+      }
+    },
+    "calendar": {
+      "title": "التقويم المدرسي",
+      "description": "اطلع على التقويم المدرسي الشامل لمدرسة عزة التكميلية لتكون على اطلاع دائم بالأحداث القادمة، العطلات، الامتحانات، والتواريخ الأكاديمية الهامة طوال العام."
+    },
     "footer": {
       "title": "تمكين المجتمعات، إثراء التعليم",
       "labels": {
@@ -226,7 +282,7 @@
       "siteLinksDropdown": [
         { "label": "الصفحة الرئيسية", "href": "/" },
         { "label": "معلومات عنا", "href": "/about" },
-        { "label": "الأنشطة", "href": "/activities" },
+        { "label": "معرض الصور", "href": "/gallery" },
         { "label": "التقويم الدراسي", "href": "/calendar" },
         { "label": "سياسة الحماية", "href": "/policy" },
         { "label": "إجراءات الحماية", "href": "/procedure" },

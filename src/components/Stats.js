@@ -1,3 +1,8 @@
+'use client'
+
+import React, { useMemo } from 'react'
+import { useTranslation } from '@/app/useTranslation'
+
 import { Gochi_Hand } from 'next/font/google'
 import clsx from 'clsx'
 
@@ -7,19 +12,11 @@ const gochiHand = Gochi_Hand({
   weight: '400',
 })
 
-const stats = [
-  { label: 'Teachers', value: '12+' },
-  { label: 'Average years of teacher experience', value: '3+' },
-  { label: 'Student to teacher ratio', value: '15:1' },
-  {
-    label: 'Students at Russel Group Universities',
-    value: '20+',
-  },
-  { label: 'Years in Operation', value: '28+' },
-  { label: 'Children Supported', value: '500+' },
-]
-
 export const Stats = () => {
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(() => translation?.about?.stats ?? {}, [translation])
+
   return (
     <section
       className={clsx(
@@ -32,16 +29,15 @@ export const Stats = () => {
         {/* Section header text */}
         <div>
           <h2 className="h2 mx-auto max-w-4xl text-center text-white">
-            Where Your Child's Academic Success Begins
+            {t.title}
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-xl leading-relaxed text-purple-50">
-            Every aspect of our environment is thoughtfully designed with your
-            child's success in mind.
+            {t.description}
           </p>
         </div>
         {/* Stats */}
         <div className="mt-12 gap-y-16 sm:grid sm:grid-cols-3 sm:gap-x-6 sm:gap-y-12 md:gap-x-8 lg:gap-x-12">
-          {stats.map((stat, index) => (
+          {t.stats?.map((stat, index) => (
             <div
               key={`stat-${index}`}
               className={clsx('text-center', index > 0 && 'mt-12 sm:mt-0')}

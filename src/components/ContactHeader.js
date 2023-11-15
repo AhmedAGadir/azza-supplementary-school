@@ -1,6 +1,8 @@
 'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import clsx from 'clsx'
 
 import { Icon } from '@/components/Icon'
 // import logo from '/public/images/azza-logo.png'
@@ -39,14 +41,29 @@ export function ContactHeader({ contact }) {
           {/* Contact information */}
           <ul className="ml-8 flex lg:space-x-6 xl:space-x-16">
             {/* Address */}
-            <li className="flex max-w-xs flex-shrink">
+            <li
+              className={clsx(
+                'flex max-w-xs flex-shrink',
+                language === 'en' ? '' : 'flex-row-reverse text-right',
+              )}
+            >
               <div>
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-yellow-400">
                   <Icon icon="mapPin" className="h-6 w-6 text-purple-700" />
                 </span>
               </div>
-              <div className="ml-3 mt-0 flex-1 xl:ml-4">
-                <h5 className="flex items-center text-base font-semibold text-purple-900">
+              <div
+                className={clsx(
+                  'mt-0 flex-1 xl:ml-4',
+                  language === 'en' ? 'ml-3' : 'mr-3',
+                )}
+              >
+                <h5
+                  className={clsx(
+                    'flex items-center text-base font-semibold text-purple-900',
+                    language === 'ar' && 'justify-end',
+                  )}
+                >
                   {t.labels?.address}
                 </h5>
                 <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
@@ -58,14 +75,29 @@ export function ContactHeader({ contact }) {
             </li>
 
             {/* Phone number */}
-            <li className="flex flex-shrink-0">
+            <li
+              className={clsx(
+                'flex max-w-xs flex-shrink',
+                language === 'en' ? '' : 'flex-row-reverse text-right',
+              )}
+            >
               <div>
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-rose-200">
                   <Icon icon="phone" className="h-6 w-6 text-purple-700" />
                 </span>
               </div>
-              <div className="ml-3 flex-1 xl:ml-4">
-                <h5 className="flex items-center text-base font-semibold text-purple-900">
+              <div
+                className={clsx(
+                  'mt-0 flex-1 xl:ml-4',
+                  language === 'en' ? 'ml-3' : 'mr-3',
+                )}
+              >
+                <h5
+                  className={clsx(
+                    'flex items-center text-base font-semibold text-purple-900',
+                    language === 'ar' && 'justify-end',
+                  )}
+                >
                   {t.labels?.phone}
                 </h5>
                 <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
@@ -78,14 +110,29 @@ export function ContactHeader({ contact }) {
             </li>
 
             {/* Email */}
-            <li className="flex flex-shrink-0">
+            <li
+              className={clsx(
+                'flex max-w-xs flex-shrink',
+                language === 'en' ? '' : 'flex-row-reverse text-right',
+              )}
+            >
               <div>
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-200">
                   <Icon icon="mail" className="h-6 w-6 text-purple-700" />
                 </span>
               </div>
-              <div className="ml-3 flex-1 xl:ml-4">
-                <h5 className="flex items-center text-base font-semibold text-purple-900">
+              <div
+                className={clsx(
+                  'mt-0 flex-1 xl:ml-4',
+                  language === 'en' ? 'ml-3' : 'mr-3',
+                )}
+              >
+                <h5
+                  className={clsx(
+                    'flex items-center text-base font-semibold text-purple-900',
+                    language === 'ar' && 'justify-end',
+                  )}
+                >
                   {t.labels?.email}
                 </h5>
                 <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">

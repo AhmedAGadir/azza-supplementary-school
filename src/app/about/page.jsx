@@ -4,6 +4,7 @@ import { Stats } from '@/components/Stats'
 import { Staff } from '@/components/Staff'
 import { Values } from '@/components/Values'
 import { Maintenance } from '@/components/Maintenance'
+import { getAllItems } from '@/lib/getItems'
 
 export const metadata = {
   title: 'About us - Azza Supplementary School',
@@ -12,6 +13,9 @@ export const metadata = {
 }
 
 export default function AboutPage() {
+  const staff = getAllItems('staff')
+  const staffArabic = getAllItems('staff-arabic')
+
   return (
     <>
       <AboutHero />
@@ -20,7 +24,7 @@ export default function AboutPage() {
 
       {/* <AlternatingFeatures /> */}
       <Stats />
-      <Staff />
+      <Staff staff={staff} staffArabic={staffArabic} />
       {/* <Values /> */}
     </>
   )

@@ -1,62 +1,62 @@
 ---
-name: English
+name: English Language
 order: 3
-dropdownDescription: Discover the nuances of English through a journey of linguistic exploration and expression.
+dropdownDescription: Discover the world of English language in an interactive and enjoyable way.
 featured: true
 hero:
-  tagline: Words Shape the World
-  headline: Azza's English Excellence Program
-  text: Deepen your command of the English language under the guidance of expert educators, committed to bringing every student into the world of nuanced communication and insightful literary appreciation.
+  tagline: Exploring the World of Words
+  headline: Azza's English Language Program
+  text: Help your child improve their English skills through fun and practical lessons, with specialized teachers who aim to enhance communication and creative abilities.
   action:
-    label: Enroll today
+    label: Enroll Now
     href: '/enroll'
     icon: true
   image:
     src: '/images/stock/english-board.webp'
 infoSection:
-  headline: The English Program That Expands Boundaries
-  text: Delve into the layers of English, experiencing the powerful literary heritage and modern expressions that connect and move societies across the globe.
-  ages: 5 - 16 years old
-  dates: Sept. 23 - July 6
-  schedule: Saturdays from 10AM - 2PM
-  classSize: Student to teacher ratio of 15:1
+  headline: English Program for Development and Creativity
+  text: Immerse in the English learning experience, getting to know both classic literature and modern usage of the language in everyday life.
+  ages: 5-16 years
+  dates: September 23 - July 6
+  schedule: Saturdays from 10 AM to 2 PM
+  classSize: Student to teacher ratio 15:1
 descriptionSection:
   text: >
-    ## Our unique approach to English literacy
+    ## Our Special Approach to English Teaching
 
-    From essential grammar rules to advanced rhetoric, our program covers the expanse of the English language, enabling students to convey their ideas effectively and creatively. Interactive lessons encourage students to refine their written and verbal English skills, positioning them as confident contributors in global dialogues.
+    Our program covers various aspects of the English language, from basics to advanced skills. Students will develop their expressive and creative abilities through interactive lessons, enhancing their confidence in dialogues and discussions.
 
-    ### What they will learn
+    ### What Students Will Learn
 
-    * Advanced grammar, expansive vocabulary, and expressive stylistic techniques.
+    * Mastery of English grammar, rich vocabulary, and expressive writing styles.
 
-    * Assurance in various communication forms, bridging casual chats and scholarly discussions.
+    * Confidence in using the language in different communicative situations.
 
-    * Critical appreciation and analysis of diverse literary genres and historical periods.
+    * Analytical appreciation of various literary genres.
 
-    * Techniques in persuasive argumentation and captivating narrative construction.
+    * Development of creative and expressive writing skills.
 
-    * Cultivation of a distinct personal writing style, fostering academic advancement and personal growth.
+    * Building a unique personal writing style that supports personal and academic growth.
 
 
-    In our vibrant learning atmosphere, students find encouragement and intellectual stimulation vital for proficiency in English. Our educators serve not merely as teachers but as guides in literary exploration, instilling an enduring love for the English language and its pivotal role in cultural discourse.
+    We ensure our program offers an interactive educational environment that encourages students to inquire and innovate, helping them master English in a fun and practical way. Our specialized and enthusiastic teachers are dedicated to helping students explore and appreciate the world of the English language.
   portraitImage: '/images/stock/english-books.jpeg'
   squareImage1: '/images/stock/english-lesson.jpeg'
   squareImage2: '/images/stock/english-writing.png'
 pricingSection:
-  tagline: A Single Investment in Holistic Education
-  headline: Complete Academic Enrichment, One Annual Fee
-  text: Dive into a comprehensive educational experience with our all-encompassing curriculum, designed for holistic growth and exploration.
+  tagline: An Investment in Comprehensive Education
+  headline: Comprehensive Educational Program with an Annual Fee
+  text: Enjoy a rich and comprehensive educational experience with our integrated curriculum, designed to stimulate overall growth and creativity.
   pricing:
-    name: Full Academic Year Enrollment
+    name: Full Academic Year Registration
     price: £240
     interval: per academic year
-    shortDescription: All-encompassing educational journey across key subjects
+    shortDescription: Comprehensive educational experience covering key academic subjects
     features:
-      - feature: Comprehensive curriculum including Arabic, cultural studies, Maths, and English
-      - feature: One fee, multiple subjects - simplicity in academic planning
+      - feature: An inclusive curriculum encompassing Mathematics, Cultural Studies, Arabic, and English
+      - feature: One fee for multiple subjects - simplifying academic planning
     action:
-      label: Enroll Today
+      label: Enroll Now
       href: '/enroll'
       icon: true
 ---

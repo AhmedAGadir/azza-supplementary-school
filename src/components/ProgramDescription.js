@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import { marked } from 'marked'
+import clsx from 'clsx'
 
 import dotsChaos from '/public/images/illustrations/dots-chaos.svg'
 import dotsStrip from '/public/images/illustrations/dots-strip.svg'
 import dotsPurpleMess from '/public/images/illustrations/dots-purple-mess.svg'
 
-export const ProgramDescription = ({ data }) => {
+export const ProgramDescription = ({ data, language }) => {
   return (
     <section className="relative overflow-hidden">
       {/* Purple background to fill in right gap */}
@@ -64,7 +65,10 @@ export const ProgramDescription = ({ data }) => {
           </div>
           <div className="order-1 flex flex-col justify-center lg:order-2 lg:py-36">
             <div
-              className="prose prose-lg prose-invert relative z-20 mx-auto sm:prose-xl"
+              className={clsx(
+                'prose prose-lg prose-invert relative z-20 mx-auto sm:prose-xl',
+                language === 'en' ? 'text-left' : 'text-right',
+              )}
               dangerouslySetInnerHTML={{ __html: marked.parse(data.text) }}
             ></div>
           </div>

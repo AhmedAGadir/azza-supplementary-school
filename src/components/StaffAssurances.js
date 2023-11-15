@@ -43,10 +43,22 @@ export const StaffAssurances = () => {
           {/* Teacher qualifications box */}
           <div className={clsx('mx-auto w-full sm:mx-0 sm:max-w-none ')}>
             <div className="relative mt-16 max-w-4xl rounded-xl bg-yellow-100 sm:mt-14">
-              <span className="absolute -top-7 left-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-600 to-purple-600 shadow-md sm:left-10">
+              <span
+                className={clsx(
+                  'absolute -top-7 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-600 to-purple-600 shadow-md',
+                  language === 'en'
+                    ? 'left-6 sm:left-10'
+                    : 'right-6 sm:right-10',
+                )}
+              >
                 <Icon icon="certificate" className="h-8 w-8 text-purple-50" />
               </span>
-              <div className="mt-2 px-4 py-10 sm:px-10 sm:py-12">
+              <div
+                className={clsx(
+                  'mt-2 px-4 py-10 sm:px-10 sm:py-12',
+                  language === 'en' ? 'text-left' : 'text-right',
+                )}
+              >
                 <p className="text-lg font-semibold text-purple-900 sm:text-xl">
                   {t.title2}
                 </p>
@@ -55,10 +67,16 @@ export const StaffAssurances = () => {
                   {t.assurances?.map((assurance, index) => (
                     <li
                       key={`assurance-${index}`}
-                      className="flex items-center"
+                      className={clsx(
+                        'flex items-center',
+                        language === 'en' ? '' : 'flex-row-reverse items-end',
+                      )}
                     >
                       <Image
-                        className="mr-3 h-7 w-7 flex-shrink-0"
+                        className={clsx(
+                          'h-7 w-7 flex-shrink-0',
+                          language === 'en' ? 'mr-3' : 'ml-3',
+                        )}
                         src={checkmark}
                         alt=""
                       />

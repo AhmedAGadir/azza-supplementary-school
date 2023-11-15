@@ -1,3 +1,8 @@
+'use client'
+
+import React, { useMemo } from 'react'
+import { useTranslation } from '@/app/useTranslation'
+
 import Image from 'next/image'
 import { Fragment } from 'react'
 
@@ -21,6 +26,10 @@ import clsx from 'clsx'
 // ]
 
 export function AboutHero() {
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(() => translation?.about?.hero ?? {}, [translation])
+
   return (
     <section className="bg-purple-25 px-4 pt-16 sm:px-6 lg:px-8">
       {/* Container */}
@@ -28,16 +37,12 @@ export function AboutHero() {
         {/* Page header */}
         <div className="relative z-20">
           <h2 className="h1 mx-auto max-w-3xl text-center text-purple-900">
-            Why Azza?
+            {t.title}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-xl leading-relaxed text-purple-800 sm:mt-5">
-            Choosing Azza means investing in a comprehensive education grounded
-            in core values of excellence, inclusivity, and lifelong learning.
-            <br />
-            <br />
-            Established in 1995 by a group of dedicated refugee women, began its
-            journey by teaching children Arabic language and cultural studies.
-          </p>
+          <p
+            className="mx-auto mt-4 max-w-2xl text-center text-xl leading-relaxed text-purple-800 sm:mt-5"
+            dangerouslySetInnerHTML={{ __html: t.description }}
+          ></p>
         </div>
         {/* School image */}
         <div
@@ -90,40 +95,13 @@ export function AboutHero() {
           </div>
         </div>
         {/* About school */}
-        <div className="prose prose-lg mx-auto mt-14 sm:prose-xl sm:mt-16 lg:mt-24">
-          <p>
-            These modest beginnings in North Kensington burgeoned into a school
-            that has since been a beacon of learning for hundreds of children.
-            Every Saturday, from 10 am to 2 pm at KAA, children aged 6-16
-            receive an education that spans subjects beyond just Arabic, delving
-            into mainstream school curriculum subjects such as English and
-            Mathematics.
-          </p>
-          <p>
-            Alongside these academic pursuits, the school offers enriching
-            activities like football, gymnastics, and engagement sessions for
-            parents, fostering a holistic development environment. Our purpose
-            extends beyond mere academic assistance. We aim to bolster the
-            cultural identity, self-esteem, and confidence of children,
-            predominantly from the Sudanese community and other communities
-            within Kensington and Chelsea.
-          </p>
-          <p>
-            Many of our learners hail from immigrant backgrounds, often with
-            English as their second language, making our English and Maths
-            classes doubly essential for both them and their Arabic-speaking
-            parents.
-          </p>
-          <p>
-            Beyond the classroom, Azza Supplementary School promotes camaraderie
-            and understanding; we've observed heartening bonds forged between
-            families, stemming from friendships initiated within our school
-            walls. These relationships have proven invaluable, enhancing
-            self-confidence, reducing feelings of isolation, and creating an
-            inclusive environment where children and parents from diverse
-            backgrounds intermingle seamlessly.
-          </p>
-        </div>
+        <div
+          className={clsx(
+            'prose prose-lg mx-auto mt-14 sm:prose-xl sm:mt-16 lg:mt-24',
+            language === 'ar' && 'text-right',
+          )}
+          dangerouslySetInnerHTML={{ __html: t.description2 }}
+        />
       </div>
     </section>
   )

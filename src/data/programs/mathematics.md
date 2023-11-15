@@ -1,62 +1,61 @@
 ---
 name: Mathematics
 order: 2
-dropdownDescription: Delve into the world of numbers and logical reasoning with our comprehensive mathematics program.
+dropdownDescription: Embark on an educational adventure with our diverse Mathematics program.
 featured: true
 hero:
-  tagline: Discover the Universe of Numbers
-  headline: Azza's Mathematics Mastery Program
-  text: Uncover the secrets of mathematics through a journey from the fundamental principles to complex problem-solving, guided by our dedicated educators committed to excellence in mathematical education and logical thinking.
+  tagline: A Journey into the World of Mathematics
+  headline: Azza's Mathematics Program
+  text: Experience a delightful journey from the basics of mathematics to its complex challenges, guided by specialized teachers focusing on developing critical thinking and logical reasoning.
   action:
-    label: Enroll today
+    label: Enroll Now
     href: '/enroll'
     icon: true
   image:
     src: '/images/stock/maths-problem.webp'
 infoSection:
-  headline: The Math Program dedicated to nurturing problem solvers
-  text: Dive into the elegance of mathematical theories and their practical applications, fostering a deep appreciation for logic, structure, and abstract thinking through a curriculum that inspires a passion for continuous learning.
-  ages: 5 - 16 years old
-  dates: Sept. 23 - July 6
-  schedule: Saturdays from 10AM - 2PM
-  classSize: Student to teacher ratio of 15:1
+  headline: Building Foundations and Preparing for Advanced Challenges
+  text: Our program combines basic mathematics learning with preparation for advanced academic challenges such as GCSE and A levels.
+  ages: 5-16 years
+  dates: September 23 - July 6
+  schedule: Saturdays from 10 AM to 2 PM
+  classSize: Student to teacher ratio 15:1
 descriptionSection:
   text: >
-    ## Our unique approach to mathematics education
-            
-    From basic arithmetic to advanced calculus, our program spans the entire mathematical spectrum, enabling students to build a robust foundation and progressively challenge themselves with more complex concepts. Interactive and dynamic sessions ensure deep engagement, developing critical thinking, analytical reasoning, and problem-solving skills.
-        
-    ### What they will learn
-          
-    * Mastery of fundamental mathematical operations and principles.
+    ## Our Approach to Teaching Mathematics
 
-    * Ability to approach problem-solving with analytical reasoning and logic.
+    Our program covers mathematical areas from the basics to advanced levels, enabling students to build a solid understanding and develop analytical and computational skills.
 
-    * Understanding of theoretical mathematics and its real-world applications.
+    ### What Students Will Learn
 
-    * Confidence to tackle academic challenges and standardized examinations.
+    * Familiarity with basic and advanced mathematical concepts.
 
-    * Skills that lay the groundwork for potential future careers in Science, Technology, Engineering, and Mathematics (STEM) fields.
+    * Development of mathematical analysis and problem-solving abilities.
 
+    * Understanding of practical applications of mathematics in everyday life and scientific fields.
 
-    We cultivate an environment where inquiry is encouraged and every question is a step forward in the journey of learning. Our instructors are passionate about mathematics, striving to instill the same passion in their students by unlocking the intriguing world of numbers and logical reasoning.
+    * Building confidence to tackle advanced academic tests like GCSE and A levels.
+
+    * Developing skills beneficial for future STEM fields.
+
+    Azza School provides a stimulating educational environment that encourages active learning and exploration of the world of mathematics in detail.
   portraitImage: '/images/stock/maths-equations.jpeg'
   squareImage1: '/images/stock/maths-board.jpeg'
   squareImage2: '/images/stock/maths-book.jpeg'
 pricingSection:
-  tagline: A Single Investment in Holistic Education
-  headline: Complete Academic Enrichment, One Annual Fee
-  text: Dive into a comprehensive educational experience with our all-encompassing curriculum, designed for holistic growth and exploration.
+  tagline: An Investment in Educational Future
+  headline: Comprehensive Mathematics Program with an Annual Fee
+  text: A rich and integrated educational experience, focusing on developing academic and personal skills.
   pricing:
-    name: Full Academic Year Enrollment
+    name: Full Academic Year Registration
     price: £240
     interval: per academic year
-    shortDescription: All-encompassing educational journey across key subjects
+    shortDescription: A comprehensive educational journey covering basic and advanced subjects
     features:
-      - feature: Comprehensive curriculum including Arabic, cultural studies, Maths, and English
-      - feature: One fee, multiple subjects - simplicity in academic planning
+      - feature: An inclusive curriculum including Mathematics with preparation for higher levels
+      - feature: A single tuition fee for ease of academic planning
     action:
-      label: Enroll Today
+      label: Enroll Now
       href: '/enroll'
       icon: true
 ---

@@ -1,9 +1,5 @@
-import { ProgramHero } from '@/components/ProgramHero'
-import { ProgramInformation } from '@/components/ProgramInformation'
-import { ProgramDescription } from '@/components/ProgramDescription'
-import { ProgramPricing } from '@/components/ProgramPricing'
-
 import { getItemData, getAllItems } from '@/lib/getItems'
+import ProgramPageContent from '@/components/ProgramPageContent'
 
 export async function generateMetadata({ params: { slug } }) {
   const program = getItemData(slug, 'programs')
@@ -16,21 +12,9 @@ export async function generateMetadata({ params: { slug } }) {
 
 export default function ProgramPage({ params: { slug } }) {
   const program = getItemData(slug, 'programs')
+  const programArabic = getItemData(slug, 'programs-arabic')
 
-  return (
-    <>
-      {program?.hero && <ProgramHero hero={program.hero} />}
-      {program?.infoSection && (
-        <ProgramInformation data={program.infoSection} />
-      )}
-      {program?.descriptionSection && (
-        <ProgramDescription data={program.descriptionSection} />
-      )}
-      {program?.pricingSection && (
-        <ProgramPricing data={program.pricingSection} />
-      )}
-    </>
-  )
+  return <ProgramPageContent program={program} programArabic={programArabic} />
 }
 
 export async function generateStaticParams() {

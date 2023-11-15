@@ -32,18 +32,28 @@ const InfoCard = ({ icon, title, gradientColors, text }) => {
   )
 }
 
-export const ProgramInformation = ({ data }) => {
+export const ProgramInformation = ({ data, language }) => {
   return (
     <section className="relative w-full px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
       {/* Container */}
       <div className="mx-auto max-w-xl lg:max-w-screen-xl">
         {/* Section header text */}
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 xl:gap-32">
-          <div className="flex items-center">
+          <div
+            className={clsx(
+              'flex items-center',
+              language === 'en' ? 'text-left' : 'text-right',
+            )}
+          >
             <h2 className="h2 max-w-4xl text-purple-900">{data.headline}</h2>
           </div>
           <div className="mt-6 flex items-center lg:mt-0">
-            <p className="text-xl leading-relaxed text-purple-800">
+            <p
+              className={clsx(
+                'text-xl leading-relaxed text-purple-800',
+                language === 'en' ? 'text-left' : 'text-right',
+              )}
+            >
               {data.text}
             </p>
           </div>

@@ -259,6 +259,7 @@ export function Navbar({ programs }) {
                                         pathname === `/programs/${program.slug}`
                                           ? 'bg-purple-25'
                                           : 'transition duration-200 ease-in-out hover:bg-purple-25/60',
+                                        language === 'ar' && 'text-right',
                                       )}
                                       onClick={close}
                                     >
