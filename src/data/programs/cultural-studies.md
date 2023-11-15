@@ -44,17 +44,18 @@ descriptionSection:
   squareImage1: '/images/stock/cultural-studies-classroom.jpeg'
   squareImage2: '/images/stock/cultural-studies-map.jpeg'
 pricingSection:
-  tagline: Comprehensive Cultural Education
-  headline: Cultural Studies Program with an Annual Fee
-  text: Enjoy a rich educational experience that combines cultural knowledge with global exploration.
+  tagline: Your Gateway to Enhanced Learning
+  headline: Engaging Saturday Education Program
+  text: Join us for an enriching Saturday experience with our well-rounded curriculum, designed to complement your child's regular education and spark a love for learning and discovery.
   pricing:
     name: Full Academic Year Registration
-    price: £240
+    price: Free
     interval: per academic year
-    shortDescription: A comprehensive educational experience covering the main academic subjects in an integrated manner
+    shortDescription: Comprehensive educational experience covering key academic subjects
     features:
-      - feature: Curriculum includes interactive and comprehensive cultural studies
-      - feature: One tuition fee for simplified academic planning
+      - feature: An inclusive curriculum encompassing Arabic, Cultural Studies, Mathematics, and English
+      - feature: Specialized teaching approaches tailored to individual learning styles and needs
+      - feature: Access to a variety of extracurricular activities and educational workshops
     action:
       label: Enroll Now
       href: '/enroll'

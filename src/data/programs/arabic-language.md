@@ -44,17 +44,18 @@ descriptionSection:
   squareImage1: '/images/stock/arabic-writing.jpeg'
   squareImage2: '/images/stock/arabic-books.png'
 pricingSection:
-  tagline: An Investment in Comprehensive Education
-  headline: Comprehensive Arabic Language Education
-  text: Experience a rich educational journey with our integrated curriculum, designed for overall growth and scientific curiosity.
+  tagline: Your Gateway to Enhanced Learning
+  headline: Engaging Saturday Education Program
+  text: Join us for an enriching Saturday experience with our well-rounded curriculum, designed to complement your child's regular education and spark a love for learning and discovery.
   pricing:
     name: Full Academic Year Registration
-    price: £240
+    price: Free
     interval: per academic year
     shortDescription: Comprehensive educational experience covering key academic subjects
     features:
       - feature: An inclusive curriculum encompassing Arabic, Cultural Studies, Mathematics, and English
-      - feature: Unified tuition fees for easy academic planning
+      - feature: Specialized teaching approaches tailored to individual learning styles and needs
+      - feature: Access to a variety of extracurricular activities and educational workshops
     action:
       label: Enroll Now
       href: '/enroll'

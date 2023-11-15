@@ -105,7 +105,9 @@ export const Footer = ({ programs, contact }) => {
                   index > 0 && index < programs.length && 'py-2',
                 )}
               >
-                <Link href={program.slug}>{program.data.name}</Link>
+                <Link href={`programs/${program.slug}`}>
+                  {program.data.name}
+                </Link>
               </li>
             ))}
           </ul>

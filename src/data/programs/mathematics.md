@@ -43,17 +43,18 @@ descriptionSection:
   squareImage1: '/images/stock/maths-board.jpeg'
   squareImage2: '/images/stock/maths-book.jpeg'
 pricingSection:
-  tagline: An Investment in Educational Future
-  headline: Comprehensive Mathematics Program with an Annual Fee
-  text: A rich and integrated educational experience, focusing on developing academic and personal skills.
+  tagline: Your Gateway to Enhanced Learning
+  headline: Engaging Saturday Education Program
+  text: Join us for an enriching Saturday experience with our well-rounded curriculum, designed to complement your child's regular education and spark a love for learning and discovery.
   pricing:
     name: Full Academic Year Registration
-    price: £240
+    price: Free
     interval: per academic year
-    shortDescription: A comprehensive educational journey covering basic and advanced subjects
+    shortDescription: Comprehensive educational experience covering key academic subjects
     features:
-      - feature: An inclusive curriculum including Mathematics with preparation for higher levels
-      - feature: A single tuition fee for ease of academic planning
+      - feature: An inclusive curriculum encompassing Arabic, Cultural Studies, Mathematics, and English
+      - feature: Specialized teaching approaches tailored to individual learning styles and needs
+      - feature: Access to a variety of extracurricular activities and educational workshops
     action:
       label: Enroll Now
       href: '/enroll'

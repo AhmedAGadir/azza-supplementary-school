@@ -44,17 +44,18 @@ descriptionSection:
   squareImage1: '/images/stock/english-lesson.jpeg'
   squareImage2: '/images/stock/english-writing.png'
 pricingSection:
-  tagline: An Investment in Comprehensive Education
-  headline: Comprehensive Educational Program with an Annual Fee
-  text: Enjoy a rich and comprehensive educational experience with our integrated curriculum, designed to stimulate overall growth and creativity.
+  tagline: Your Gateway to Enhanced Learning
+  headline: Engaging Saturday Education Program
+  text: Join us for an enriching Saturday experience with our well-rounded curriculum, designed to complement your child's regular education and spark a love for learning and discovery.
   pricing:
     name: Full Academic Year Registration
-    price: £240
+    price: Free
     interval: per academic year
     shortDescription: Comprehensive educational experience covering key academic subjects
     features:
-      - feature: An inclusive curriculum encompassing Mathematics, Cultural Studies, Arabic, and English
-      - feature: One fee for multiple subjects - simplifying academic planning
+      - feature: An inclusive curriculum encompassing Arabic, Cultural Studies, Mathematics, and English
+      - feature: Specialized teaching approaches tailored to individual learning styles and needs
+      - feature: Access to a variety of extracurricular activities and educational workshops
     action:
       label: Enroll Now
       href: '/enroll'
