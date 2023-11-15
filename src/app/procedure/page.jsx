@@ -1,16 +1,16 @@
+'use client'
+
+import { useTranslation } from '@/app/useTranslation'
+import { ArabicOnlyWarning } from '@/components/ArabicOnlyWarning'
+
 import Image from 'next/image'
 import flowchart from '/public/images/photos/flowchart.png'
 import bodymap from '/public/images/photos/bodymap.png'
 
-export const metadata = {
-  title: 'Safeguarding Procedure - Azza Supplementary School',
-  description:
-    'Explore Azza Supplementary School’s safeguarding procedure to learn how we protect our students and staff.',
-}
-
-const Procedure = () => (
+const Procedure = ({ language }) => (
   <div className="prose prose-lg mx-auto mt-14 pb-16 sm:mt-16">
     <h3 className="mb-12 text-center text-5xl font-bold">
+      {language === 'ar' && <ArabicOnlyWarning />}
       Safeguarding Procedure
     </h3>
     <h4 className="text-2xl">Contents</h4>
@@ -1471,11 +1471,13 @@ const IncidentLogTable = () => (
 )
 
 export default function PolicyPage() {
+  const { language } = useTranslation()
+
   return (
     <section className="bg-purple-25 px-4 pt-16 sm:px-6 lg:px-8">
       {/* Container */}
       <div className="mx-auto max-w-screen-xl">
-        <Procedure />
+        <Procedure language={language} />
       </div>
     </section>
   )

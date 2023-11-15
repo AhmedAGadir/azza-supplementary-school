@@ -48,12 +48,12 @@ export const Staff = ({ staff, staffArabic }) => {
             {staffArr.map((member, i) => (
               <div key={`member-${i}`}>
                 <div
-                  class={clsx(
+                  className={clsx(
                     'mx-auto h-[130px] max-w-sm rounded-lg border border-gray-200 bg-gray-100 p-6 shadow',
                   )}
                 >
                   <h5
-                    class={clsx(
+                    className={clsx(
                       'mb-2 text-2xl font-semibold tracking-tight text-purple-600',
                       language === 'ar' && 'text-right',
                     )}
@@ -61,7 +61,7 @@ export const Staff = ({ staff, staffArabic }) => {
                     {member.data.name}
                   </h5>
                   <p
-                    class={clsx(
+                    className={clsx(
                       'mb-3 font-normal text-gray-400',
                       language === 'ar' && 'text-right',
                     )}

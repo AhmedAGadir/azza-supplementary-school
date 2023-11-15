@@ -1,15 +1,18 @@
 'use client'
+import React, { useMemo, useRef } from 'react'
+import { useTranslation } from '@/app/useTranslation'
+
 import Image from 'next/image'
 import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
+import { ArabicOnlyWarning } from '@/components/ArabicOnlyWarning'
 import dotsLargeGrid from '/public/images/illustrations/dots-large-grid.svg'
 import dotsGrid from '/public/images/illustrations/dots-grid.svg'
 import dotsStrip from '/public/images/illustrations/dots-strip.svg'
 
 import checkmark from '/public/images/illustrations/checkmark.svg'
 
-import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
 const enrollmentFields = [
@@ -279,6 +282,10 @@ const enrollmentFields = [
 ]
 
 export const EnrollmentHero = () => {
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(() => translation?.enroll?.hero ?? {}, [translation])
+
   const [submitted, setSubmitted] = React.useState(false)
   const [message, setMessage] = React.useState('')
   const form = useRef()
@@ -297,15 +304,11 @@ export const EnrollmentHero = () => {
         (result) => {
           console.log(result.text)
           setSubmitted(true)
-          setMessage(
-            'Thank you for your application. We will get back to you shortly.',
-          )
+          setMessage(t.messageSuccess)
         },
         (error) => {
           console.log(error.text)
-          setMessage(
-            'Sorry, there was an error sending your message. Please try again.',
-          )
+          setMessage(t.messageError)
         },
       )
   }
@@ -315,21 +318,34 @@ export const EnrollmentHero = () => {
       {/* <div className="mx-auto max-w-xl lg:grid lg:max-w-screen-2xl lg:grid-cols-3 lg:gap-8 xl:gap-16 "> */}
       <div className="mx-auto lg:max-w-7xl">
         {/* <div className="py-16 lg:py-32">< */}
-        <div className="pb-16 lg:pb-32">
+        <div
+          className={clsx(
+            'pb-16 lg:pb-32',
+            language === 'en'
+              ? 'order-1 text-left'
+              : 'order-2 ml-auto text-right',
+          )}
+        >
           <div>
             <span className="- inline-block rounded-full bg-purple-200 px-4 py-2 font-medium text-purple-700 shadow-md">
-              Enroll Today
+              {t.title}
             </span>
           </div>
-          <h1 className="h1 mt-4 max-w-xl text-purple-900">
-            Begin Your Educational Journey
+          <h1
+            className={clsx(
+              'h1 mt-4 max-w-md text-purple-900',
+              language === 'ar' && 'ml-auto',
+            )}
+          >
+            {t.subtitle}
           </h1>
-          <p className="mt-3 max-w-3xl text-xl leading-relaxed text-purple-800">
-            Ready to take the next step in your education? We’re here to guide
-            you through the enrollment process. Our team is dedicated to
-            providing a smooth transition into our community, ensuring that your
-            academic journey is enriching, engaging, and rewarding from the very
-            start.
+          <p
+            className={clsx(
+              'mt-3 max-w-3xl text-xl leading-relaxed text-purple-800',
+              language === 'ar' && 'ml-auto',
+            )}
+          >
+            {t.description}
           </p>
         </div>
         {/* Contact form container */}
@@ -368,6 +384,15 @@ export const EnrollmentHero = () => {
             {!submitted && (
               <>
                 <div className="mb-4">
+                  {language === 'ar' && (
+                    <ArabicOnlyWarning>
+                      <span>
+                        <span className="font-medium">نعتذر</span>، هذا النموذج
+                        متاح حالياً باللغة الإنجليزية فقط.
+                      </span>
+                    </ArabicOnlyWarning>
+                  )}
+
                   <h3 className="text-3xl font-bold text-purple-900">
                     Student Registration Form
                   </h3>

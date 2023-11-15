@@ -1,5 +1,6 @@
 import { EnrollmentHero } from '@/components/EnrollmentHero'
 import { ContactInformation } from '@/components/ContactInformation'
+import { getItemData } from '@/lib/getItems'
 
 export const metadata = {
   title: 'Enroll Today - Azza Supplementary School',
@@ -8,10 +9,11 @@ export const metadata = {
 }
 
 export default function EnrollmentPage() {
+  const contact = getItemData('contact', 'global')
   return (
     <>
       <EnrollmentHero />
-      <ContactInformation email="enrollment@azzaschool.org" />
+      <ContactInformation email="enrollment@azzaschool.org" contact={contact} />
     </>
   )
 }

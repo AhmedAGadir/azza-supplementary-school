@@ -91,7 +91,7 @@
       },
       "faqs": {
         "title": "Frequently asked questions",
-        "description": " Seeking more information? Explore our FAQ section for insights on program specifics, scheduling, and our educational approach."
+        "description": " Seeking more formFields? Explore our FAQ section for insights on program specifics, scheduling, and our educational approach."
       }
     },
     "about": {
@@ -123,6 +123,67 @@
     "calendar": {
       "title": "School Calendar",
       "description": "Access the comprehensive school calendar of Azza Supplementary School to keep up-to-date with upcoming events, holidays, examinations, and other important academic dates throughout the year."
+    },
+    "contact": {
+      "hero": {
+        "title": "Contact us today",
+        "subtitle": "We'd love to hear from you",
+        "description": "Whether you have questions, feedback, or stories to share, we're here for you. Our community thrives on your insights, and we're committed to ensuring your experience with us is positive, impactful, and meaningful.",
+        "formFields": [
+          {
+            "name": "from_name",
+            "label": "Name",
+            "type": "text",
+            "placeholder": "Your name",
+            "required": true
+          },
+          {
+            "name": "from_email",
+            "label": "Email",
+            "type": "email",
+            "placeholder": "Your email address",
+            "required": true
+          },
+          {
+            "name": "from_phone",
+            "label": "Phone",
+            "type": "text",
+            "placeholder": "Your phone number",
+            "required": true
+          },
+          {
+            "name": "message",
+            "label": "Message",
+            "type": "textarea",
+            "placeholder": "Message",
+            "required": true
+          }
+        ],
+        "sendMessageBtn": "Send message",
+        "sendMessage": "Send us a message",
+        "wellGetBackToYou": "We'll get back to you within 24 hours.",
+        "messageSuccess": "Thank you for your message. We will get back to you shortly.",
+        "messageError": "Sorry, there was an error sending your message. Please try again."
+      },
+      "information": {
+        "title": "Contact information",
+        "description": " Reach out to us for any inquiries or support. We're here to assist and guide you through any needed information or help concerning our educational services and community involvement.",
+        "labels": {
+          "address": "Address",
+          "email": "Email",
+          "phone": "Phone",
+          "addressTimes": "(Term dates between 10am - 2pm only)"
+        }
+      }
+    },
+    "enroll": {
+      "hero": {
+        "title": "Enroll Today",
+        "subtitle": "Begin Your Educational Journey",
+        "description": "Ready to take the next step in your education? We’re here to guide you through the enrollment process. Our team is dedicated to providing a smooth transition into our community, ensuring that your academic journey is enriching, engaging, and rewarding from the very start.",
+        "messageSuccess": "Thank you for your application. We will get back to you shortly.",
+        "messageError": "Sorry, there was an error submitting your application. Please try again."
+      }
     },
     "footer": {
       "title": "Empowering Communities, Enriching Education",
@@ -268,6 +329,68 @@
       "title": "التقويم المدرسي",
       "description": "اطلع على التقويم المدرسي الشامل لمدرسة عزة التكميلية لتكون على اطلاع دائم بالأحداث القادمة، العطلات، الامتحانات، والتواريخ الأكاديمية الهامة طوال العام."
     },
+    "contact": {
+      "hero": {
+        "title": "نحن هنا لنسمع منك",
+        "subtitle": "تواصل معنا الآن",
+        "description": "إذا كان لديك استفسارات، ملاحظات، أو تجارب تود مشاركتها، فنحن في انتظارك. ينمو مجتمعنا ويتطور بفضل مساهماتكم، ونعدكم بتجربة غنية وملهمة معنا، تُثري حياتكم وتترك أثراً إيجابياً.",
+        "formFields": [
+          {
+            "name": "from_name",
+            "label": "الاسم",
+            "type": "text",
+            "placeholder": "اسمك",
+            "required": true
+          },
+          {
+            "name": "from_email",
+            "label": "البريد الإلكتروني",
+            "type": "email",
+            "placeholder": "عنوان بريدك الإلكتروني",
+            "required": true
+          },
+          {
+            "name": "from_phone",
+            "label": "الهاتف",
+            "type": "text",
+            "placeholder": "رقم هاتفك",
+            "required": true
+          },
+          {
+            "name": "message",
+            "label": "الرسالة",
+            "type": "textarea",
+            "placeholder": "رسالتك",
+            "required": true
+          }
+        ],
+        "sendMessageBtn": "أرسل الرسالة",
+        "sendMessage": "ابعث برسالتك إلينا",
+        "wellGetBackToYou": "سنرد على استفسارك خلال ٢٤ ساعة.",
+        "messageSuccess": "شكراً لتواصلك معنا. سنقوم بالرد عليك في أقرب وقت.",
+        "messageError": "نأسف، حصل خطأ في إرسال رسالتك. يرجى المحاولة مجدداً."
+      },
+      "information": {
+        "title": "معلومات الاتصال",
+        "description": "تواصل معنا لأي استفسارات أو دعم. نحن هنا لمساعدتك وتقديم الإرشادات المطلوبة حول خدماتنا التعليمية ومشاركتنا المجتمعية.",
+        "labels": {
+          "address": "العنوان",
+          "email": "البريد الإلكتروني",
+          "phone": "الهاتف",
+          "addressTimes": "(مواعيد الفصل من ١٠ صباحًا حتى ٢ ظهرًا فقط)"
+        }
+      }
+    },
+    "enroll": {
+      "hero": {
+        "title": "سجل الآن",
+        "subtitle": "ابدأ رحلتك التعليمية",
+        "description": "هل أنت جاهز لخطوة جديدة في مسيرتك التعليمية؟ نحن هنا لنرشدك خلال عملية التسجيل. فريقنا ملتزم بتوفير انتقال سلس إلى مجتمعنا الدراسي، مع ضمان تجربة تعليمية غنية وجذابة تبدأ من اللحظة الأولى.",
+        "messageSuccess": "شكراً لتقديمك. سنتواصل معك قريباً.",
+        "messageError": "عذراً، حدث خطأ أثناء إرسال طلبك. يرجى المحاولة مرة أخرى."
+      }
+    },
+
     "footer": {
       "title": "تمكين المجتمعات، إثراء التعليم",
       "labels": {

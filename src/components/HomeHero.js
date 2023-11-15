@@ -1,6 +1,8 @@
 'use client'
 
 import React, { useMemo } from 'react'
+import { useTranslation } from '@/app/useTranslation'
+
 import Image from 'next/image'
 // import { useState, Fragment } from 'react'
 // import { Dialog, Transition } from '@headlessui/react'
@@ -11,8 +13,6 @@ import { Button } from '@/components/Button'
 
 import heroImage1 from '/public/images/photos/certificates-1-cropped-2.jpg'
 import heroImage2 from '/public/images/photos/gardening-cropped.jpg'
-
-import { useTranslation } from '@/app/useTranslation'
 
 // import alifbata from '/public/images/illustrations/alifbata.svg'
 

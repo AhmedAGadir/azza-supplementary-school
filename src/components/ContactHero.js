@@ -1,4 +1,7 @@
 'use client'
+import React, { useMemo, useRef } from 'react'
+import { useTranslation } from '@/app/useTranslation'
+
 import Image from 'next/image'
 import clsx from 'clsx'
 
@@ -9,41 +12,13 @@ import dotsStrip from '/public/images/illustrations/dots-strip.svg'
 
 import checkmark from '/public/images/illustrations/checkmark.svg'
 
-import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
-const fields = [
-  {
-    name: 'from_name',
-    label: 'Name',
-    type: 'text',
-    placeholder: 'Your name',
-    required: true,
-  },
-  {
-    name: 'from_email',
-    label: 'Email',
-    type: 'email',
-    placeholder: 'Your email address',
-    required: true,
-  },
-  {
-    name: 'from_phone',
-    label: 'Phone',
-    type: 'text',
-    placeholder: 'Your phone number',
-    required: true,
-  },
-  {
-    name: 'message',
-    label: 'Message',
-    type: 'textarea',
-    placeholder: 'Message',
-    required: true,
-  },
-]
-
 export const ContactHero = () => {
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(() => translation?.contact?.hero ?? {}, [translation])
+
   const [submitted, setSubmitted] = React.useState(false)
   const [message, setMessage] = React.useState('')
   const form = useRef()
@@ -62,15 +37,11 @@ export const ContactHero = () => {
         (result) => {
           console.log(result.text)
           setSubmitted(true)
-          setMessage(
-            'Thank you for your message. We will get back to you shortly.',
-          )
+          setMessage(t.messageSuccess)
         },
         (error) => {
           console.log(error.text)
-          setMessage(
-            'Sorry, there was an error sending your message. Please try again.',
-          )
+          setMessage(t.messageError)
         },
       )
   }
@@ -80,24 +51,47 @@ export const ContactHero = () => {
       {/* Container */}
       <div className="mx-auto max-w-xl lg:grid lg:max-w-screen-xl lg:grid-cols-2 lg:gap-10 xl:gap-32 ">
         {/* Hero header */}
-        <div className="py-16 lg:py-32">
+        <div
+          className={clsx(
+            'py-16 lg:py-32',
+            language === 'en'
+              ? 'order-1 text-left'
+              : 'order-2 ml-auto text-right',
+          )}
+        >
           <div>
-            <span className="- inline-block rounded-full bg-purple-200 px-4 py-2 font-medium text-purple-700 shadow-md">
-              Contact us today
+            <span
+              className={clsx(
+                '- inline-block rounded-full bg-purple-200 px-4 py-2 font-medium text-purple-700 shadow-md',
+              )}
+            >
+              {t.title}
             </span>
           </div>
-          <h1 className="h1 mt-4 max-w-md text-purple-900">
-            We'd love to hear from you
+          <h1
+            className={clsx(
+              'h1 mt-4 max-w-md text-purple-900',
+              language === 'ar' && 'ml-auto',
+            )}
+          >
+            {t.subtitle}
           </h1>
-          <p className="mt-3 max-w-lg text-xl leading-relaxed text-purple-800">
-            Whether you have questions, feedback, or stories to share, we're
-            here for you. Our community thrives on your insights, and we're
-            committed to ensuring your experience with us is positive,
-            impactful, and meaningful.
+          <p
+            className={clsx(
+              'mt-3 max-w-lg text-xl leading-relaxed text-purple-800',
+              language === 'ar' && 'ml-auto',
+            )}
+          >
+            {t.description}
           </p>
         </div>
         {/* Contact form container */}
-        <div className="relative">
+        <div
+          className={clsx(
+            'relative',
+            language === 'en' ? 'order-2' : 'order-1 text-right',
+          )}
+        >
           {/* Background decorations */}
           <Image
             src={dotsLargeGrid}
@@ -121,7 +115,10 @@ export const ContactHero = () => {
               <div className="mb-6">
                 <h3 className="h3 text-purple-800">
                   <Image
-                    className="mb-3 mr-3 block h-20 w-20 flex-shrink-0"
+                    className={clsx(
+                      'mb-3 block h-20 w-20 flex-shrink-0',
+                      language === 'en' ? 'mr-3' : 'ml-auto',
+                    )}
                     src={checkmark}
                     alt=""
                   />
@@ -133,14 +130,14 @@ export const ContactHero = () => {
               <>
                 <div>
                   <h3 className="text-2xl font-bold text-purple-900">
-                    Send us a message
+                    {t.sendMessage}
                   </h3>
                   <p className="mt-0.5 text-purple-800 text-opacity-90">
-                    We'll get back to you within 24 hours.
+                    {t.wellGetBackToYou}
                   </p>
                 </div>
                 <form className="mt-8" ref={form} onSubmit={sendEmail}>
-                  {fields.map((field, index) => (
+                  {t.formFields?.map((field, index) => (
                     <div
                       key={`contact-form-field-${index}}`}
                       className={clsx(index > 0 && 'mt-6')}
@@ -149,8 +146,11 @@ export const ContactHero = () => {
                         htmlFor={field.name}
                         className="ml-0.5 text-sm font-medium text-purple-900"
                       >
+                        {language === 'ar' && field.required && (
+                          <span className="text-red-500">*</span>
+                        )}
                         {field.label}{' '}
-                        {field.required && (
+                        {language === 'en' && field.required && (
                           <span className="text-red-500">*</span>
                         )}
                       </label>
@@ -160,7 +160,10 @@ export const ContactHero = () => {
                           name={field.name}
                           placeholder={field.placeholder}
                           rows={5}
-                          className="mt-2 w-full rounded-2xl border-2 border-purple-50 p-4 text-sm font-medium text-purple-700 placeholder-purple-700 placeholder-opacity-70 outline-none duration-300 ease-in-out focus:border-purple-200 focus:outline-none focus:ring-purple-200"
+                          className={clsx(
+                            'mt-2 w-full rounded-2xl border-2 border-purple-50 p-4 text-sm font-medium text-purple-700 placeholder-purple-700 placeholder-opacity-70 outline-none duration-300 ease-in-out focus:border-purple-200 focus:outline-none focus:ring-purple-200',
+                            language === 'ar' && 'text-right',
+                          )}
                           required={field.required}
                         />
                       )}
@@ -171,7 +174,10 @@ export const ContactHero = () => {
                           type={field.type}
                           name={field.name}
                           placeholder={field.placeholder}
-                          className="mt-2 h-14 w-full rounded-2xl border-2 border-purple-50 p-4 text-sm font-medium text-purple-700 placeholder-purple-700 placeholder-opacity-70 outline-none duration-300 ease-in-out focus:border-purple-200 focus:outline-none focus:ring-purple-200"
+                          className={clsx(
+                            'mt-2 h-14 w-full rounded-2xl border-2 border-purple-50 p-4 text-sm font-medium text-purple-700 placeholder-purple-700 placeholder-opacity-70 outline-none duration-300 ease-in-out focus:border-purple-200 focus:outline-none focus:ring-purple-200',
+                            language === 'ar' && 'text-right',
+                          )}
                           required={field.required}
                         />
                       )}
@@ -184,7 +190,7 @@ export const ContactHero = () => {
                   )}
 
                   <div className="mt-6 flex justify-end">
-                    <Button type="submit">Send message</Button>
+                    <Button type="submit">{t.sendMessageBtn}</Button>
                   </div>
                 </form>
               </>

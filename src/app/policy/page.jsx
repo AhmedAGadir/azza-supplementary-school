@@ -1,12 +1,12 @@
-export const metadata = {
-  title: 'Safeguarding Policy - Azza Supplementary School',
-  description:
-    'Explore Azza Supplementary School’s safeguarding policy to understand our commitment to protecting children and young people from harm.',
-}
+'use client'
 
-const Policy = () => (
+import { useTranslation } from '@/app/useTranslation'
+import { ArabicOnlyWarning } from '@/components/ArabicOnlyWarning'
+
+const Policy = ({ language }) => (
   <div className="prose prose-lg mx-auto mt-14 pb-16  sm:mt-16">
     <h3 className="mb-12 text-center text-5xl font-bold">
+      {language === 'ar' && <ArabicOnlyWarning />}
       Safeguarding Policy Statement September {new Date().getFullYear()}
     </h3>
     <h4 className="text-2xl">1. The purpose of this policy statement is:</h4>
@@ -486,11 +486,13 @@ const Policy = () => (
 )
 
 export default function PolicyPage() {
+  const { language } = useTranslation()
+
   return (
     <section className="bg-purple-25 px-4 pt-16 sm:px-6 lg:px-8">
       {/* Container */}
       <div className="mx-auto max-w-screen-xl">
-        <Policy />
+        <Policy language={language} />
       </div>
     </section>
   )
