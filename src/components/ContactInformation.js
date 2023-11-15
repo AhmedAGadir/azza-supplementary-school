@@ -174,7 +174,7 @@ export const ContactInformation = ({ email, contact }) => {
             style={{ border: 0 }}
             src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ_-A3f98PdkgR5Qn6SpOkZs0&key=${
               process.env.NEXT_PUBLIC_API_KEY
-            }${language === 'ar' && '&language=ar'}`}
+            }${language === 'ar' ? '&language=ar' : ''}`}
             allowFullScreen
             loading="lazy"
           />
