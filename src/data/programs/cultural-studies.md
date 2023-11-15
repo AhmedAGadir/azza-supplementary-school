@@ -1,7 +1,7 @@
 ---
 name: Cultural Studies
 order: 4
-dropdownDescription: Embark on a knowledge adventure exploring the richness of diverse cultures through our comprehensive Cultural Studies program.
+dropdownDescription: Embark on a knowledge adventure exploring the richness of diverse cultures.
 featured: true
 hero:
   tagline: Journey Through the Tapestry of Human Civilization

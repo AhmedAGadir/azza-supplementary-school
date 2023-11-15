@@ -62,7 +62,7 @@ export const ProgramInformation = ({ data, language }) => {
         <div className="mt-12 grid gap-8 sm:mt-14 sm:max-w-none sm:grid-cols-2 sm:gap-6 lg:mt-24 lg:grid-cols-4 xl:gap-12">
           <InfoCard
             icon="moodKid"
-            title="Ages"
+            title={language === 'en' ? 'Ages' : 'الأعمار'}
             gradientColors={{
               bgColor: 'bg-yellow-200',
               iconBgColor: 'bg-yellow-400',
@@ -74,7 +74,7 @@ export const ProgramInformation = ({ data, language }) => {
 
           <InfoCard
             icon="calendar"
-            title="Dates"
+            title={language === 'en' ? 'Dates' : 'التواريخ'}
             gradientColors={{
               bgColor: 'bg-purple-50',
               iconBgColor: 'bg-purple-200',
@@ -86,7 +86,7 @@ export const ProgramInformation = ({ data, language }) => {
 
           <InfoCard
             icon="clock"
-            title="Schedule"
+            title={language === 'en' ? 'Schedule' : 'الجدول الزمني'}
             gradientColors={{
               bgColor: 'bg-rose-50',
               iconBgColor: 'bg-rose-200',
@@ -98,7 +98,7 @@ export const ProgramInformation = ({ data, language }) => {
 
           <InfoCard
             icon="users"
-            title="Class sizes"
+            title={language === 'en' ? 'Class Sizes' : 'حجم الفصل'}
             gradientColors={{
               bgColor: 'bg-blue-50',
               iconBgColor: 'bg-blue-200',
