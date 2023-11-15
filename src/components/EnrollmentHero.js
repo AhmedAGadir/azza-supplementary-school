@@ -316,7 +316,7 @@ export const EnrollmentHero = () => {
   return (
     <section className="overflow-hidden bg-gradient-to-b from-purple-25 to-purple-50 px-4 pb-12 sm:px-6 lg:px-8 lg:pt-24">
       {/* <div className="mx-auto max-w-xl lg:grid lg:max-w-screen-2xl lg:grid-cols-3 lg:gap-8 xl:gap-16 "> */}
-      <div className="mx-auto lg:max-w-7xl">
+      <div className="mx-auto lg:max-w-5xl">
         {/* <div className="py-16 lg:py-32">< */}
         <div
           className={clsx(
