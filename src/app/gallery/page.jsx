@@ -18,7 +18,7 @@ export default function GalleryPage() {
 
   return (
     <>
-      <GalleryHero />
+      {/* <GalleryHero /> */}
       <Gallery gallery={gallery} tags={tags} />
     </>
   )
