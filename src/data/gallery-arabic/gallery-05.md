@@ -1,5 +1,5 @@
 ---
 src: '/images/photos/youth-ramadan-2.jpeg'
 alt: 'Gallery image'
-tag: Youth Ramadan
+tag: الشباب في رمضان
 ---

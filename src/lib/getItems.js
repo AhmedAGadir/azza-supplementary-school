@@ -29,8 +29,8 @@ export function getAllItems(dir) {
   return itemsData
 }
 
-export function getGalleryTags() {
-  const galleryImages = getAllItems('gallery')
+export function getGalleryTags(folderName) {
+  const galleryImages = getAllItems(folderName)
   const uniqueTags = [...new Set(galleryImages.map((image) => image.data.tag))]
   return uniqueTags
 }

@@ -1,26 +1,43 @@
 'use client'
 
+import React, { useMemo, useState, useEffect } from 'react'
+import { useTranslation } from '@/app/useTranslation'
+
 {
   /* This component uses Lightgallery, a customizable, modular, responsive, lightbox gallery plugin.  https://github.com/sachinchoolur/lightGallery */
 }
 
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
 import clsx from 'clsx'
 import LightGallery from 'lightgallery/react'
 import { Icon } from '@/components/Icon'
 
-export const Gallery = ({ gallery, tags }) => {
-  const [galleryPhotos, setGalleryPhotos] = useState(gallery)
+export const Gallery = ({ gallery, tags, galleryArabic, tagsArabic }) => {
+  const { translation, language } = useTranslation()
+
+  const t = useMemo(() => translation?.gallery ?? {}, [translation])
+
+  const galleryArr = useMemo(
+    () => (language === 'en' ? gallery : galleryArabic),
+    [gallery, galleryArabic, language],
+  )
+
+  const tagsArr = useMemo(
+    () => (language === 'en' ? tags : tagsArabic),
+    [language, tags, tagsArabic],
+  )
+
+  const [galleryPhotos, setGalleryPhotos] = useState(galleryArr)
+
   const [selectedTag, setSelectedTag] = useState('all')
 
   useEffect(() => {
     setGalleryPhotos(
       selectedTag === 'all'
-        ? gallery
-        : gallery.filter((image) => image.data.tag === selectedTag),
+        ? galleryArr
+        : galleryArr.filter((image) => image.data.tag === selectedTag),
     )
-  }, [selectedTag, gallery])
+  }, [galleryArr, selectedTag])
 
   function GalleryTabs() {
     return (
@@ -29,13 +46,18 @@ export const Gallery = ({ gallery, tags }) => {
           <div className="mx-auto max-w-screen-xl">
             <div className="flex justify-center">
               <span className="- inline-block rounded-full bg-purple-200 px-4 py-2 font-medium text-purple-700 shadow-md">
-                Creating memories for life
+                {t.title}
               </span>
             </div>
             <h3 className="h2 mx-auto mb-10 mt-4 max-w-2xl text-center text-purple-900 sm:mb-12 md:mb-20">
-              See what it's like to be part of our school
+              {t.subtitle}
             </h3>
-            <ul className="-my-2 flex flex-wrap items-center justify-center space-x-2 text-sm font-medium sm:space-x-4 lg:space-x-6">
+            <ul
+              className={clsx(
+                '-my-2 flex flex-wrap items-center justify-center space-x-2 text-sm font-medium sm:space-x-4 lg:space-x-6',
+                language == 'ar' && 'flex-row-reverse',
+              )}
+            >
               <li className="my-2">
                 <button
                   className={clsx(
@@ -46,10 +68,10 @@ export const Gallery = ({ gallery, tags }) => {
                   )}
                   onClick={() => setSelectedTag('all')}
                 >
-                  All images
+                  {t.allImages}
                 </button>
               </li>
-              {tags.map((tag, index) => (
+              {tagsArr.map((tag, index) => (
                 <li key={`tag-${index}`} className="my-2">
                   <button
                     className={clsx(
@@ -83,7 +105,7 @@ export const Gallery = ({ gallery, tags }) => {
         {galleryPhotos.map((image, index) => (
           <li
             key={`gallery-image-${index}`}
-            className="group relative cursor-pointer"
+            className="group relative"
             data-src={image.data.src}
           >
             <div className="aspect-h-1 aspect-w-1 bg-purple-50">
@@ -118,7 +140,12 @@ export const Gallery = ({ gallery, tags }) => {
       {/* Gallery */}
       <div className="-mb-48 mt-12 -translate-y-56 px-4 sm:mt-16 sm:px-6 lg:mt-20 lg:px-8">
         <div className="mx-auto max-w-3xl lg:max-w-screen-xl">
-          <LightGallery speed={500} selector="li">
+          <LightGallery
+            speed={500}
+            selector="li"
+            download={false}
+            getCaptionFromTitleOrAlt={false}
+          >
             <GalleryPhotos />
           </LightGallery>
         </div>

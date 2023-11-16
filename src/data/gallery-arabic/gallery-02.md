@@ -1,5 +1,5 @@
 ---
 src: '/images/photos/boys-football.jpg'
 alt: 'Gallery image'
-tag: Football
+tag: كرة القدم
 ---

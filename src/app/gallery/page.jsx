@@ -12,14 +12,21 @@ export const metadata = {
 }
 
 export default function GalleryPage() {
-  return <Maintenance />
+  // return <Maintenance />
   const gallery = getAllItems('gallery')
-  const tags = getGalleryTags()
+  const galleryArabic = getAllItems('gallery-arabic')
+  const tags = getGalleryTags('gallery')
+  const tagsArabic = getGalleryTags('gallery-arabic')
 
   return (
     <>
       {/* <GalleryHero /> */}
-      <Gallery gallery={gallery} tags={tags} />
+      <Gallery
+        gallery={gallery}
+        galleryArabic={galleryArabic}
+        tags={tags}
+        tagsArabic={tagsArabic}
+      />
     </>
   )
 }

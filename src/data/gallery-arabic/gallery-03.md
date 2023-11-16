@@ -1,5 +1,5 @@
 ---
 src: '/images/photos/gardening-cropped.jpg'
 alt: 'Gallery image'
-tag: Gardening
+tag: البستنة
 ---
