@@ -73,7 +73,10 @@ export const Footer = ({ programs, contact }) => {
                 href="https://www.facebook.com/azza.supplementary"
                 icon="facebook"
               />
-              <SocialLink href="  " icon="twitter" />
+              <SocialLink
+                href="https://twitter.com/AzzaSupplement1"
+                icon="twitter"
+              />
             </div>
           </div>
         </div>
