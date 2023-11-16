@@ -37,7 +37,7 @@ export const Gallery = ({ gallery, tags, galleryArabic, tagsArabic }) => {
         ? galleryArr
         : galleryArr.filter((image) => image.data.tag === selectedTag),
     )
-  }, [galleryArr, selectedTag])
+  }, [galleryArr, selectedTag, language])
 
   function GalleryTabs() {
     return (
