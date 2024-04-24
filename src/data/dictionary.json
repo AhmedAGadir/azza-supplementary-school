@@ -209,6 +209,7 @@
         { "label": "Safeguarding Policy", "href": "/policy" },
         { "label": "Safeguarding Procedure", "href": "/procedure" },
         { "label": "Enrollment", "href": "/enroll" },
+        { "label": "Resources", "href": "/resources" },
         { "label": "Contact us", "href": "/contact" }
       ]
     }
@@ -419,6 +420,7 @@
         { "label": "التقويم الدراسي", "href": "/calendar" },
         { "label": "سياسة الحماية", "href": "/policy" },
         { "label": "إجراءات الحماية", "href": "/procedure" },
+        { "label": "الموارد", "href": "/resources" },
         { "label": "التسجيل", "href": "/enroll" },
         { "label": "تواصل معنا", "href": "/contact" }
       ]

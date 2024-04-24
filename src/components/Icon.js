@@ -34,6 +34,8 @@ import {
   IconBrandTwitter,
   IconBrandLinkedin,
   IconTool,
+  IconDownload,
+  IconDownloadOff,
 } from '@tabler/icons-react'
 
 const iconOptions = {
@@ -72,6 +74,8 @@ const iconOptions = {
   twitter: IconBrandTwitter,
   linkedin: IconBrandLinkedin,
   tool: IconTool,
+  download: IconDownload,
+  downloadOff: IconDownloadOff,
 }
 
 export const Icon = ({ icon, className = '', stroke = 1.5 }) => {
