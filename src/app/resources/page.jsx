@@ -35,10 +35,15 @@ export default function PolicyPage() {
             <div>
               <p>The welcome pack includes:</p>
               <ul>
-                <li>Parent–school agreement</li>
+                <li>Parent handbook</li>
+                <li>Safeguarding statement</li>
+                <li>School agreement (English)</li>
+                <li>School agreement (Arabic)</li>
+                <li>School Term Dates</li>
                 <li>Consent forms</li>
                 <li>Code of behaviour</li>
                 <li>Anti-bullying policy</li>
+                <li>E-learning</li>
               </ul>
               <p>You can also view more relevant information below:</p>
               <ul>
@@ -56,10 +61,6 @@ export default function PolicyPage() {
                 <li>
                   Click to see our{' '}
                   <Link href="./policy"> Safeguarding policy statement</Link>
-                </li>
-                <li>
-                  Our E-Safety policy is not yet available for download. Please
-                  check back later.
                 </li>
               </ul>
             </div>
@@ -80,12 +81,13 @@ export default function PolicyPage() {
                 the completed version will include:
               </p>
               <ul>
-                <li>Code of conduct for staff and volunteers</li>
-                <li>Staff and volunteer policy</li>
-                <li>Child protection Policy</li>
-                <li>Health and Safety Policy</li>
-                <li>Safety Advice for staff</li>
-                <li>Pupil registers (only downloadable by staff members)</li>
+                <li>Code of practice for teachers</li>
+                <li>Voluntary role description</li>
+                <li>Staff volunteers policy</li>
+                <li>Pupil registers</li>
+                <li>Offsite procedures</li>
+                <li>List of staff</li>
+                <li>Health and safety</li>
               </ul>
               <p>You can also view more relevant information below:</p>
               <ul>
