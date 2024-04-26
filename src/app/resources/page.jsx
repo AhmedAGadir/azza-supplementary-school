@@ -76,10 +76,7 @@ export default function PolicyPage() {
               </a>
             </div>
             <div>
-              <p>
-                The staff and volunteer handbook is still under construction,
-                the completed version will include:
-              </p>
+              <p>The staff and volunteer handbook includes:</p>
               <ul>
                 <li>Code of practice for teachers</li>
                 <li>Voluntary role description</li>
