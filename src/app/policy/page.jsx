@@ -324,7 +324,7 @@ const Policy = ({ language }) => (
     <ul>
       <li>
         <a
-          href="https://www.rbkc.gov.uk/lscb/information-professionals-and-volunteers"
+          href="https://www.rbkc.gov.uk/lscp/information-professionals-and-volunteers"
           target="_blank"
         >
           Local Safeguarding Children Partnership Multi-agency Safeguarding
