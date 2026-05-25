@@ -129,6 +129,14 @@
       "title": "School Calendar",
       "description": "Access the comprehensive school calendar of Azza Supplementary School to keep up-to-date with upcoming events, holidays, examinations, and other important academic dates throughout the year."
     },
+    "archive": {
+      "title": "Archive",
+      "description": "A collection of past events, performances, and memories from Azza Supplementary School.",
+      "videos": {
+        "videoOneTitle": "Archive video 1",
+        "videoTwoTitle": "Archive video 2"
+      }
+    },
     "contact": {
       "hero": {
         "title": "Contact us today",
@@ -210,6 +218,7 @@
         { "label": "Safeguarding Procedure", "href": "/procedure" },
         { "label": "Enrollment", "href": "/enroll" },
         { "label": "Resources", "href": "/resources" },
+        { "label": "Archive", "href": "/archive" },
         { "label": "Contact us", "href": "/contact" }
       ]
     }
@@ -340,6 +349,14 @@
       "title": "التقويم المدرسي",
       "description": "اطلع على التقويم المدرسي الشامل لمدرسة عزة التكميلية لتكون على اطلاع دائم بالأحداث القادمة، العطلات، الامتحانات، والتواريخ الأكاديمية الهامة طوال العام."
     },
+    "archive": {
+      "title": "الأرشيف",
+      "description": "مجموعة من الفعاليات والعروض والذكريات السابقة من مدرسة عزة التكميلية.",
+      "videos": {
+        "videoOneTitle": "فيديو الأرشيف ١",
+        "videoTwoTitle": "فيديو الأرشيف ٢"
+      }
+    },
     "contact": {
       "hero": {
         "title": "تواصلوا معنا",
@@ -422,6 +439,7 @@
         { "label": "إجراءات الحماية", "href": "/procedure" },
         { "label": "الموارد", "href": "/resources" },
         { "label": "التسجيل", "href": "/enroll" },
+        { "label": "الأرشيف", "href": "/archive" },
         { "label": "تواصل معنا", "href": "/contact" }
       ]
     }
