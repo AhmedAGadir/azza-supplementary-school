@@ -20,11 +20,17 @@ export const ContactHero = () => {
   const t = useMemo(() => translation?.contact?.hero ?? {}, [translation])
 
   const [submitted, setSubmitted] = React.useState(false)
+  const [sending, setSending] = React.useState(false)
   const [message, setMessage] = React.useState('')
   const form = useRef()
 
   const sendEmail = (e) => {
     e.preventDefault()
+
+    if (sending) return
+
+    setSending(true)
+    setMessage('')
 
     emailjs
       .sendForm(
@@ -34,14 +40,17 @@ export const ContactHero = () => {
         process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
       )
       .then(
-        (result) => {
-          console.log(result.text)
+        () => {
+          setSending(false)
           setSubmitted(true)
           setMessage(t.messageSuccess)
         },
         (error) => {
-          console.log(error.text)
-          setMessage(t.messageError)
+          setSending(false)
+          console.error('Contact form submission failed:', error)
+          setMessage(
+            `${t.messageError} You can also reach us directly at info@azzaschool.org.`,
+          )
         },
       )
   }
@@ -190,7 +199,9 @@ export const ContactHero = () => {
                   )}
 
                   <div className="mt-6 flex justify-end">
-                    <Button type="submit">{t.sendMessageBtn}</Button>
+                    <Button type="submit" disabled={sending}>
+                      {sending ? 'Sending…' : t.sendMessageBtn}
+                    </Button>
                   </div>
                 </form>
               </>

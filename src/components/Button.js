@@ -22,7 +22,7 @@ export function Button({
   ...props
 }) {
   className = clsx(
-    'font-medium relative leading-normal inline-flex items-center justify-center duration-300 ease-in-out rounded-full outline-none group',
+    'font-medium relative leading-normal inline-flex items-center justify-center duration-300 ease-in-out rounded-full outline-none group disabled:cursor-not-allowed disabled:opacity-60',
     variantStyles[`${variant}ClassName`],
     sizeStyles[`${size}ClassName`],
     className,

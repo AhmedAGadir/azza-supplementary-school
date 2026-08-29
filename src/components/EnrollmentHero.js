@@ -91,14 +91,12 @@ const enrollmentFields = [
         name: 'parentTelephoneNumber',
         label: 'Telephone Number',
         type: 'tel',
-        pattern: '[0-9]{3}-[0-9]{3}-[0-9]{4}',
         required: true,
       },
       {
         name: 'mobileTelephoneNumber',
         label: 'Mobile Number',
         type: 'tel',
-        pattern: '[0-9]{3}-[0-9]{3}-[0-9]{4}',
         required: true,
       },
       {
@@ -145,14 +143,38 @@ const enrollmentFields = [
         label: 'Ethnic Origin',
         type: 'select',
         options: [
-          'Sudanese',
-          'North African',
-          'African',
-          'Middle Eastern',
-          'Asian',
-          'Caucasian',
-          'Other',
-          'Prefer not to say',
+          'Bangladeshi',
+          'Indian',
+          'Pakistani',
+          'Chinese',
+          'Other Asian',
+          'Black African',
+          'Black Caribbean',
+          'Black Congolese',
+          'Black Nigerian',
+          'Black Somali',
+          'Black British',
+          'Other Black',
+          'White and Asian',
+          'White and Black African',
+          'White and Black Caribbean',
+          'Other Mixed',
+          'White British',
+          'White Irish',
+          'White European',
+          'Albanian',
+          'Kosovan',
+          'Traveller',
+          'Gypsy / Roma',
+          'Other White',
+          'Arab',
+          'Iranian',
+          'Iraqi',
+          'Kurdish',
+          'Latin / South / Central American',
+          'Moroccan',
+          'Turkish',
+          'Other background',
         ],
         required: true,
       },
@@ -169,6 +191,14 @@ const enrollmentFields = [
         type: 'radio',
         options: ['Yes', 'No'],
         required: true,
+      },
+      {
+        name: 'learningDifficultyDetail',
+        label: 'If yes, please give more detail',
+        type: 'textarea',
+        placeholder:
+          'Please describe the learning difficulty or disability, and any support your child needs',
+        required: false,
       },
       {
         name: 'registeredForFreeSchoolMeals',
@@ -206,6 +236,30 @@ const enrollmentFields = [
     ],
   },
   {
+    section: 'Medical Information',
+    description: [
+      'Please tell us about any medical conditions, allergies or medication we should be aware of, so that staff can keep your child safe. If there is nothing to report, please write "None".',
+      'Health information is treated as special category data under the UK GDPR. It is shared only with the staff responsible for your child and is used solely to look after their safety and wellbeing.',
+    ],
+    fields: [
+      {
+        name: 'medicalConditions',
+        label: 'Details of any medical condition/s, allergies or medication',
+        type: 'textarea',
+        placeholder:
+          'e.g. asthma, epilepsy, food allergies, medication carried. Write "None" if not applicable.',
+        required: true,
+      },
+      {
+        name: 'medicalConsent',
+        label:
+          'I consent to Azza Supplementary School holding this health information and sharing it with staff responsible for my child, so that they can care for my child safely.',
+        type: 'checkbox',
+        required: true,
+      },
+    ],
+  },
+  {
     section: 'Classes',
     description: 'Select the classes that the student will be allocated to.',
     fields: [
@@ -213,7 +267,7 @@ const enrollmentFields = [
         label: 'Select Classes',
         name: 'classes',
         type: 'checkboxGroup',
-        options: ['English', 'Maths', 'Arabic', 'Science', 'Other'],
+        options: ['English', 'Maths', 'Arabic', 'Science', 'Sport', 'Other'],
         required: false,
       },
     ],
@@ -271,10 +325,32 @@ const enrollmentFields = [
         options: ['phone', 'post', 'email'],
         required: false,
       },
+    ],
+  },
+  {
+    section: 'Parent/Carer Declaration',
+    description: [
+      'Please confirm your consent below. Typing your full name and ticking the boxes has the same legal effect as signing this form by hand.',
+    ],
+    fields: [
       {
         name: 'parentCarerConsent',
-        label: "Parent/Carer's Consent",
+        label:
+          "I confirm that I am the parent or legal guardian of the child named on this form, that the information I have given is correct to the best of my knowledge, and I consent to the processing of my child's personal data as described in the Data Protection Statement above.",
         type: 'checkbox',
+        required: true,
+      },
+      {
+        name: 'signatureFullName',
+        label: 'Parent/Carer full name (type your name to sign)',
+        type: 'text',
+        placeholder: 'Type your full name',
+        required: true,
+      },
+      {
+        name: 'signatureDate',
+        label: 'Date',
+        type: 'date',
         required: true,
       },
     ],
@@ -287,11 +363,19 @@ export const EnrollmentHero = () => {
   const t = useMemo(() => translation?.enroll?.hero ?? {}, [translation])
 
   const [submitted, setSubmitted] = React.useState(false)
+  const [sending, setSending] = React.useState(false)
   const [message, setMessage] = React.useState('')
   const form = useRef()
 
   const sendEmail = (e) => {
     e.preventDefault()
+
+    // Guard against double submission: without this, a failing send leaves the
+    // button live and parents re-submit the form repeatedly.
+    if (sending) return
+
+    setSending(true)
+    setMessage('')
 
     emailjs
       .sendForm(
@@ -301,14 +385,17 @@ export const EnrollmentHero = () => {
         process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
       )
       .then(
-        (result) => {
-          console.log(result.text)
+        () => {
+          setSending(false)
           setSubmitted(true)
           setMessage(t.messageSuccess)
         },
         (error) => {
-          console.log(error.text)
-          setMessage(t.messageError)
+          setSending(false)
+          console.error('Enrollment form submission failed:', error)
+          setMessage(
+            `${t.messageError} If this keeps happening, please call the school or email enrollment@azzaschool.org so we can take your details another way.`,
+          )
         },
       )
   }
@@ -545,8 +632,12 @@ export const EnrollmentHero = () => {
                                     id={field.name}
                                     name={field.name}
                                     className="mt-2 w-full rounded-2xl border-2 border-purple-50 p-4 text-sm font-medium text-purple-700 outline-none duration-300 ease-in-out focus:border-purple-200 focus:outline-none focus:ring-purple-200"
+                                    defaultValue=""
                                     required={field.required}
                                   >
+                                    <option value="" disabled>
+                                      Please select…
+                                    </option>
                                     {field.options.map((option, optIndex) => (
                                       <option
                                         key={`select-${field.name}-${optIndex}`}
@@ -604,7 +695,9 @@ export const EnrollmentHero = () => {
                     )}
 
                     <div className="mt-6 flex justify-end">
-                      <Button type="submit">Submit Application</Button>
+                      <Button type="submit" disabled={sending}>
+                        {sending ? 'Sending…' : 'Submit Application'}
+                      </Button>
                     </div>
                   </div>
                 </form>
