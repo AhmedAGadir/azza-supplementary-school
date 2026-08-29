@@ -57,8 +57,22 @@ Parents cannot currently register. Do this first.
       (Note: test emails do not decrement the request quota — the `OK` rows are the
       signal to look for, not the counter.)
 - [ ] Confirm the two test emails actually landed in the school inbox
-- [ ] Resend the failed submissions from Email History — **before they age out**
-- [ ] Confirm the resent enrollment applications arrived in the inbox
+- [x] ~~Resend the failed submissions from Email History~~ — **Resend button is a
+      no-op on these records.** Tried four times: the confirm dialog opens and closes
+      cleanly, but no email is sent, no new history row appears, the Resends column
+      stays `--` and the quota does not move. The school inbox confirms nothing
+      arrived (and nothing was duplicated). Cause unknown — possibly EmailJS refuses
+      to replay records predating the service reconnection, or resend is gated on a
+      paid tier and fails silently. Not investigated further; superseded below.
+- [x] **Data extracted manually instead**, removing the retention deadline. Both
+      applications and the contact message written up in full to
+      `scratchpad/recovered/recovered-submissions-2026-08-29.md`
+      (deliberately outside the repo — children's personal data, must not be committed).
+- [x] Confirm delivery works end to end — the two test emails arrived in the school
+      inbox at 21:36 and 21:44. Sending is genuinely fixed; only the historical
+      replay feature is broken.
+- [ ] Send the recovered applications to the school
+- [ ] Contact both families (see follow-up list in the recovery file)
 
 ### What the 30 failed rows actually contain
 
