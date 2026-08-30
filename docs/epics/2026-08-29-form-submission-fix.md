@@ -71,8 +71,13 @@ Parents cannot currently register. Do this first.
 - [x] Confirm delivery works end to end — the two test emails arrived in the school
       inbox at 21:36 and 21:44. Sending is genuinely fixed; only the historical
       replay feature is broken.
-- [ ] Send the recovered applications to the school
-- [ ] Contact both families (see follow-up list in the recovery file)
+- [x] **Send the recovered applications to the school** — done a better way than the
+      broken Resend button: sent as three fresh, formatted emails through Resend to
+      the school inbox, each with `reply_to` set to the parent so staff can reply
+      directly, and each carrying a banner explaining the fault and flagging the
+      unreliable borough/ethnicity fields. All three confirmed delivered.
+- [ ] Contact both families (see follow-up list in the recovery file) — **still
+      outstanding, and the only item here that affects real people today**
 
 ### What the 30 failed rows actually contain
 
@@ -119,9 +124,38 @@ was actively chosen. **Confirm ethnicity and borough with both families directly
       and root SPF/MX for ImprovMX confirmed untouched
 - [x] Test send from `noreply@azzaschool.org` → **delivered to the school inbox**
       (not spam), displaying as "Azza School"
-- [ ] Point the EmailJS service at Resend SMTP (replacing the Gmail connection)
+- [ ] Stop the connection expiring again — **see "Open decision" below**, the
+      SMTP swap may not be the right shape
 - [ ] Send a test submission through both forms end to end
-- [ ] Lock EmailJS allowed origins to `www.azzaschool.org`
+- [ ] ~~Lock EmailJS allowed origins~~ — **attempted, would not save.** The domain
+      chip adds correctly (the field needs Enter, not the `+` button) but
+      "Save Changes" does not persist it; the list is empty again on reload. Left
+      unrestricted. Moot if the forms move off EmailJS (see below).
+
+## Open decision — how to stop it expiring
+
+The original plan was to point EmailJS at Resend SMTP. Having now built the Resend
+path, that looks like the wrong shape:
+
+- EmailJS cannot convert a Gmail service to SMTP. It needs a **new service**, so
+  `NEXT_PUBLIC_EMAIL_SERVICE_ID` changes and the site must be redeployed.
+- It keeps every other EmailJS constraint: public key exposed in the client bundle,
+  200 emails/month on the free tier, and an admin UI that has been unreliable to
+  automate all session.
+
+**Alternative: drop EmailJS from the forms entirely.** Post the form to a Next.js
+route handler that sends via Resend — the same path `/api/email-health` already
+uses successfully. That would:
+
+- remove the expiring-credential problem at the root (Resend keys do not expire)
+- remove the 200/month cap
+- remove the public key from the browser bundle, which also makes the
+  allowed-origins item above unnecessary
+- give a natural place to later persist submissions or attach a PDF, which the
+  consent-record gap needs anyway
+
+Cost: a real code change to both forms, and EmailJS templates would need
+reimplementing as email bodies in the route.
 
 > **Vercel domain had to be moved to a team first.** `azzaschool.org` was an
 > "Account domain", which Vercel has deprecated — the dashboard gated DNS
