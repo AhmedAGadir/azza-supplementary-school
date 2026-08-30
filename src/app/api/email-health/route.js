@@ -9,10 +9,16 @@ import { NextResponse } from 'next/server'
 //
 // The alert deliberately goes out via Resend rather than EmailJS: an alert
 // that travels the same path as the thing being monitored dies with it.
+//
+// History API shape (verified against the live endpoint):
+//   GET https://api.emailjs.com/api/v1.1/history?user_id=...&accessToken=...
+//   -> { is_last_page: bool, rows: [{ result, error, template_id, created_at, ... }] }
+//   result is numeric: 1 = delivered, anything else = failed.
 
 export const dynamic = 'force-dynamic'
 
-const EMAILJS_HISTORY_URL = 'https://api.emailjs.com/api/v1.0/history'
+const EMAILJS_HISTORY_URL = 'https://api.emailjs.com/api/v1.1/history'
+const RESULT_OK = 1
 const LOOKBACK_MS = 24 * 60 * 60 * 1000
 
 export async function GET(request) {
@@ -35,17 +41,13 @@ export async function GET(request) {
     )
   }
 
-  let history
+  let rows
   try {
-    const response = await fetch(EMAILJS_HISTORY_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        user_id: publicKey,
-        accessToken: privateKey,
-      }),
-      cache: 'no-store',
-    })
+    const url = `${EMAILJS_HISTORY_URL}?user_id=${encodeURIComponent(
+      publicKey,
+    )}&accessToken=${encodeURIComponent(privateKey)}`
+
+    const response = await fetch(url, { cache: 'no-store' })
 
     if (!response.ok) {
       throw new Error(
@@ -53,7 +55,8 @@ export async function GET(request) {
       )
     }
 
-    history = await response.json()
+    const body = await response.json()
+    rows = Array.isArray(body?.rows) ? body.rows : []
   } catch (error) {
     // If we can't even read the history, that is itself worth knowing about.
     await sendAlert(
@@ -63,14 +66,12 @@ export async function GET(request) {
     return NextResponse.json({ error: error.message }, { status: 502 })
   }
 
-  const records = Array.isArray(history) ? history : (history?.rows ?? [])
   const since = Date.now() - LOOKBACK_MS
 
-  const recentFailures = records.filter((record) => {
-    const result = String(record.result ?? '').toLowerCase()
-    if (result === 'ok' || result === 'success') return false
+  const recentFailures = rows.filter((row) => {
+    if (row.result === RESULT_OK) return false
 
-    const timestamp = Date.parse(record.created ?? record.created_at ?? '')
+    const timestamp = Date.parse(row.created_at ?? '')
     // Keep undated records rather than dropping a failure on a parsing quirk.
     return Number.isNaN(timestamp) ? true : timestamp >= since
   })
@@ -80,7 +81,9 @@ export async function GET(request) {
       .slice(0, 10)
       .map(
         (f) =>
-          `- ${f.created ?? 'unknown time'} | ${f.template_id ?? 'unknown template'} | ${f.error ?? f.result ?? 'no error text'}`,
+          `- ${f.created_at ?? 'unknown time'} | ${
+            f.template_id ?? 'unknown template'
+          } | ${f.error ?? 'no error text'}`,
       )
       .join('\n')
 
@@ -88,14 +91,14 @@ export async function GET(request) {
       `Azza site: ${recentFailures.length} form submission(s) failed to send`,
       `The following form submissions were accepted by EmailJS but not delivered in the last 24 hours.\n\n` +
         `${details}\n\n` +
-        `The submitted data is still recoverable from the EmailJS history and can be resent:\n` +
+        `The submitted data is still recoverable from the EmailJS history:\n` +
         `https://dashboard.emailjs.com/admin/history\n\n` +
         `A common cause is the mail service connection needing to be reconnected.`,
     )
   }
 
   return NextResponse.json({
-    checked: records.length,
+    checked: rows.length,
     failures: recentFailures.length,
   })
 }

@@ -111,12 +111,29 @@ was actively chosen. **Confirm ethnicity and borough with both families directly
 
 ## Phase 2 — Stop it recurring
 
-- [ ] Create a Resend account
-- [ ] Add and verify `azzaschool.org` in Resend
-- [ ] Add Resend's generated DNS records in Vercel → Domains → azzaschool.org
+- [x] Create a Resend account — under `azzasupplementaryschool@gmail.com` so the
+      client owns it, matching the EmailJS account
+- [x] Add and verify `azzaschool.org` in Resend — region `eu-west-1` (Ireland),
+      status **Verified**
+- [x] Add Resend's generated DNS records in Vercel → verified resolving via `dig`,
+      and root SPF/MX for ImprovMX confirmed untouched
+- [x] Test send from `noreply@azzaschool.org` → **delivered to the school inbox**
+      (not spam), displaying as "Azza School"
 - [ ] Point the EmailJS service at Resend SMTP (replacing the Gmail connection)
 - [ ] Send a test submission through both forms end to end
 - [ ] Lock EmailJS allowed origins to `www.azzaschool.org`
+
+> **Vercel domain had to be moved to a team first.** `azzaschool.org` was an
+> "Account domain", which Vercel has deprecated — the dashboard gated DNS
+> management behind the move, and the CLI could not see the domain at all
+> (`You don't have permission to list the domain record`). Moved to
+> `ahmedagadirs-projects`; all DNS records, aliases and the live site verified
+> intact afterwards.
+
+> **Auto-renew confirmed on** — `azzaschool.org` renews 26 Oct 2026.
+
+> **The Node.js 20 build warning is not this project.** `azza-supplementary-school`
+> runs 22.x. The affected project is `anthroai` (20.x), unrelated to this work.
 
 > ⚠️ **Do not modify the root SPF or MX records.** The domain runs ImprovMX email
 > forwarding (`info@` / `enrollment@azzaschool.org` → Gmail) on:
