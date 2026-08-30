@@ -179,15 +179,21 @@ All complete, built clean, verified in browser. Not yet committed or deployed.
 
 - [x] `src/app/api/email-health/route.js` — daily EmailJS history check, alerts via Resend
 - [x] `vercel.json` — cron at 09:00 daily
-- [ ] Add Vercel environment variables (**none prefixed `NEXT_PUBLIC_`**):
-  - [ ] `CRON_SECRET`
-  - [ ] `EMAILJS_PUBLIC_KEY`
-  - [ ] `EMAILJS_PRIVATE_KEY`
-  - [ ] `RESEND_API_KEY`
-  - [ ] `ALERT_EMAIL_TO`
-  - [ ] `ALERT_EMAIL_FROM`
-- [ ] Confirm the first scheduled cron run succeeds
-- [ ] Verify the `/history` response shape matches what the route expects (parsing may need adjusting)
+- [x] Add Vercel environment variables (**none prefixed `NEXT_PUBLIC_`**) — all six
+      set on Production via `vercel env add`
+- [x] **Corrected the route against the live API.** The original implementation was
+      wrong in three ways and would have reported zero failures forever — the exact
+      failure mode it exists to catch:
+      - `POST /api/v1.0/history` 404s. Real endpoint is
+        `GET /api/v1.1/history?user_id=…&accessToken=…`
+      - rows live under `rows`; the timestamp field is `created_at`, not `created`
+      - `result` is numeric (**1 = delivered, 2 = failed**), not a string
+- [x] **Verified end to end in production:**
+      - `GET /api/email-health` with the cron secret → `{"checked":33,"failures":1}`,
+        correctly catching the 21:31 scopes failure
+      - without the secret → `401`
+      - **the alert email was delivered to the school inbox via Resend**
+- [ ] Confirm the first *scheduled* cron run fires (09:00 daily)
 
 ---
 
