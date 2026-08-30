@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "node --test tests/*.test.js --test-skip-pattern=\"integration\"",
+    "test:unit": "node --test tests/submissions.test.js tests/rateLimit.test.js",
+    "test:integration": "node --test tests/api.integration.test.js"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.11.0",
     "@headlessui/react": "^1.7.17",
     "@tabler/icons-react": "^2.34.0",
     "clsx": "^2.0.0",

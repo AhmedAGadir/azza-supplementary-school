@@ -13,7 +13,7 @@ import dotsStrip from '/public/images/illustrations/dots-strip.svg'
 
 import checkmark from '/public/images/illustrations/checkmark.svg'
 
-import emailjs from '@emailjs/browser'
+import { HoneypotField, submitForm } from '@/components/formSubmit'
 
 const enrollmentFields = [
   {
@@ -367,7 +367,7 @@ export const EnrollmentHero = () => {
   const [message, setMessage] = React.useState('')
   const form = useRef()
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault()
 
     // Guard against double submission: without this, a failing send leaves the
@@ -377,27 +377,18 @@ export const EnrollmentHero = () => {
     setSending(true)
     setMessage('')
 
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAIL_ENROLLMENT_TEMPLATE_ID,
-        form.current,
-        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
+    try {
+      await submitForm('/api/enroll', form.current)
+      setSubmitted(true)
+      setMessage(t.messageSuccess)
+    } catch (error) {
+      console.error('Enrollment form submission failed:', error)
+      setMessage(
+        `${t.messageError} If this keeps happening, please call the school or email enrollment@azzaschool.org so we can take your details another way.`,
       )
-      .then(
-        () => {
-          setSending(false)
-          setSubmitted(true)
-          setMessage(t.messageSuccess)
-        },
-        (error) => {
-          setSending(false)
-          console.error('Enrollment form submission failed:', error)
-          setMessage(
-            `${t.messageError} If this keeps happening, please call the school or email enrollment@azzaschool.org so we can take your details another way.`,
-          )
-        },
-      )
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -488,6 +479,7 @@ export const EnrollmentHero = () => {
                   </p> */}
                 </div>
                 <form className="mt-8" ref={form} onSubmit={sendEmail}>
+                  <HoneypotField />
                   <div className="space-y-12">
                     {enrollmentFields.map((section, ind) => (
                       <div

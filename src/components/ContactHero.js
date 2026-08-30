@@ -12,7 +12,7 @@ import dotsStrip from '/public/images/illustrations/dots-strip.svg'
 
 import checkmark from '/public/images/illustrations/checkmark.svg'
 
-import emailjs from '@emailjs/browser'
+import { HoneypotField, submitForm } from '@/components/formSubmit'
 
 export const ContactHero = () => {
   const { translation, language } = useTranslation()
@@ -24,7 +24,7 @@ export const ContactHero = () => {
   const [message, setMessage] = React.useState('')
   const form = useRef()
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault()
 
     if (sending) return
@@ -32,27 +32,18 @@ export const ContactHero = () => {
     setSending(true)
     setMessage('')
 
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAIL_CONTACT_TEMPLATE_ID,
-        form.current,
-        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
+    try {
+      await submitForm('/api/contact', form.current)
+      setSubmitted(true)
+      setMessage(t.messageSuccess)
+    } catch (error) {
+      console.error('Contact form submission failed:', error)
+      setMessage(
+        `${t.messageError} You can also reach us directly at info@azzaschool.org.`,
       )
-      .then(
-        () => {
-          setSending(false)
-          setSubmitted(true)
-          setMessage(t.messageSuccess)
-        },
-        (error) => {
-          setSending(false)
-          console.error('Contact form submission failed:', error)
-          setMessage(
-            `${t.messageError} You can also reach us directly at info@azzaschool.org.`,
-          )
-        },
-      )
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -146,6 +137,7 @@ export const ContactHero = () => {
                   </p>
                 </div>
                 <form className="mt-8" ref={form} onSubmit={sendEmail}>
+                  <HoneypotField />
                   {t.formFields?.map((field, index) => (
                     <div
                       key={`contact-form-field-${index}}`}
